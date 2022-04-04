@@ -100,13 +100,8 @@
         font-size: 16px;
         line-height: 24px;
         color: #A24DE8;
-    }
 
-    input {
-        background: transparent;
-        border: 1px solid #DDDDDD;
-        box-sizing: border-box;
-        border-radius: 8px;
+        cursor: pointer;
     }
 
     h1 {
