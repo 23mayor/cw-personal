@@ -1,0 +1,37 @@
+.avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    background-color: #EEEEEE;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    color: #A2A2A2;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.avatar svg path,
+.avatar svg rect {
+    fill: #A24DE8;
+}
+
+.mini {
+    width: 40px;
+    height: 40px;
+
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.05em;
+}
+
+.john {
+    background-image: url("../../images/john.png");
+}

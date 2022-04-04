@@ -1,0 +1,224 @@
+    /* colors  */
+
+    .white {
+        color: #FFFFFF;
+    }
+
+    .gray-100 {
+        color: #F3F3F3;
+    }
+
+    .gray-200 {
+        color: #EEEEEE;
+    }
+
+    .gray-300 {
+        color: #E6E6E6;
+    }
+
+    .gray-400 {
+        color: #DDDDDD;
+    }
+
+    .gray-500 {
+        color: #CECECE;
+    }
+
+    .gray-600 {
+        color: #A1A1A1;
+    }
+
+    .gray-700 {
+        color: #737373;
+    }
+
+    .dark {
+        color: #140E17;
+    }
+
+    .purple-100 {
+        color: #F0E2FB;
+    }
+
+    .purple-200 {
+        color: #E7D1F9;
+    }
+
+    .purple-300 {
+        color: #DDBFF7;
+    }
+
+    .purple-400 {
+        color: #A24DE8;
+    }
+
+    .purple-500 {
+        color: #903CD6;
+    }
+
+    .red-100 {
+        color: #FCEAEA;
+    }
+
+    .red-300 {
+        color: #E22929;
+    }
+
+    .green-100 {
+        color: #D5F0DB;
+    }
+
+    .green-300 {
+        color: #51B267;
+    }
+
+    .blue-100 {
+        color: #D0E4FF;
+    }
+
+    .blue-300 {
+        color: #3183F3;
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&display=swap');
+        
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Manrope", sans-serif;
+        font-style: normal;
+        color: #140E17;
+    }
+
+    a {
+        transition: all 0.2s ease;
+        text-decoration: none;
+
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        color: #A24DE8;
+    }
+
+    input {
+        background: transparent;
+        border: 1px solid #DDDDDD;
+        box-sizing: border-box;
+        border-radius: 8px;
+    }
+
+    h1 {
+        font-weight: 500;
+        font-size: 64px;
+        line-height: 76px;
+    }
+
+    h2 {
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 48px;
+    }
+    
+    h3 {
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 32px;
+    }
+    
+    h4 {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .semibold-text {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+    }
+     
+    .regular-text { 
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .small-bold-text {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+    }
+
+    .small-semibold-text {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .btn-link-text {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    @media (max-width: 375px) {
+        h1 {
+            font-weight: 500;
+            font-size: 32px;
+            line-height: 36px;
+        }
+    
+        h2 {
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 28px;
+        }
+        
+        h3 {
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 24px;
+        }
+        
+        h4 {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 24px;
+        }
+    
+        .semibold-text {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 20px;
+        }
+         
+        .regular-text { 
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+        }
+    
+        .small-bold-text {
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 16px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+    
+        .small-semibold-text {
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 16px;
+        }
+    
+        .btn-link-text {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }

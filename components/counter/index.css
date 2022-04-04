@@ -1,0 +1,41 @@
+.div {
+    padding: 30px;
+}
+
+.counter {
+    width: 34px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.purple {
+    background-color: #A24DE8;
+    color: #FFFFFF;
+}
+
+.gray {
+    background-color: #E6E6E6;
+    color: #140E17;
+}
+
+.white {
+    background-color: #FFFFFF;
+    color: #140E17;
+}
+
+@media (max-width: 375px) {
+    .counter {
+        width: 28px;
+        height: 20px;
+
+        font-size: 12px;
+        line-height: 16px;
+    }
+}

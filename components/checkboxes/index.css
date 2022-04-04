@@ -1,0 +1,199 @@
+.div {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+/* Checkbox Item */
+.custom-checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+
+.custom-checkbox+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+}
+
+.custom-checkbox+label::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 2px solid #A2A2A2;
+    border-radius: 4px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+    cursor: pointer;
+}
+
+.custom-checkbox:checked+label::before {
+    border-color: #A24DE8;
+    background-color: transparent;
+    background-image: url("../../images/checkbox-active.svg");
+}
+
+/* стили при наведении курсора на checkbox */
+.custom-checkbox:not(:disabled):not(:checked)+label:hover::before {
+    border-color: #140E17;
+    background-image: url("../../images/checkbox.svg");
+}
+
+/* стили для активного состояния чекбокса (при нажатии на него) */
+.custom-checkbox:not(:disabled):active+label::before {
+    background-color: #b3d7ff;
+    border-color: #b3d7ff;
+}
+
+/* стили для чекбокса, находящегося в состоянии disabled */
+.custom-checkbox:disabled+label::before {
+    background-color: #A2A2A2;
+}
+
+.custom-checkbox:disabled:checked+label::before {
+    border-color: #A2A2A2;
+    background-image: url("../../images/checkbox.svg");
+}
+
+/* Indeterminate Checkbox*/
+
+.indeterminate+label::before {
+    border-color: #A2A2A2;
+    background-image: url("../../images/indeterminate.svg");
+}
+
+/* Radiobutton Item */
+
+.custom-radio {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.custom-radio+label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+.custom-radio+label::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 2px solid #A2A2A2;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 6px;
+    cursor: pointer;
+}
+
+/* Hover */
+.custom-radio:not(:disabled):not(:checked)+label:hover::before {
+    border-color: #140E17;
+    background-image: url("../../images/radiobutton-hover.svg");
+}
+
+/* Checked */
+.custom-radio:checked+label::before {
+    border-color: #A24DE8;
+    background-image: url("../../images/radiobutton-chosen.svg");
+}
+
+/* Disabled */
+.custom-radio:disabled+label::before {
+    border-color: #A2A2A2;
+}
+
+.custom-radio:disabled:checked+label::before {
+    border-color: #A2A2A2;
+    background-image: url("../../images/radiobutton-disabled-checked.svg");
+}
+
+/* Toggle */
+.toggle {
+	display: inline-block;    
+	position: relative;
+	vertical-align: middle;
+	user-select: none;	
+}
+
+.toggle .toggle-switch {
+	position: relative;	
+	display: inline-block;
+	box-sizing: border-box;			
+	width: 40px;	
+	height: 20px;
+	border: 2px solid #A2A2A2;
+	border-radius: 100px;	
+	transition: .2s;
+}
+
+.toggle .toggle-switch:before {
+	content: '';
+	position: absolute;
+	top: 2px;
+	left: 3px;	
+	display: inline-block;
+	width: 12px;	
+	height: 12px;
+	border-radius: 50%;
+	background: #140E17;
+	transition: .15s;
+}
+
+.toggle input[type=checkbox] {
+	display: block;	
+	width: 0;
+	height: 0;	
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
+
+.toggle input[type=checkbox]:checked + .toggle-switch {
+	background-color: #DDBFF7;
+    border-color: #A24DE8;
+}
+.toggle input[type=checkbox]:checked + .toggle-switch:before {
+	transform:translateX(18px);
+}
+ 
+/* Hover */
+.toggle input[type="checkbox"]:not(:disabled):hover + .toggle-switch {
+	cursor: pointer;
+	border-color: #140E17;
+}
+ 
+/* Disabled */
+.toggle input[type=checkbox]:disabled + .toggle-switch {
+	border-color: #A2A2A2;
+}
+.toggle input[type=checkbox]:disabled + .toggle-switch:before {
+	background: #A2A2A2;
+}
+
+@media (max-width: 375px) {
+    /* Checkbox Item */
+
+    .custom-checkbox+label::before {
+        width: 16px;
+        height: 16px;
+    }
+
+    /* Radiobutton Item */
+
+    .custom-radio+label::before {
+        width: 16px;
+        height: 16px;
+        background-size: 4px;
+    }
+}

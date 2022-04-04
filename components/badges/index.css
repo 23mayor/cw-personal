@@ -1,0 +1,101 @@
+.div {
+    padding: 30px;
+}
+
+.div .badge {
+    margin-bottom: 30px;
+}
+
+.badge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 74px;
+    height: 32px;
+    background: #EEEEEE;
+    border-radius: 8px;
+}
+
+.indicator {
+    width: 14px;
+    height: 14px;
+    border-radius: 4px;
+    margin-right: 8px;
+}
+
+.arrow {
+    width: 20px;
+    height: 20px;
+    margin-left: 8px;
+
+    background-image: url("../../images/arrow-down.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Indicator Colors */
+
+.color-user {
+    background-color: #51B267;
+}
+
+.color-admin {
+    background-color: #E22929;
+}
+
+.color-main-admin {
+    background-color: #3183F3;
+}
+
+/* Badge Sizes */
+
+.s-size {
+    width: 87px;
+}
+
+.m-size {
+    width: 102px;
+}
+
+.l-size {
+    width: 115px;
+}
+
+.xl-size {
+    width: 126px;
+}
+
+.xxl-size {
+    width: 154px;
+}
+
+@media (max-width: 375px) {
+
+
+/* Badge Sizes */
+
+.badge {
+    width: 59px;
+}
+
+.s-size {
+    width: 69px;
+}
+
+.m-size {
+    width: 83px;
+}
+
+.l-size {
+    width: 93px;
+}
+
+.xl-size {
+    width: 98px;
+}
+
+.xxl-size {
+    width: 122px;
+}
+}

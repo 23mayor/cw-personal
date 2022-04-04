@@ -1,0 +1,91 @@
+.btn {
+    /* width: 492px;
+    height: 72px; */
+    padding: 16px 24px;
+    border-radius: 8px;
+    border: none;
+    color: #FFFFFF;
+    font-weight: 700;
+
+    font-size: 16px;
+    line-height: 24px;
+
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.primary-btn {
+    background: #A24DE8;
+}
+
+.primary-btn:hover {
+    background: #903CD6;
+}
+
+.primary-btn:active {
+    background: #7B25C1;
+}
+
+.primary-btn:disabled {
+    background: #CECECE;
+}
+
+.primary-btn:disabled svg path,
+.primary-btn:disabled svg rect {
+    fill: #FFFFFF;
+}
+
+.secondary-btn {
+    background: #F0E2FB;
+    color: #A24DE8;
+    font-weight: 600;
+}
+
+.secondary-btn:hover {
+    background: #E7D1F9;
+}
+
+.secondary-btn:active {
+    background: #DDBFF7;
+}
+
+.secondary-btn:disabled {
+    background: #F3F3F3;
+    color: #A2A2A2;
+}
+
+.secondary-btn:disabled svg path,
+.secondary-btn:disabled svg rect {
+    fill: #A2A2A2;
+}
+
+.tetriary-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #140E17;
+    border: 1px solid #DDDDDD;
+    background-color: transparent;
+}
+
+.tetriary-btn:hover {
+    border: 1px solid #CECECE;
+}
+
+.tetriary-btn:active {
+    border: 1px solid #7B25C1;
+}
+
+.tetriary-btn:disabled {
+    color: #A2A2A2;
+    border: 1px solid #CECECE;
+}
+
+.tetriary-btn:disabled svg path,
+.tetriary-btn:disabled svg rect {
+    fill: #A2A2A2;
+}
+
+.add-btn svg {
+    margin-right: 8px;
+}

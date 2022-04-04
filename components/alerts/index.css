@@ -1,0 +1,91 @@
+.div {
+    padding: 30px;
+}
+
+.div .alert {
+    margin-bottom: 20px;
+}
+
+.alert {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 600px;
+    padding: 20px 20px;
+    border-radius: 8px;
+
+    margin-top: 40px;
+    margin-right: 40px;
+}
+
+.alert span {
+    margin-left: 12px;
+    margin-right: auto;
+}
+
+.alert .no-link {
+    width: 119px;
+    justify-content: center;
+}
+
+.alert .no-link span {
+    margin: 0;
+}
+
+.alert .no-link svg {
+    margin-right: 12px;
+}
+
+/* Mobile */
+
+.mobile {
+    width: 320px;
+    padding: 12px;
+    align-items: flex-start;
+
+    margin-top: 20px;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.mobile .container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 8px;
+    margin-right: auto;
+}
+
+.mobile span {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.no-link span {
+    margin-bottom: 0;
+}
+
+/* Colors */
+
+.informational {
+    background-color: #D0E4FF;
+}
+
+.informational svg path {
+    fill: #3183F3;
+}
+
+.success {
+    background-color: #D5F0DB;
+}
+
+.success svg path {
+    fill: #51B267;
+}
+
+.error {
+    background-color: #FCEAEA;
+}
+
+.error svg path {
+    fill: #E22929;
+}

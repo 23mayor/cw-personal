@@ -1,0 +1,21 @@
+.time {
+    display: flex;
+    align-items: center;
+}
+
+.time .container {
+    display: flex;
+    flex-direction: column;
+
+    margin-right: 8px;
+}
+
+.time .arrow-down {
+    width: 15px;
+    height: 15px;
+
+    background-image: url("../../images/time-arrow-down.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
