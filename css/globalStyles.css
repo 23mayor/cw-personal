@@ -92,6 +92,10 @@
         color: #140E17;
     }
 
+    li {
+        list-style: none;
+    }
+
     a {
         display: flex;
         align-items: center;
@@ -101,13 +105,8 @@
         font-weight: 700;
         font-size: 16px;
         line-height: 24px;
-        color: #A24DE8;
 
         cursor: pointer;
-    }
-
-    a svg {
-        margin-right: 8px;
     }
 
     h1 {
