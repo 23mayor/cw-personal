@@ -1,0 +1,31 @@
+.logo-full {
+    width: 387px;
+    height: 48px;
+
+    background-image: url("../../images/logo-full.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.logo-mini {
+    width: 48px;
+    height: 48px;
+
+    background-image: url("../../images/logo-mini.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 375px) {
+    .logo-full {
+        width: 194px;
+        height: 24px;
+    }
+
+    .logo-mini {
+        width: 40px;
+        height: 40px;
+    }
+}

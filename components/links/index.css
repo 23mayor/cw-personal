@@ -1,0 +1,53 @@
+.link:hover {
+    color: #903CD6;
+}
+
+.link:active {
+    color: #7B25C1;
+}
+
+.link:hover svg path,
+.link:hover svg rect {
+    fill: #903CD6;
+}
+
+.link:active svg path,
+.link:active svg rect {
+    fill: #7B25C1;
+}
+
+.disabled-link {
+    color: #CECECE;
+}
+
+.disabled-link svg path,
+.disabled-link svg rect {
+    fill: #CECECE;
+}
+
+.link-gray {
+    color: #A2A2A2;
+}
+
+.link-gray svg path,
+.link-gray svg rect {
+    fill: #A2A2A2;
+}
+
+.link-gray:hover {
+    color: #737373;
+}
+
+.link-gray:active {
+    color: #140E17;
+}
+
+.link-gray:hover svg path,
+.link-gray:hover svg rect {
+    fill: #737373;
+}
+
+.link-gray:active svg path,
+.link-gray:active svg rect {
+    fill: #140E17;
+}

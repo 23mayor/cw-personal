@@ -66,25 +66,13 @@
 
 /* Colors */
 
-.informational {
-    background-color: #D0E4FF;
-}
-
 .informational svg path {
     fill: #3183F3;
-}
-
-.success {
-    background-color: #D5F0DB;
 }
 
 .success svg path,
 .success svg rect {
     fill: #51B267;
-}
-
-.error {
-    background-color: #FCEAEA;
 }
 
 .error svg path {

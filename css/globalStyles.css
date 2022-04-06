@@ -93,6 +93,8 @@
     }
 
     a {
+        display: flex;
+        align-items: center;
         transition: all 0.2s ease;
         text-decoration: none;
 
@@ -102,6 +104,10 @@
         color: #A24DE8;
 
         cursor: pointer;
+    }
+
+    a svg {
+        margin-right: 8px;
     }
 
     h1 {
@@ -214,6 +220,12 @@
         .btn-link-text {
             font-weight: 700;
             font-size: 16px;
+            line-height: 20px;
+        }
+
+        a {
+            font-weight: 700;
+            font-size: 14px;
             line-height: 20px;
         }
     }
