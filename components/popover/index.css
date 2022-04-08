@@ -1,0 +1,42 @@
+body {
+    background-color: #737373;
+}
+
+.popover {
+    border-radius: 8px;
+    border: none;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 20px rgba(20, 14, 23, 0.08);
+}
+
+.bs-popover-auto[x-placement^=bottom] .arrow::before, .bs-popover-bottom .arrow::before {
+    border: none;
+    box-shadow: 0px 4px 20px rgba(20, 14, 23, 0.08);
+}
+
+.bs-popover-auto[x-placement^=right] .arrow::before, .bs-popover-right .arrow::before {
+    border: none;
+    box-shadow: 0px 4px 20px rgba(20, 14, 23, 0.08); 
+}
+
+.bs-popover-auto[x-placement^=top] .arrow::before, .bs-popover-top .arrow::before {
+    border: none;
+    box-shadow: 0px 4px 20px rgba(20, 14, 23, 0.08);
+}
+
+.bs-popover-auto[x-placement^=left] .arrow::before, .bs-popover-left .arrow::before {
+    border: none;
+    box-shadow: 0px 4px 20px rgba(20, 14, 23, 0.08); 
+}
+
+.popover-header {
+    display: none;
+}
+
+.popover-body {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #737373;
+}
