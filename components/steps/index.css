@@ -1,0 +1,38 @@
+.div {
+    padding: 30px;
+}
+
+.step-list {
+    display: flex;
+}
+
+.step-item:nth-child(1) {
+    margin-right: 30px;
+}
+
+.step-item {
+    color: #A2A2A2;
+}
+
+.line {
+    width: 100%;
+    height: 4px;
+    background-color: #CECECE;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.active .line {
+    background-color: #A24DE8;
+}
+
+.active {
+    color: #A24DE8;
+}
+
+@media (max-width: 375px) {
+    .line {
+        height: 2px;
+        margin-bottom: 4px;
+    }
+}

@@ -1,11 +1,23 @@
 .navigation {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     max-width: 400px;
+    height: 96vh;
+}
+
+.navigation.hide {
+    max-width: 108px;
 }
 
 .navigation .top {
     padding: 25px 30px;
+}
+
+.hide .top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .logo-full {
@@ -14,7 +26,16 @@
     margin-bottom: 40px;
 }
 
-.show-panel {
+.hide .logo-full {
+    background-image: url("../../images/logo-mini.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 48px;
+    height: 48px;
+}
+
+.show-btn {
     width: 40px;
     height: 40px;
     display: flex;
@@ -26,40 +47,52 @@
     cursor: pointer;
 }
 
-.show-panel:hover {
+.show-btn.hide {
+    transform: rotate(180deg);
+}
+
+.show-btn:hover {
     background-color: #E7D1F9;
 }
 
-.show-panel:hover svg path,
-.show-panel:hover svg rect {
+.show-btn:hover svg path,
+.show-btn:hover svg rect {
     fill: #A24DE8;
 }
 
-.show-panel:active {
+.show-btn:active {
     background-color: #DDBFF7;
 }
 
-.show-panel:active svg path,
-.show-panel:active svg rect {
+.show-btn:active svg path,
+.show-btn:active svg rect {
     fill: #A24DE8;
 }
 
-.show-panel:active {
+.show-btn:active {
     background-color: #DDBFF7;
 }
 
-.show-panel:disabled {
+.show-btn:disabled {
     background-color: #CECECE;
 }
 
-.show-panel:disabled svg path,
-.show-panel:disabled svg rect {
+.show-btn:disabled svg path,
+.show-btn:disabled svg rect {
     fill: #FFFFFF;
 }
 
 .navigation__list {
-    margin-top: 80px;
-    margin-bottom: 452px;
+    margin-top: 30px;
+    margin-bottom: auto;
+}
+
+.hide .navigation__list-item h4 {
+    display: none;
+}
+
+.hide .navigation__list-item {
+    padding: 35px 35px;
 }
 
 .navigation__list-item {
@@ -70,8 +103,8 @@
     padding: 0 40px;
 }
 
-.navigation__list-item svg {
-    margin-right: 29px;
+.navigation__list-item h4 {
+    margin-left: 29px;
 }
 
 .navigation__list-item:hover {
@@ -108,6 +141,10 @@
     fill: #FFFFFF;
 }
 
+.hide .book-a-demo span {
+    display: none;
+}
+
 .book-a-demo {
     display: flex;
     justify-content: center;
@@ -121,8 +158,16 @@
     margin-right: auto;
 }
 
+.hide .book-a-demo {
+    width: 20%;
+}
+
 .book-a-demo span {
     margin-left: 12px;
+}
+
+.hide .user span {
+    display: none;
 }
 
 .user {
