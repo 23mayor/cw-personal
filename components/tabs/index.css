@@ -1,0 +1,24 @@
+.div {
+    padding: 30px;
+}
+
+.tab-list {
+    display: flex;
+}
+
+.tab-item {
+    padding: 12px;
+    color: #140E17;
+    border-bottom: 1px solid #DDDDDD;
+}
+
+.active {
+    border-color: #A24DE8;
+    color: #A24DE8;
+}
+
+@media (max-width: 375px) {
+    .tab-item {
+        padding: 8px;
+    }
+}

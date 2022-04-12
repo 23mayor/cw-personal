@@ -1,0 +1,55 @@
+.div {
+    padding: 100px;
+}
+
+.div .tooltip {
+    margin-bottom: 50px;
+}
+
+.tooltip {
+	position: relative;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+}
+
+.tooltip svg {
+	width: 100%;
+	height: 100%;
+}
+
+.tooltip::after {
+	content: attr(data-text);
+	position: absolute;
+    width: 160px;
+	left: 50%;
+    top: calc(100% + 5px);
+    transform: translateX(-50%);
+    background: #140E17;
+    border-radius: 4px;
+	padding: 8px 12px;
+	color: #FFFFFF;
+	opacity: 0;
+	visibility: hidden;
+}
+
+.tooltip::before {
+	content: "";
+	position: absolute;
+	left: 50%;
+    transform: translateX(-50%);
+    top: 91%;
+	width: 0;
+	height: 0;
+    border-width: 0 5px 8px 5px;
+	border-style: solid;
+	border-color: transparent transparent #140E17 transparent;
+	opacity: 0;
+	visibility: hidden;
+}
+
+.tooltip:hover::after,
+.tooltip:hover::before {
+	opacity: 1;
+	visibility: visible;
+}

@@ -1,0 +1,198 @@
+.div {
+    padding: 30px;
+}
+
+.div .upload-pic {
+    margin-bottom: 50px;
+}
+
+.upload-pic {
+    width: 492px;
+    height: 320px;
+    background: #EEEEEE;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.upload-pic__link {
+    margin-bottom: 16px;
+}
+
+.upload-pic__link span{
+    color: #A24DE8;
+    margin-left: 8px;
+
+}
+
+.upload-pic__requirements {
+    display: flex;
+    color: #A2A2A2;
+}
+
+.upload-pic__requirements .left {
+    padding-right: 16px;
+    border-right: 1px solid #A2A2A2;
+}
+
+.upload-pic__requirements .right {
+    padding-left: 16px;
+}
+
+/* Loaded Pic */
+
+.loaded-pic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.loaded-pic .img {
+    width: 492px;
+    height: 272px;
+
+    background-image: url("../../images/loaded-pic.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+}
+
+.loaded-pic .instruments {
+    display: flex;
+    margin-top: 16px;
+    color: #A24DE8;
+}
+
+.loaded-pic .instruments .left {
+    padding-right: 12px;
+    border-right: 1px solid #A2A2A2;
+}
+
+.loaded-pic .instruments .right {
+    padding-left: 12px;
+}
+
+/* Upload photo */
+
+.upload-photo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.upload-photo .photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EEEEEE;
+    width: 220px;
+    height: 220px;
+    border-radius: 100%;
+    margin-bottom: 24px;
+}
+
+.upload-photo a {
+    color: #A24DE8;
+}
+
+.upload-photo.mini {
+    flex-direction: row;
+}
+
+.upload-photo.mini .photo {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 0;
+    margin-right: 16px;
+}
+
+.upload-photo.mini .requirements {
+    color: #A2A2A2;
+}
+
+.upload-photo.mini div:nth-child(1) {
+    margin-bottom: 8px;
+}
+
+.loaded-photo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loaded-photo.mini {
+    flex-direction: row;
+}
+
+.loaded-photo .photo {
+    width: 220px;
+    height: 220px;
+    border-radius: 100%;
+    margin-bottom: 24px;
+    background-image: url("../../images/john.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.loaded-photo.mini .photo {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 0;
+    margin-right: 16px;
+}
+
+.loaded-photo .instruments {
+    display: flex;
+    color: #A24DE8;
+}
+
+.loaded-photo.mini .instruments {
+    flex-direction: column;
+}
+
+.loaded-photo.mini .instruments div:nth-child(1) {
+    margin-bottom: 16px;
+}
+
+.loaded-photo .instruments .left {
+    padding-right: 12px;
+    border-right: 1px solid #A2A2A2;
+}
+
+.loaded-photo.mini .instruments .left {
+    border-right: none;
+    padding-right: 0;
+}
+
+.loaded-photo .instruments .right {
+    padding-left: 12px;
+}
+
+.loaded-photo.mini .instruments .right {
+    padding-left: 0;
+}
+
+@media (max-width: 375px) {
+    .upload-pic {
+        width: 320px;
+        height: 200px;
+    }
+
+    .loaded-pic .img {
+        width: 320px;
+        height: 200px;
+    }
+
+    .upload-photo .photo,
+    .loaded-photo .photo {
+        width: 160px;
+        height: 160px;
+    }
+}
