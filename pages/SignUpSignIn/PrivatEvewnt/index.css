@@ -1,0 +1,116 @@
+/*Prevent event*/
+
+aside .side-menu .title {
+    margin-bottom: 5px;
+}
+
+aside .side-menu .description {
+    margin-bottom: 22px;
+    font-size: 17px;
+}
+
+aside .side-menu .btn {
+    margin-bottom: 40px;
+}
+
+aside .side-menu .bottom-privat {
+    border-top: 1px solid var(--gray-400);
+}
+
+/*Modal window*/
+
+main .reset-password-modal {
+    padding: 24px 32px;
+}
+
+.modal-wrapper .reset-password-modal .modal-content-wrap {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    margin-bottom: 56px;
+    background-color: var(--gray-300);
+    border-radius: 16px;
+}
+
+.modal-wrapper .reset-password-modal .modal-content-wrap .modal-invite-title {
+    text-align: center;
+    margin: 0 70px 16px 70px;
+}
+
+.modal-wrapper .reset-password-modal .modal-content-wrap .invite-card {
+    display: grid;
+    grid-template-columns: 178px 1fr;
+    gap: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+    background-color: var(--white);
+    border-radius: 8px;
+}
+
+.modal-wrapper .reset-password-modal .modal-content-wrap .invite-card .invite-image {
+    grid-row: 2 span;
+}
+
+.modal-wrapper .reset-password-modal .modal-content-wrap .invite-card .invite-title {
+    margin: 0;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+
+}
+
+.modal-wrapper .reset-password-modal .modal-content-wrap .invite-card .invite-date {
+    padding: 10px;
+    margin-right: 90px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    background-color: var(--gray-100);
+    border-radius: 8px;
+}
+
+.modal-wrapper .reset-password-modal .modal-content-wrap .invite-card .invite-date .time {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0 0 0;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.modal-wrapper .reset-password-modal .modal-content-wrap .invite-card .invite-date .time svg {
+    fill: var(--gray-700);
+}
+
+.modal-wrapper .reset-password-modal .modal-content-wrap .btn {
+    margin: 0;
+}
+
+@media screen and (min-width: 375px) and (max-width: 1079px) {
+
+    /*Private event */
+
+    aside .side-menu .logo-full {
+        margin-bottom: 36px;
+    }
+
+    aside .side-menu .title {
+        margin-bottom: 8px;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 28px;
+    }
+
+    aside .side-menu .description {
+        max-width: 266px;
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    aside .side-menu .bottom-title {
+        font-size: 19px;
+        line-height: 24px;
+        font-weight: 600;
+    }
+}

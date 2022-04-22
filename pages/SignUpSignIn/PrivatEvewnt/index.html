@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="../../../css/globalStyles.css">
+	<link rel="stylesheet" href="../../../components/links/index.css">
+	<link rel="stylesheet" href="../../../components/navigation%20bar/menuLinks.css">
+	<link rel="stylesheet" href="../../../components/checkboxes/index.css">
+	<link rel="stylesheet" href="../../../components/buttons/buttons.css">
+	<link rel="stylesheet" href="../../../components/logos/index.css">
+	<link rel="stylesheet" href="../RecoveryPassword/index.css">
+	<link rel="stylesheet" href="../index.css">
+	<link rel="stylesheet" href="./index.css">
+	<title>Registration</title>
+</head>
+<body>
+<main>
+
+	<!--		Navigation panel-->
+
+	<div class="navigation hide">
+		<div class="top">
+			<div class="logo-full"></div>
+		</div>
+		<div class="line"></div>
+	</div>
+
+	<!--		Main content-->
+
+	<div class="container-content">
+		<div class="content">
+
+		</div>
+	</div>
+
+	<!--		Sidebar-->
+
+	<aside>
+		<div class="side-menu side-form side-active">
+			<div class="logo-full"></div>
+			<h2 class="privat-event title">
+				This is the private event
+			</h2>
+			<p class="privat-event-description description">
+				Please, login with corporate email.
+			</p>
+			<button class="btn primary-btn" type="submit">Login</button>
+			<div class="bottom-privat">
+				<h3 class="bottom-title">
+					Don’t have an account?
+				</h3>
+				<a href="#" class="bottom-link link">
+					Join now
+				</a>
+			</div>
+		</div>
+	</aside>
+
+	<!--	Modal window-->
+
+	<div class="modal-wrapper visible">
+		<div class="reset-password-modal">
+			<span class="modal-link-top">
+				View in the browser
+			</span>
+			<div class="logo-full"></div>
+			<div class="modal-content-wrap">
+				<h3 class="modal-invite-title">
+					Anastasiia Astrovski has invited you to join the event "New Year party"
+				</h3>
+				<div class="invite-card">
+					<img class="invite-image" src="./image/invite-image.jpg" alt="party-image">
+					<h4 class="invite-title">
+						New Year party
+					</h4>
+					<div class="invite-date">
+						<span class="date-month">
+							December 31
+						</span>
+						<div class="time">
+							<div class="container">
+								<span class="regular-text gray-600">00:00 pm</span>
+							</div>
+							<svg width="12" height="8" viewBox="0 0 12 8" fill="#140E17" xmlns="http://www.w3.org/2000/svg">
+								<path d="M0.24 4.624V3.28H9.56L7.256 0.976L8.072 0.144L11.888 3.96L8.072 7.776L7.256 6.944L9.576 4.624H0.24Z"/>
+							</svg>
+							<div class="container">
+								<span class="regular-text gray-600">00:00 am</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<button class="btn primary-btn" type="submit" onclick="closeModal()">Join</button>
+			</div>
+			<p class="modal-reset-bottom-text">
+				Do you have any feedback on this email? <br> Please share it with us in a
+				<a href="#" class="link-feedback link">1-min survey</a>
+			</p>
+			<span class="footer-description">
+				Collective web is a online meta universe to bring teams together, anytime and anywhere.
+			</span>
+			<div class="modal-link-wrapper">
+				<span>
+					Unsubscribe
+				</span>
+				<span>
+					View in the browser
+				</span>
+			</div>
+		</div>
+	</div>
+</main>
+<script>
+
+    const closeModal = () => {
+        const modal = document.querySelector('.modal-wrapper')
+        modal.classList.remove('visible')
+    }
+
+</script>
+</body>
+</html>

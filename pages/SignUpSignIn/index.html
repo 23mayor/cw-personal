@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<!--	<link rel="preconnect" href="https://fonts.googleapis.com">-->
+<!--	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
+<!--	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Noto+Sans+Display:wght@400;500;700&display=swap" rel="stylesheet">-->
+
+	<link rel="stylesheet" href="../../css/globalStyles.css">
+	<link rel="stylesheet" href="../../components/links/index.css">
+	<link rel="stylesheet" href="../../components/logos/index.css">
+	<link rel="stylesheet" href="../../components/navigation%20bar/menuLinks.css">
+	<link rel="stylesheet" href="../../components/checkboxes/index.css">
+	<link rel="stylesheet" href="../../components/buttons/buttons.css">
+	<link rel="stylesheet" href="./index.css">
+	<title>Registration</title>
+</head>
+<body>
+	<main>
+
+<!--		Navigation panel-->
+
+		<div class="navigation hide">
+			<div class="top">
+				<div class="logo-full"></div>
+			</div>
+			<div class="line"></div>
+		</div>
+
+<!--		Main content-->
+
+		<div class="container-content">
+			<div class="content">
+
+			</div>
+		</div>
+
+<!--		Sidebar-->
+
+		<aside>
+			<div class="side-menu side-form side-active">
+				<div class="logo-full"></div>
+				<div class="btn-wrap">
+					<button class="button btn-sign-up button-active" onclick="switchForm()">
+						Sign up
+					</button>
+					<button class="button btn-log-in" onclick="switchForm()">
+						Log in
+					</button>
+				</div>
+
+<!--				Sign up-->
+
+				<form action="" method="get" class="form-sign-up form-active">
+					<!--		Добавление сообщение об ошибке class='field-error'			-->
+					<div class="text-field text-field_floating">
+						<input class="text-field__input" type="text" id="firstNameSign" placeholder=" " required>
+						<label class="text-field__label" for="firstNameSign">FIRST NAME*</label>
+						<label class="text-field__label-error" for="firstNameSign">FIRST NAME ISN’T CORRECT*</label>
+					</div>
+					<div class="text-field text-field_floating">
+						<input class="text-field__input" type="text" id="secondNameSign" placeholder=" " required>
+						<label class="text-field__label" for="secondNameSign">SECOND NAME*</label>
+						<label class="text-field__label-error" for="secondNameSign">SECOND NAME ISN’T CORRECT*</label>
+					</div>
+					<div class="text-field text-field_floating">
+						<input class="text-field__input" type="email" id="email" placeholder=" " required>
+						<label class="text-field__label" for="email">EMAIL*</label>
+						<label class="text-field__label-error" for="email">EMAIL ISN’T CORRECT*</label>
+					</div>
+					<div class="text-field text-field_floating">
+						<input class="text-field__input" type="password" id="passwordSign" placeholder=" " required>
+						<label class="text-field__label" for="passwordSign">PASSWORD*</label>
+						<label class="text-field__label-error" for="passwordSign">PASSWORD ISN’T CORRECT*</label>
+						<div class="icon-password" onclick="switchPasswordType()">
+							<span class="icon-eye-close">
+								<svg width="20" height="20" viewBox="0 0 20 20" fill="#140E17" xmlns="http://www.w3.org/2000/svg">
+								<mask id="mask0_3806_7219" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="5" width="20" height="10">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M3.39771 6.20931C3.14502 5.71822 2.54207 5.52495 2.05098 5.77764C1.5599 6.03033 1.36663 6.63328 1.61932 7.12437C1.76801 7.41333 1.93546 7.69239 2.12021 7.96055L0.994031 9.00127C0.58842 9.3761 0.557268 10.0144 0.92445 10.4269C1.29163 10.8395 1.91811 10.8701 2.32372 10.4952L3.45058 9.45389C3.96221 9.90519 4.53423 10.302 5.15391 10.6357L4.58435 12.0719C4.38075 12.5853 4.62969 13.1719 5.14037 13.3822C5.65106 13.5925 6.2301 13.3468 6.4337 12.8334L7.00289 11.3982C7.65143 11.592 8.33091 11.7244 9.03112 11.7885L9.03475 13.3348C9.03604 13.887 9.4848 14.3337 10.0371 14.3323C10.5894 14.331 11.036 13.8822 11.0347 13.3299L11.0311 11.7836C11.7052 11.7185 12.3598 11.5902 12.9857 11.4046L13.5557 12.8418C13.7593 13.3552 14.3383 13.6009 14.849 13.3906C15.3597 13.1803 15.6086 12.5937 15.405 12.0803L14.8363 10.6463C15.4586 10.3131 16.0332 9.91631 16.5471 9.4647L17.6754 10.5074C18.0811 10.8822 18.7075 10.8517 19.0747 10.4391C19.4419 10.0266 19.4107 9.38828 19.0051 9.01345L17.8804 7.97408C18.0689 7.70178 18.2395 7.41819 18.3906 7.12437C18.6433 6.63328 18.4501 6.03033 17.959 5.77764C17.4679 5.52495 16.8649 5.71822 16.6123 6.20931C15.5444 8.28473 13.0352 9.8328 10.005 9.8328C6.97473 9.8328 4.46561 8.28473 3.39771 6.20931Z"/>
+								</mask>
+								<g mask="url(#mask0_3806_7219)">
+									<rect width="20" height="20" />
+								</g>
+								</svg>
+							</span>
+							<span class="icon-eye-open">
+								<svg width="20" height="20" viewBox="0 0 24 24" fill="#140E17" xmlns="http://www.w3.org/2000/svg">
+								<mask id="mask0_3806_6549" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="1" y="5" width="22" height="14">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M3.75571 12.277C3.66855 12.1778 3.5888 12.0849 3.51679 11.9995C3.5888 11.9141 3.66855 11.8212 3.75571 11.722C4.22627 11.1862 4.90641 10.4729 5.74361 9.76205C6.19274 9.38072 6.6771 9.00856 7.18976 8.66722C6.8934 9.31678 6.72821 10.0382 6.72821 10.7996C6.72821 13.6871 9.10394 15.9992 11.999 15.9992C14.8941 15.9992 17.2698 13.6871 17.2698 10.7996C17.2698 10.0382 17.1046 9.31672 16.8082 8.66714C17.3209 9.00851 17.8053 9.38069 18.2545 9.76205C19.0917 10.4729 19.7718 11.1862 20.2424 11.722C20.3296 11.8212 20.4093 11.9141 20.4813 11.9995C20.4093 12.0849 20.3296 12.1778 20.2424 12.277C19.7718 12.8128 19.0917 13.5261 18.2545 14.237C16.5502 15.684 14.3384 16.999 11.9991 16.999C9.65972 16.999 7.44794 15.684 5.74361 14.237C4.90641 13.5261 4.22627 12.8128 3.75571 12.277ZM22.5688 11.4102C22.569 11.4104 22.5692 11.4107 21.7609 11.9995C22.5692 12.5883 22.569 12.5886 22.5688 12.5888L22.5683 12.5895L22.567 12.5913L22.5632 12.5964L22.5509 12.6131C22.5406 12.627 22.526 12.6465 22.5073 12.6712C22.4699 12.7205 22.4159 12.7906 22.3462 12.8785C22.207 13.0542 22.0044 13.3016 21.7451 13.5968C21.2277 14.1859 20.4783 14.9725 19.549 15.7615C17.7202 17.3143 15.051 18.999 11.9991 18.999C8.94707 18.999 6.27794 17.3143 4.44916 15.7615C3.51982 14.9725 2.77037 14.1859 2.25298 13.5968C1.99369 13.3016 1.79115 13.0542 1.65187 12.8785C1.5822 12.7906 1.52825 12.7205 1.49085 12.6712C1.47214 12.6465 1.45756 12.627 1.44721 12.6131L1.43487 12.5964L1.4311 12.5913L1.42982 12.5895L1.42933 12.5888C1.42912 12.5886 1.42894 12.5883 2.23721 11.9995C1.42894 11.4107 1.42912 11.4104 1.42933 11.4102L1.42982 11.4095L1.4311 11.4077L1.43487 11.4026L1.44721 11.3859C1.45756 11.372 1.47214 11.3525 1.49085 11.3278C1.52825 11.2785 1.5822 11.2084 1.65187 11.1205C1.79115 10.9448 1.99369 10.6974 2.25298 10.4022C2.77037 9.81308 3.51982 9.0265 4.44916 8.23745C6.27794 6.68475 8.94707 5 11.9991 5C15.051 5 17.7202 6.68475 19.549 8.23745C20.4783 9.0265 21.2277 9.81308 21.7451 10.4022C22.0044 10.6974 22.207 10.9448 22.3462 11.1205C22.4159 11.2084 22.4699 11.2785 22.5073 11.3278C22.526 11.3525 22.5406 11.372 22.5509 11.3859L22.5632 11.4026L22.567 11.4077L22.5683 11.4095L22.5688 11.4102ZM21.7609 11.9995L22.5692 11.4107L22.9981 11.9995L22.5692 12.5883L21.7609 11.9995ZM1.42894 11.4107L2.23721 11.9995L1.42894 12.5883L1 11.9995L1.42894 11.4107ZM8.72821 10.7996C8.72821 9.04825 10.1767 7.59995 11.999 7.59995C13.8213 7.59995 15.2698 9.04825 15.2698 10.7996C15.2698 12.5509 13.8213 13.9992 11.999 13.9992C10.1767 13.9992 8.72821 12.5509 8.72821 10.7996Z"/>
+								</mask>
+								<g mask="url(#mask0_3806_6549)">
+								<rect width="24" height="24"/>
+								</g>
+								</svg>
+							</span>
+						</div>
+						<span class="password-description">
+							Use 8 or more characters with a mix of letters, numbers & symbols.
+						</span>
+					</div>
+					<div class="form-bottom">
+						<div class="div">
+							<input type="checkbox" class="custom-checkbox" id="checkboxSign" name="checkbox" value="yes">
+							<label for="checkboxSign">I agree with the Terms of Use</label>
+						</div>
+						<button class="btn primary-btn" type="submit" onclick="backToRegistr()">Join now</button>
+					</div>
+				</form>
+
+<!--				Log in-->
+
+				<form action="" method="get" class="form-log-in">
+
+					<!--		Активировать сообщение о шибки авторизации добавить class='error-active'			-->
+					<div class="error-message">
+						<span class="error-icon">
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="#E22929" xmlns="http://www.w3.org/2000/svg">
+							<mask id="mask0_3847_7573" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M18 10C18 14.4183 14.4183 18 10 18C5.58172 18 2 14.4183 2 10C2 5.58172 5.58172 2 10 2C14.4183 2 18 5.58172 18 10ZM20 10C20 15.5228 15.5228 20 10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10ZM9.3891 13.5746C9.3891 13.9016 9.65418 14.1667 9.98118 14.1667H10.0162C10.3432 14.1667 10.6083 13.9016 10.6083 13.5746C10.6083 13.2476 10.3432 12.9825 10.0162 12.9825H9.98118C9.65418 12.9825 9.3891 13.2476 9.3891 13.5746ZM9.3891 11.4571C9.3891 11.7937 9.66201 12.0667 9.99868 12.0667C10.3353 12.0667 10.6083 11.7937 10.6083 11.4571V6.37625C10.6083 6.03959 10.3353 5.76667 9.99868 5.76667C9.66201 5.76667 9.3891 6.03959 9.3891 6.37625V11.4571Z"/>
+							</mask>
+							<g mask="url(#mask0_3847_7573)">
+							<rect width="20" height="20"/>
+							</g>
+							</svg>
+						</span>
+						<span class="error-description">
+							You’ve entered your login and password not correctly.
+						</span>
+					</div>
+
+					<!--		Добавление сообщение об ошибке class='field-error'			-->
+					<div class="text-field text-field_floating">
+						<input class="text-field__input" type="email" id="emailLogIn" placeholder=" " required>
+						<label class="text-field__label" for="emailLogIn">EMAIL</label>
+						<label class="text-field__label-error" for="emailLogIn">EMAIL ISN’T CORRECT*</label>
+					</div>
+					<div class="text-field text-field_floating">
+						<input class="text-field__input" type="password" id="passwordLogIn" placeholder=" " required>
+						<label class="text-field__label" for="passwordLogIn">PASSWORD*</label>
+						<label class="text-field__label-error" for="passwordLogIn">PASSWORD ISN’T CORRECT*</label>
+						<div class="icon-password" onclick="switchPasswordTypeLog()">
+							<span class="icon-eye-close">
+								<svg width="20" height="20" viewBox="0 0 20 20" fill="#140E17" xmlns="http://www.w3.org/2000/svg">
+								<mask id="mask0_3806_7219" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="5" width="20" height="10">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M3.39771 6.20931C3.14502 5.71822 2.54207 5.52495 2.05098 5.77764C1.5599 6.03033 1.36663 6.63328 1.61932 7.12437C1.76801 7.41333 1.93546 7.69239 2.12021 7.96055L0.994031 9.00127C0.58842 9.3761 0.557268 10.0144 0.92445 10.4269C1.29163 10.8395 1.91811 10.8701 2.32372 10.4952L3.45058 9.45389C3.96221 9.90519 4.53423 10.302 5.15391 10.6357L4.58435 12.0719C4.38075 12.5853 4.62969 13.1719 5.14037 13.3822C5.65106 13.5925 6.2301 13.3468 6.4337 12.8334L7.00289 11.3982C7.65143 11.592 8.33091 11.7244 9.03112 11.7885L9.03475 13.3348C9.03604 13.887 9.4848 14.3337 10.0371 14.3323C10.5894 14.331 11.036 13.8822 11.0347 13.3299L11.0311 11.7836C11.7052 11.7185 12.3598 11.5902 12.9857 11.4046L13.5557 12.8418C13.7593 13.3552 14.3383 13.6009 14.849 13.3906C15.3597 13.1803 15.6086 12.5937 15.405 12.0803L14.8363 10.6463C15.4586 10.3131 16.0332 9.91631 16.5471 9.4647L17.6754 10.5074C18.0811 10.8822 18.7075 10.8517 19.0747 10.4391C19.4419 10.0266 19.4107 9.38828 19.0051 9.01345L17.8804 7.97408C18.0689 7.70178 18.2395 7.41819 18.3906 7.12437C18.6433 6.63328 18.4501 6.03033 17.959 5.77764C17.4679 5.52495 16.8649 5.71822 16.6123 6.20931C15.5444 8.28473 13.0352 9.8328 10.005 9.8328C6.97473 9.8328 4.46561 8.28473 3.39771 6.20931Z"/>
+								</mask>
+								<g mask="url(#mask0_3806_7219)">
+									<rect width="20" height="20" />
+								</g>
+								</svg>
+							</span>
+							<span class="icon-eye-open">
+								<svg width="24" height="24" viewBox="0 0 20 20" fill="#140E17" xmlns="http://www.w3.org/2000/svg">
+								<mask id="mask0_3806_6549" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="1" y="5" width="22" height="14">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M3.75571 12.277C3.66855 12.1778 3.5888 12.0849 3.51679 11.9995C3.5888 11.9141 3.66855 11.8212 3.75571 11.722C4.22627 11.1862 4.90641 10.4729 5.74361 9.76205C6.19274 9.38072 6.6771 9.00856 7.18976 8.66722C6.8934 9.31678 6.72821 10.0382 6.72821 10.7996C6.72821 13.6871 9.10394 15.9992 11.999 15.9992C14.8941 15.9992 17.2698 13.6871 17.2698 10.7996C17.2698 10.0382 17.1046 9.31672 16.8082 8.66714C17.3209 9.00851 17.8053 9.38069 18.2545 9.76205C19.0917 10.4729 19.7718 11.1862 20.2424 11.722C20.3296 11.8212 20.4093 11.9141 20.4813 11.9995C20.4093 12.0849 20.3296 12.1778 20.2424 12.277C19.7718 12.8128 19.0917 13.5261 18.2545 14.237C16.5502 15.684 14.3384 16.999 11.9991 16.999C9.65972 16.999 7.44794 15.684 5.74361 14.237C4.90641 13.5261 4.22627 12.8128 3.75571 12.277ZM22.5688 11.4102C22.569 11.4104 22.5692 11.4107 21.7609 11.9995C22.5692 12.5883 22.569 12.5886 22.5688 12.5888L22.5683 12.5895L22.567 12.5913L22.5632 12.5964L22.5509 12.6131C22.5406 12.627 22.526 12.6465 22.5073 12.6712C22.4699 12.7205 22.4159 12.7906 22.3462 12.8785C22.207 13.0542 22.0044 13.3016 21.7451 13.5968C21.2277 14.1859 20.4783 14.9725 19.549 15.7615C17.7202 17.3143 15.051 18.999 11.9991 18.999C8.94707 18.999 6.27794 17.3143 4.44916 15.7615C3.51982 14.9725 2.77037 14.1859 2.25298 13.5968C1.99369 13.3016 1.79115 13.0542 1.65187 12.8785C1.5822 12.7906 1.52825 12.7205 1.49085 12.6712C1.47214 12.6465 1.45756 12.627 1.44721 12.6131L1.43487 12.5964L1.4311 12.5913L1.42982 12.5895L1.42933 12.5888C1.42912 12.5886 1.42894 12.5883 2.23721 11.9995C1.42894 11.4107 1.42912 11.4104 1.42933 11.4102L1.42982 11.4095L1.4311 11.4077L1.43487 11.4026L1.44721 11.3859C1.45756 11.372 1.47214 11.3525 1.49085 11.3278C1.52825 11.2785 1.5822 11.2084 1.65187 11.1205C1.79115 10.9448 1.99369 10.6974 2.25298 10.4022C2.77037 9.81308 3.51982 9.0265 4.44916 8.23745C6.27794 6.68475 8.94707 5 11.9991 5C15.051 5 17.7202 6.68475 19.549 8.23745C20.4783 9.0265 21.2277 9.81308 21.7451 10.4022C22.0044 10.6974 22.207 10.9448 22.3462 11.1205C22.4159 11.2084 22.4699 11.2785 22.5073 11.3278C22.526 11.3525 22.5406 11.372 22.5509 11.3859L22.5632 11.4026L22.567 11.4077L22.5683 11.4095L22.5688 11.4102ZM21.7609 11.9995L22.5692 11.4107L22.9981 11.9995L22.5692 12.5883L21.7609 11.9995ZM1.42894 11.4107L2.23721 11.9995L1.42894 12.5883L1 11.9995L1.42894 11.4107ZM8.72821 10.7996C8.72821 9.04825 10.1767 7.59995 11.999 7.59995C13.8213 7.59995 15.2698 9.04825 15.2698 10.7996C15.2698 12.5509 13.8213 13.9992 11.999 13.9992C10.1767 13.9992 8.72821 12.5509 8.72821 10.7996Z"/>
+								</mask>
+								<g mask="url(#mask0_3806_6549)">
+								<rect width="24" height="24"/>
+								</g>
+								</svg>
+							</span>
+						</div>
+					</div>
+					<a href="#" class="link-forgot-password link">
+						I forgot my password
+					</a>
+					<button class="btn primary-btn" type="submit">Continue</button>
+				</form>
+
+<!--				Google auth-->
+
+				<span class="google-title">Or sign up with</span>
+				<div class="google-link-wrap">
+					<a href="#" class="google-link" onclick="openModal()">
+						<svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<mask id="mask0_256_1228" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="5" y="5" width="31" height="30">
+								<path d="M5.5 20C5.5 22.5723 6.14699 24.9929 7.28764 27.1085C9.82117 31.8072 14.7881 35 20.5004 35C24.0551 35 27.3205 33.7637 29.891 31.6975C32.5341 29.5728 34.4421 26.5703 35.1723 23.1318C35.3874 22.1214 35.5003 21.0738 35.5003 19.9999C35.5003 19.0422 35.4105 18.1051 35.2382 17.1978H20.8301V23.1318H28.851C28.129 25.0588 26.7584 26.6684 25.0045 27.6969C23.6834 28.4725 22.1438 28.9168 20.5004 28.9168C16.6771 28.9168 13.4154 26.5102 12.1486 23.1294C11.7827 22.1561 11.5833 21.1011 11.5831 20C11.5831 18.9855 11.7529 18.0105 12.0645 17.1022C13.2678 13.6003 16.5897 11.0832 20.4996 11.0832C22.2311 11.0832 23.8474 11.5769 25.2147 12.4316L30.074 8.45328C27.4762 6.29645 24.1391 5 20.4996 5C14.7023 5 9.67363 8.2885 7.17719 13.1017C6.10492 15.1671 5.5 17.5127 5.5 20Z" fill="#A24DE8"/>
+							</mask>
+							<g mask="url(#mask0_256_1228)">
+								<rect x="0.5" width="40" height="40" fill="#A24DE8"/>
+							</g>
+						</svg>
+						Sign up with Google
+					</a>
+					<div class="icon">
+						<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<mask id="mask0_256_1232" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="1" y="8" width="38" height="25">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M11.6375 8.34761C10.6877 8.43925 9.81961 8.68874 8.97685 9.11224C5.62334 10.7975 2.93849 15.1336 2.00821 20.3669C1.83945 21.3162 1.74565 22.1293 1.68766 23.145C1.64719 23.8542 1.66897 25.2771 1.72849 25.8097C1.97576 28.0225 2.66831 29.7052 3.8252 30.9041C4.49942 31.6028 5.25065 32.0781 6.15355 32.3772C6.8568 32.6102 7.49128 32.7066 8.32157 32.7065C9.91396 32.7063 11.0794 32.3014 12.3121 31.3201C12.8878 30.8618 13.7671 29.9219 14.4147 29.0727C15.5628 27.5669 16.3068 26.362 18.6925 22.145L20.0056 19.8238L20.2909 20.2941C20.6611 20.9044 21.9813 23.1083 22.7818 24.4524C24.7827 27.8121 25.944 29.4511 27.1935 30.6788C28.437 31.9006 29.5932 32.486 31.1177 32.6655C31.5257 32.7136 32.3654 32.7198 32.7529 32.6777C33.8075 32.563 34.752 32.2025 35.5314 31.6172C35.7943 31.4198 36.284 30.9447 36.5007 30.6767C37.3903 29.5768 37.9887 27.9996 38.217 26.1525C38.3901 24.7521 38.3698 22.9885 38.1612 21.2991C37.558 16.4131 35.4258 12.1505 32.4745 9.93048C30.704 8.59864 28.6838 8.07358 26.7961 8.45461C24.8139 8.85469 22.8871 10.334 20.8336 13.0321C20.6844 13.2281 20.5473 13.4051 20.529 13.4253C20.502 13.4552 20.4385 13.3913 20.1914 13.0857C17.5026 9.75886 15.0772 8.30942 12.2405 8.33396C11.9616 8.33637 11.6902 8.34251 11.6375 8.34761ZM28.5731 11.5507C29.5317 11.7643 30.4024 12.2892 31.2476 13.163C31.8193 13.7539 32.2732 14.3758 32.7131 15.1708C33.8798 17.2796 34.5578 19.771 34.7985 22.8347C34.8519 23.5137 34.8439 25.2105 34.7852 25.6452C34.5462 27.4174 33.8874 28.3972 32.7443 28.6811C32.4207 28.7614 31.8121 28.7669 31.4916 28.6924C30.6425 28.4949 30.0448 27.9946 29.0307 26.6323C28.2944 25.6432 26.7229 23.1688 24.9556 20.2161C23.6122 17.9716 23.16 17.2427 22.483 16.2311L22.2934 15.9479L22.6073 15.4771C24.2065 13.0785 25.5829 11.8483 27.0132 11.5394C27.2368 11.4911 27.3449 11.4851 27.8195 11.4943C28.1965 11.5015 28.4318 11.5192 28.5731 11.5507ZM12.761 12.3634C13.8351 12.5125 14.7502 13.0344 15.8317 14.1145C16.4721 14.7542 17.0869 15.4969 17.8201 16.5169L18.1292 16.9468L18.0389 17.087C17.9893 17.1642 17.6365 17.7085 17.255 18.2967C16.3241 19.732 15.4992 21.0168 14.5967 22.4371C13.6242 23.9674 13.3696 24.3566 12.8209 25.1516C11.255 27.4206 10.3272 28.3448 9.32672 28.6324C8.56497 28.8513 7.78141 28.7706 7.16624 28.4099C6.93783 28.2759 6.56237 27.9079 6.39052 27.6494C6.01245 27.0809 5.76677 26.3103 5.65971 25.3573C5.61534 24.9624 5.61553 23.6544 5.66006 23.0951C5.96696 19.2395 7.29619 15.7288 9.18312 13.79C10.059 12.8901 10.8714 12.4443 11.8567 12.323C11.993 12.3062 12.5182 12.3297 12.761 12.3634Z" fill="#A24DE8"/>
+							</mask>
+							<g mask="url(#mask0_256_1232)">
+								<rect width="40" height="40" fill="#A24DE8"/>
+							</g>
+						</svg>
+					</div>
+				</div>
+			</div>
+
+<!--			Verify-email-->
+
+			<div class="side-menu verify-menu">
+				<div class="logo-full"></div>
+				<h2 class="verify-title">
+					Verify your email
+				</h2>
+				<p class="verify-description">
+					We created a personal account for you. Please confirm email address and use our service to the maximum.
+				</p>
+
+<!--				put in the button title email-->
+
+				<button class="verify-btn btn-with-email">
+					alexthompson@gmail.com
+				</button>
+
+				<div class="resend-message">
+					<h3 class="resend-title">
+						No email in your inbox or spam folder?
+					</h3>
+					<a href="#" class="resend-link link">
+						Resend it
+					</a>
+				</div>
+				<div class="wrong-email">
+					<h3 class="wrong-title">
+						Wrong address?
+					</h3>
+					<a href="#" class="log-out-link link" onclick="backToRegistr()">
+						Log out
+					</a>
+				</div>
+			</div>
+		</aside>
+
+<!--		Modal window-->
+
+		<div class="container-modal">
+			<div class="modal-window">
+				<div class="modal-header">
+					<h2 class="modal-title">
+						Review the Terms
+						to sign up
+					</h2>
+					<button class="modal-close" onclick="closeModal()">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="#A24DE8" xmlns="http://www.w3.org/2000/svg">
+							<mask id="mask0_3806_9856" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="4" y="4" width="16" height="16">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M19.7071 4.29289C20.0976 4.68342 20.0976 5.31658 19.7071 5.70711L13.4142 12L19.7071 18.2929C20.0976 18.6834 20.0976 19.3166 19.7071 19.7071C19.3166 20.0976 18.6834 20.0976 18.2929 19.7071L12 13.4142L5.70711 19.7071C5.31658 20.0976 4.68342 20.0976 4.29289 19.7071C3.90237 19.3166 3.90237 18.6834 4.29289 18.2929L10.5858 12L4.29289 5.70711C3.90237 5.31658 3.90237 4.68342 4.29289 4.29289C4.68342 3.90237 5.31658 3.90237 5.70711 4.29289L12 10.5858L18.2929 4.29289C18.6834 3.90237 19.3166 3.90237 19.7071 4.29289Z"/>
+							</mask>
+							<g mask="url(#mask0_3806_9856)">
+								<rect width="24" height="24"/>
+							</g>
+						</svg>
+					</button>
+				</div>
+				<div class="div">
+					<input type="checkbox" class="custom-checkbox" id="checkboxModal" name="checkbox" value="yes">
+					<label for="checkboxModal">I agree with the Terms of Use</label>
+				</div>
+				<button class="btn primary-btn" type="submit">Continue to Sign up</button>
+			</div>
+		</div>
+	</main>
+
+	<script>
+		const switchPasswordType = () => {
+			const eye = document.querySelector('.icon-password');
+            const inputPass = document.getElementById('passwordSign')
+			eye.classList.toggle('eye-open');
+            if (inputPass.type === 'password') {
+                inputPass.type = 'text';
+            } else {
+                inputPass.type = 'password'
+            }
+		}
+
+        const switchPasswordTypeLog = () => {
+            const eye = document.querySelector('.icon-password');
+            const inputPass = document.getElementById('passwordLogIn')
+            eye.classList.toggle('eye-open');
+            if (inputPass.type === 'password') {
+                inputPass.type = 'text';
+            } else {
+                inputPass.type = 'password'
+            }
+        }
+
+        const openModal = () => {
+            const modal = document.querySelector('.container-modal');
+            modal.classList.add('modal-active');
+        }
+
+        const closeModal = () => {
+            const modal = document.querySelector('.container-modal');
+            modal.classList.remove('modal-active');
+        }
+
+        const backToRegistr = () => {
+            const verifyMenu = document.querySelector('.verify-menu');
+            const sideForm = document.querySelector('.side-menu');
+            verifyMenu.classList.toggle('side-active');
+            sideForm.classList.toggle('side-active')
+        }
+
+        const switchForm = () => {
+            const formSignUp = document.querySelector('.form-sign-up')
+	        const formLogIn = document.querySelector('.form-log-in')
+	        const buttonSignUp = document.querySelector('.btn-sign-up')
+	        const buttonLogIn = document.querySelector('.btn-log-in')
+
+            formSignUp.classList.toggle('form-active')
+            formLogIn.classList.toggle('form-active')
+            buttonSignUp.classList.toggle('button-active')
+            buttonLogIn.classList.toggle('button-active')
+
+        }
+	</script>
+
+</body>
+</html>

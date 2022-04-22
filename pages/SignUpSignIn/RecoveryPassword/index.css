@@ -1,0 +1,284 @@
+
+/*Recovery screen*/
+
+aside .side-menu .recover-wrap {
+    display: none;
+    flex-direction: column;
+}
+
+aside .side-menu .recover-wrap.visible {
+    display: flex;
+}
+
+aside .side-menu .title {
+    margin: 0 0 14px 0;
+    font-weight: 500;
+    font-size: 37px;
+    line-height: 50px;
+}
+
+aside .side-menu .description {
+    max-width: 380px;
+    margin: 0 0 14px 0;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 24px;
+    color: var(--gray-600);
+}
+
+aside .side-menu .container-recovery .text-field {
+    margin-bottom: 16px;
+}
+
+aside .side-menu .container-recovery .btn {
+    margin-bottom: 40px;
+}
+
+aside .side-menu .container-recovery .bottom-recovery {
+    border-top: 1px solid var(--gray-400);
+}
+
+aside .side-menu .bottom-title {
+    margin: 0 0 16px 0;
+    padding-top: 17px;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 28px;
+}
+
+aside .side-menu .bottom-link {
+    font-size: 15px;
+    line-height: 24px;
+}
+
+/*Reset password*/
+
+aside .side-menu .reset-password-btn {
+    margin-bottom: 16px;
+    font-size: 16px;
+}
+
+aside .side-menu .container-reset .container-resend-folder {
+    border-top: 1px solid var(--gray-400);
+}
+
+/*Modal reset password*/
+
+.modal-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--gray-300);
+    font-family: 'Roboto', sans-serif;
+}
+
+.modal-wrapper.visible {
+    display: flex;
+}
+
+.reset-password-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+    padding: 40px 48px;
+    background-color: var(--white);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 114%;
+}
+
+.reset-password-modal .modal-link-top {
+    margin-bottom: 16px;
+    font-size: 12px;
+    line-height: 14px;
+    color: #777777;
+    text-decoration: underline;
+}
+
+.reset-password-modal .logo-full {
+    width: 258px;
+    height: 32px;
+    margin-bottom: 56px;
+}
+
+.reset-password-modal .modal-reset-title {
+    align-self: flex-start;
+    margin: 0 0 20px 0;
+    font-weight: 700;
+}
+
+.reset-password-modal .modal-text {
+    align-self: flex-start;
+    margin-bottom: 12px;
+}
+
+.reset-password-modal .second-text {
+    margin-bottom: 32px;
+}
+
+.reset-password-modal .link-for-reset {
+    margin-bottom: 20px;
+    line-height: 114%;
+    font-weight: 400;
+}
+
+.reset-password-modal .btn {
+    align-self: normal;
+    margin: 0 0 60px 0;
+}
+
+.reset-password-modal .modal-reset-bottom-text {
+    text-align: center;
+    margin: 0 0 40px 0;
+}
+
+.reset-password-modal .link-feedback {
+    display: inline;
+    font-weight: 400;
+}
+
+.reset-password-modal .footer-description {
+    margin-bottom: 18px;
+    font-size: 11px;
+    line-height: 13px;
+}
+
+.reset-password-modal .modal-link-wrapper {
+    font-size: 13px;
+    line-height: 15px;
+    text-decoration: underline;
+}
+
+.reset-password-modal .modal-link-wrapper span:first-child {
+    margin-right: 8px;
+}
+
+/*Password reset form*/
+
+.container-reset-form .email-wrap {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--gray-600);
+}
+
+.container-reset-form .email-wrap a {
+    margin-left: 6px;
+}
+
+.container-reset-form .password-description {
+    max-width: 360px;
+    margin: 4px 0 0 15px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--gray-600);
+}
+
+.side-menu .container-reset-form .text-field {
+    margin-bottom: 16px;
+}
+
+/*Change-password-screen*/
+
+.side-menu .container-change-pass .change-password-title {
+    margin-bottom: 8px;
+}
+
+.side-menu .container-change-pass .change-password-description {
+    margin-bottom: 37px;
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1919px){
+
+    /*Change-password-screen*/
+
+    .side-menu .container-change-pass .change-password-title {
+        margin-bottom: 5px;
+    }
+
+    .side-menu .container-change-pass .change-password-description {
+        margin-bottom: 38px;
+    }
+}
+
+@media screen and (min-width: 1080px) and (max-width: 1279px) {
+
+    /*Recovery screen*/
+
+    aside .side-menu .description {
+        max-width: 260px;
+    }
+}
+
+@media screen and (min-width: 375px) and (max-width: 1079px) {
+
+    aside .logo-full {
+        margin-bottom: 37px;
+    }
+
+    aside .side-menu .title {
+        margin-bottom: 6px;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 28px;
+    }
+
+    aside .side-menu .description {
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    aside .side-menu .bottom-title {
+        padding-top: 20px;
+        margin-bottom: 13px;
+        font-weight: 600;
+        font-size: 19px;
+        line-height: 24px;
+    }
+
+    aside .side-menu .bottom-link {
+        font-size: 13px;
+    }
+
+    /*Reset password*/
+
+    aside .side-menu .reset-password-btn {
+        margin-bottom: 41px;
+    }
+
+    .container-reset-form .email-wrap {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .container-reset-form .email-wrap a {
+        margin-left: 4px;
+    }
+
+
+    .container-reset-form .password-description {
+        margin: 4px 20px 0 9px;
+        font-size: 11px;
+        line-height: 16px;
+    }
+
+    .btn {
+        font-size: 13px;
+        margin-top: 8px;
+    }
+
+    .side-menu .container-change-pass .change-password-description {
+        margin-bottom: 13px;
+    }
+}
+

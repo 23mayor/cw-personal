@@ -1,5 +1,121 @@
     /* colors  */
 
+    :root {
+        --white:  #FFFFFF;
+        --gray-100: #F3F3F3;
+        --gray-200: #EEEEEE;
+        --gray-300: #E6E6E6;
+        --gray-400: #DDDDDD;
+        --gray-500: #CECECE;
+        --gray-600: #A1A1A1;
+        --gray-700: #737373;
+        --dark: #140E17;
+        --red-100:#FCEAEA;
+        --red-300: #E22929;
+        --purple-100: #F0E2FB;
+        --purple-200: #E7D1F9;
+        --purple-300: #DDBFF7;
+        --purple-400: #A24DE8;
+    }
+
+
+    @font-face {
+        font-family: 'Manrope';
+        src: url('../fonts/bold-webfont.woff2') format('woff2'),
+        url('../fonts/bold-webfont.woff') format('woff');
+        font-weight: 700;
+        font-style: normal;
+
+    }
+
+    @font-face {
+        font-family: 'Manrope';
+        src: url('../fonts/light-webfont.woff2') format('woff2'),
+        url('../fonts/light-webfont.woff') format('woff');
+        font-weight: 300;
+        font-style: normal;
+
+    }
+
+    @font-face {
+        font-family: 'Manrope';
+        src: url('../fonts/medium-webfont.woff2') format('woff2'),
+        url('../fonts/medium-webfont.woff') format('woff');
+        font-weight: 500;
+        font-style: normal;
+
+    }
+
+    @font-face {
+        font-family: 'Manrope';
+        src: url('../fonts/regular-webfont.woff2') format('woff2'),
+        url('../fonts/regular-webfont.woff') format('woff');
+        font-weight: 400;
+        font-style: normal;
+
+    }
+
+    @font-face {
+        font-family: 'Manrope';
+        src: url('../fonts/semibold-webfont.woff2') format('woff2'),
+        url('../fonts/semibold-webfont.woff') format('woff');
+        font-weight: 600;
+        font-style: normal;
+
+    }
+
+    @font-face {
+        font-family: 'Manrope';
+        src: url('../fonts/thin-webfont.woff2') format('woff2'),
+        url('../fonts/thin-webfont.woff') format('woff');
+        font-weight: 100;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Roboto';
+        src: url('../fonts/roboto-bold-webfont.woff2') format('woff2'),
+        url('../fonts/roboto-bold-webfont.woff') format('woff');
+        font-weight: 700;
+        font-style: normal;
+    }
+
+
+
+
+    @font-face {
+        font-family: 'Roboto';
+        src: url('../fonts/roboto-light-webfont.woff2') format('woff2'),
+        url('../fonts/roboto-light-webfont.woff') format('woff');
+        font-weight: 300;
+        font-style: normal;
+
+    }
+
+
+
+
+    @font-face {
+        font-family: 'Roboto';
+        src: url('../fonts/roboto-medium-webfont.woff2') format('woff2'),
+        url('../fonts/roboto-medium-webfont.woff') format('woff');
+        font-weight: 500;
+        font-style: normal;
+
+    }
+
+
+
+
+    @font-face {
+        font-family: 'Roboto';
+        src: url('../fonts/roboto-regular-webfont.woff2') format('woff2'),
+        url('../fonts/roboto-regular-webfont.woff') format('woff');
+        font-weight: 400;
+        font-style: normal;
+    }
+
+
     .white {
         color: #FFFFFF;
     }
@@ -80,8 +196,10 @@
         color: #3183F3;
     }
 
-    @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&display=swap');
-        
+
+
+    /*@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&display=swap');*/
+
     html,
     body {
         margin: 0;
@@ -90,6 +208,10 @@
         font-family: "Manrope", sans-serif;
         font-style: normal;
         color: #140E17;
+    }
+
+    * {
+        box-sizing: border-box;
     }
 
     li {
@@ -120,13 +242,13 @@
         font-size: 40px;
         line-height: 48px;
     }
-    
+
     h3 {
         font-weight: 600;
         font-size: 28px;
         line-height: 32px;
     }
-    
+
     h4 {
         font-weight: 600;
         font-size: 24px;
@@ -138,8 +260,8 @@
         font-size: 16px;
         line-height: 20px;
     }
-     
-    .regular-text { 
+
+    .regular-text {
         font-weight: 600;
         font-size: 16px;
         line-height: 24px;
@@ -171,37 +293,37 @@
             font-size: 32px;
             line-height: 36px;
         }
-    
+
         h2 {
             font-weight: 600;
             font-size: 24px;
             line-height: 28px;
         }
-        
+
         h3 {
             font-weight: 600;
             font-size: 20px;
             line-height: 24px;
         }
-        
+
         h4 {
             font-weight: 600;
             font-size: 18px;
             line-height: 24px;
         }
-    
+
         .semibold-text {
             font-weight: 600;
             font-size: 16px;
             line-height: 20px;
         }
-         
-        .regular-text { 
+
+        .regular-text {
             font-weight: 600;
             font-size: 14px;
             line-height: 20px;
         }
-    
+
         .small-bold-text {
             font-weight: 700;
             font-size: 12px;
@@ -209,13 +331,13 @@
             letter-spacing: 0.05em;
             text-transform: uppercase;
         }
-    
+
         .small-semibold-text {
             font-weight: 600;
             font-size: 12px;
             line-height: 16px;
         }
-    
+
         .btn-link-text {
             font-weight: 700;
             font-size: 16px;
