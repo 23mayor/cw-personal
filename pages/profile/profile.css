@@ -3,6 +3,10 @@
     display: flex;
 }
 
+.wrapper .navigation-mobile {
+    display: none;
+}
+
 .wrapper .settings {
     width: 25%;
     height: 100%;
@@ -58,6 +62,10 @@
     justify-content: space-between;
     padding-bottom: 48px;
     border-bottom: 1px solid #DDDDDD;
+}
+
+.wrapper .container .content .left-side .top .loaded-photo.mini {
+    display: none;
 }
 
 .wrapper .container .content .left-side .top .input-form,
@@ -135,7 +143,6 @@
 
 .wrapper .container .content .right-side {
     width: 30%;
-    max-width: 30%;
     margin-left: auto;
     margin-right: 0;
     display: flex;
@@ -143,12 +150,190 @@
     justify-content: flex-end;
 }
 
-/* .wrapper .container .content .right-side .loaded-photo {
-    align-items: flex-end;
-} */
-
 .wrapper .container .btn {
     padding: 16px 0;
     margin-top: 40px;
     width: 100%;
+}
+
+@media (max-width: 1285px) {
+
+    .wrapper .container .content .left-side {
+        width: 57%;
+    }
+
+    .wrapper .container .content .right-side {
+        width: 40%;
+    }
+
+    .wrapper .container .content .left-side .top,
+    .wrapper .container .content .left-side .bottom {
+        flex-direction: column;
+    }
+
+    .wrapper .container .content .left-side .top h3,
+    .wrapper .container .content .left-side .bottom h3 {
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 1085px) {
+
+    .wrapper .container .content .left-side {
+        width: 72%;
+    }
+
+    .wrapper .container .content .right-side {
+        width: 20%;
+    }
+
+    .wrapper .container .content .right-side .loaded-photo .photo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .wrapper .container .content .right-side .loaded-photo .instruments {
+        flex-direction: column;
+    }
+
+    .wrapper .container .content .right-side .loaded-photo .instruments .left {
+        padding-right: 0;
+        border-right: none;
+        margin-bottom: 16px;
+    }
+
+    .wrapper .container .content .right-side .loaded-photo .instruments .right {
+        padding-left: 0;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .wrapper .navigation {
+        display: none;
+    }
+
+    .wrapper .navigation-mobile {
+        display: block;
+    }
+
+    .wrapper .settings {
+        width: 100%;
+        height: fit-content;
+        padding: 24px 15px 0 15px;
+    }
+
+    .wrapper .settings .settings-header {
+        padding: 0;
+    }
+
+    .wrapper .settings .settings-list {
+        display: flex;
+        margin-top: 22px;
+    }
+
+    .wrapper .settings .settings-item {
+        margin-bottom: 0;
+        padding: 6px;
+        border-right: none;
+    }
+
+    .wrapper .settings .settings-item:hover,
+    .wrapper .settings .settings-item.active {
+        border-right: none;
+        border-bottom: 1px solid #A24DE8;
+        color: #A24DE8;
+        background-color: transparent;
+    }
+
+    .wrapper .container {
+        width: 100%;
+        padding: 24px 16px;
+    }
+
+    .wrapper .container h1 {
+        display: none;
+    }
+
+    .wrapper .container .content {
+        padding: 16px;
+    }
+
+    .wrapper .container .content .left-side {
+        width: 100%;
+    }
+
+    .wrapper .container .content .left-side .top .loaded-photo {
+        display: flex;
+        flex-direction: row;
+        height: fit-content;
+        margin-left: 0;
+        margin-right: auto;
+        margin-bottom: 16px;
+    }
+
+    .wrapper .container .content .left-side .top .loaded-photo .photo {
+        margin-bottom: 0;
+        margin-right: 16px;
+    }
+
+    .wrapper .container .content .left-side .top .loaded-photo .instruments {
+        flex-direction: column;
+    }
+
+    .wrapper .container .content .left-side .top .loaded-photo .instruments .left {
+        padding-right: 0;
+        border-right: none;
+        margin-bottom: 16px;
+    }
+
+    .wrapper .container .content .left-side .top .loaded-photo .instruments .right {
+        padding-left: 0;
+    }
+
+    .wrapper .container .content .left-side .top h3,
+    .wrapper .container .content .left-side .bottom h3 {
+        font-size: 24px;
+        line-height: 28px;
+        margin-bottom: 28px;
+    }
+
+    .input {
+        width: 100%;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    label {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .wrapper .container .content .left-side .bottom .input-form div .reset-info {
+        width: 100%;
+    }
+
+    .wrapper .container .content .left-side .bottom .input-form .semibold-text {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .wrapper .container .btn {
+        margin-top: 20px;
+    }
+
+
+    .wrapper .container .content .right-side {
+        display: none;
+    }
+
+    .wrapper .container .content .left-side .bottom .alert {
+        top: auto;
+        bottom: 56px;
+    }
 }
