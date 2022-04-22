@@ -82,11 +82,14 @@
 
     @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&display=swap');
         
-    html,
-    body {
+    * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+    }
+
+    html,
+    body {
         font-family: "Manrope", sans-serif;
         font-style: normal;
         color: #140E17;
@@ -135,7 +138,7 @@
 
     .semibold-text {
         font-weight: 600;
-        font-size: 16px;
+        font-size: 14px;
         line-height: 20px;
     }
      

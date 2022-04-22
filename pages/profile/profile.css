@@ -1,0 +1,154 @@
+.wrapper {
+    height: 100vh;
+    display: flex;
+}
+
+.wrapper .settings {
+    width: 25%;
+    height: 100%;
+    background-color: #F3F3F3;
+}
+
+.wrapper .settings .settings-header {
+    padding: 40px 40px 0 40px;
+}
+
+.wrapper .settings .settings-list {
+    margin-top: 255px;
+}
+
+.wrapper .settings .settings-item {
+    display: block;
+    padding: 0 40px;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.wrapper .settings .settings-item:hover,
+.wrapper .settings .settings-item.active {
+    border-right: 1px solid #A24DE8;
+    color: #A24DE8;
+    background-color: transparent;
+}
+
+.wrapper .container {
+    width: 70%;
+    padding: 40px;
+    overflow-y: scroll;
+}
+
+.wrapper .container h1 {
+    margin-bottom: 40px;
+}
+
+.wrapper .container .content {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #DDDDDD;
+    padding: 40px;
+    border-radius: 8px;
+}
+
+.wrapper .container .content .left-side {
+    width: 70%;
+}
+
+.wrapper .container .content .left-side .top {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 48px;
+    border-bottom: 1px solid #DDDDDD;
+}
+
+.wrapper .container .content .left-side .top .input-form,
+.wrapper .container .content .left-side .bottom .input-form {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.wrapper .container .content .left-side .top .input-form,
+.wrapper .container .content .left-side .bottom .input-form {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.wrapper .container .content .left-side .top .input-form div,
+.wrapper .container .content .left-side .bottom .input-form div {
+    position: relative;
+}
+
+.wrapper .container .content .left-side .top .input-form div:not(:last-child),
+.wrapper .container .content .left-side .bottom .input-form div:not(:last-child) {
+    margin-bottom: 12px;
+}
+
+.wrapper .container .content .left-side .bottom {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 48px;
+}
+
+.password-control {
+	position: absolute;
+    top: 25px;
+    right: 19px;
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	background: url("../../images/eye-closed.svg") 0 0 no-repeat;
+}
+.password-control.view {
+	background: url("../../images/eye-opened.svg") 0 0 no-repeat;
+}
+
+.wrapper .container .content .left-side .bottom .input-form div .reset-info {
+    width: 400px;
+    margin-top: 4px;
+    padding-left: 16px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.wrapper .container .content .left-side .bottom .input-form div .reset-info .semibold-text {
+    color: #A2A2A2;
+}
+
+.input.password.error {
+    border-color: #E22929;
+}
+
+.wrapper .container .content .left-side .bottom .input-form div .reset-info span.password-error {
+    color: #E22929;
+}
+
+.input.password.error + label {
+    color: #E22929;
+}
+
+.wrapper .container .content .left-side .bottom .alert {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.wrapper .container .content .right-side {
+    width: 30%;
+    max-width: 30%;
+    margin-left: auto;
+    margin-right: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+/* .wrapper .container .content .right-side .loaded-photo {
+    align-items: flex-end;
+} */
+
+.wrapper .container .btn {
+    padding: 16px 0;
+    margin-top: 40px;
+    width: 100%;
+}
