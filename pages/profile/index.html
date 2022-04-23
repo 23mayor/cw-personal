@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="../../components/inputs/inputs.css">
     <link rel="stylesheet" href="../../components/logos/logos.css">
     <link rel="stylesheet" href="../../components/links/links.css">
+    <link rel="stylesheet" href="../../components/popup/popup.css">
     <link rel="stylesheet" href="../../components/buttons/buttons.css">
     <link rel="stylesheet" href="../../components/navigation bar/navi mobile/index.css">
     <link rel="stylesheet" href="../../components/navigation bar/menuLinks.css">
@@ -169,7 +170,7 @@
                 <div class="left-side">
                     <div class="top">
                         <h3>Personal info</h3>
-                        <div class="loaded-photo">
+                        <div class="loaded-photo minimobile">
                             <div class="photo"></div>
                             <div class="instruments">
                                 <a class="left btn-link-text">Change photo</a>
@@ -190,6 +191,18 @@
                             <div>
                                 <input class="input email" type="text" placeholder="" name="Title" required>
                                 <label for="email">E-mail</label>
+                                <a href="#email-popup" class="popup-link">popup link</a>
+                                <div class="alert informational no-link">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <mask id="mask0_354_2779" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2ZM0 12C0 5.37258 5.37258 0 12 0C18.6274 0 24 5.37258 24 12C24 18.6274 18.6274 24 12 24C5.37258 24 0 18.6274 0 12ZM13.5 17.5C13.5 18.3284 12.8284 19 12 19C11.1716 19 10.5 18.3284 10.5 17.5C10.5 16.6716 11.1716 16 12 16C12.8284 16 13.5 16.6716 13.5 17.5ZM13 5C13 4.44772 12.5523 4 12 4C11.4477 4 11 4.44772 11 5V13C11 13.5523 11.4477 14 12 14C12.5523 14 13 13.5523 13 13V5Z" fill="#140E17"/>
+                                        </mask>
+                                        <g mask="url(#mask0_354_2779)">
+                                            <path d="M0 0H24V24H0V0Z" fill="#140E17"/>
+                                        </g>
+                                    </svg>
+                                    <span class="regular-text">Your email isn't confirmed</span>
+                                </div>
                             </div>
                         </form>
                     </div>
@@ -250,8 +263,34 @@
             </div>
             <button class="btn primary-btn" disabled>Save changes</button>
         </div>
+        <div id="email-popup" class="popup">
+            <div class="popup__body">
+                <div class="popup__content">
+                    <div class="popup__container">
+                        <a href="#" class="popup__close close-popup">
+                            <svg width="20" height="20" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_279_4251)">
+                                <mask id="mask0_279_4251" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="7" y="7" width="18" height="18">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M24.4853 7.51473C24.0948 7.12421 23.4616 7.12421 23.0711 7.51473L16 14.5858L8.92893 7.51473C8.53841 7.12421 7.90524 7.12421 7.51472 7.51473C7.12419 7.90526 7.12419 8.53842 7.51472 8.92894L14.5858 16L7.51472 23.0711C7.12419 23.4616 7.12419 24.0948 7.51472 24.4853C7.90524 24.8758 8.53841 24.8758 8.92893 24.4853L16 17.4142L23.0711 24.4853C23.4616 24.8758 24.0948 24.8758 24.4853 24.4853C24.8758 24.0948 24.8758 23.4616 24.4853 23.0711L17.4142 16L24.4853 8.92894C24.8758 8.53842 24.8758 7.90526 24.4853 7.51473Z" fill="#A24DE8"/>
+                                </mask>
+                                <g mask="url(#mask0_279_4251)">
+                                <rect width="32" height="32" fill="#A24DE8"/>
+                                </g>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_279_4251">
+                                <rect width="32" height="32" fill="#A24DE8"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="../../js/show-menu.js"></script>
+    <script src="../../js/popup.js"></script>
     <script src="../../js/burger.js"></script>
     <script src="../../js/input-password.js"></script>
 </body>

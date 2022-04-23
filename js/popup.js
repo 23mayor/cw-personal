@@ -12,6 +12,7 @@ if (popupLinks.length > 0) {
         popupLink.addEventListener("click", function (e) {
             const popupName = popupLink.getAttribute('href').replace('#', '');
             const curentPopup = document.getElementById(popupName);
+            popupOpen(curentPopup);
             e.preventDefault();
         });
     }

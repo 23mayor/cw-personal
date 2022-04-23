@@ -64,7 +64,7 @@
     border-bottom: 1px solid #DDDDDD;
 }
 
-.wrapper .container .content .left-side .top .loaded-photo.mini {
+.wrapper .container .content .left-side .top .loaded-photo.minimobile {
     display: none;
 }
 
@@ -90,6 +90,16 @@
 .wrapper .container .content .left-side .top .input-form div:not(:last-child),
 .wrapper .container .content .left-side .bottom .input-form div:not(:last-child) {
     margin-bottom: 12px;
+}
+
+.wrapper .container .content .left-side .top .input-form div .alert {
+    width: 100%;
+    margin-top: 12px;
+    margin-right: 0;
+}
+
+.wrapper .container .content .left-side .top .input-form .label {
+    width: 100%;
 }
 
 .wrapper .container .content .left-side .bottom {
@@ -268,31 +278,34 @@
         width: 100%;
     }
 
-    .wrapper .container .content .left-side .top .loaded-photo {
+    .wrapper .container .content .left-side .top .loaded-photo.minimobile {
         display: flex;
         flex-direction: row;
+        justify-content: flex-start;
         height: fit-content;
         margin-left: 0;
         margin-right: auto;
         margin-bottom: 16px;
     }
 
-    .wrapper .container .content .left-side .top .loaded-photo .photo {
+    .wrapper .container .content .left-side .top .loaded-photo.minimobile .photo {
+        width: 110px;
+        height: 110px;
         margin-bottom: 0;
         margin-right: 16px;
     }
 
-    .wrapper .container .content .left-side .top .loaded-photo .instruments {
+    .wrapper .container .content .left-side .top .loaded-photo.minimobile .instruments {
         flex-direction: column;
     }
 
-    .wrapper .container .content .left-side .top .loaded-photo .instruments .left {
+    .wrapper .container .content .left-side .top .loaded-photo.minimobile .instruments .left {
         padding-right: 0;
         border-right: none;
         margin-bottom: 16px;
     }
 
-    .wrapper .container .content .left-side .top .loaded-photo .instruments .right {
+    .wrapper .container .content .left-side .top .loaded-photo.minimobile .instruments .right {
         padding-left: 0;
     }
 
