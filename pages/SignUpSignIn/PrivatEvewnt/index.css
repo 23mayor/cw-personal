@@ -1,20 +1,25 @@
 /*Prevent event*/
 
 aside .side-menu .title {
-    margin-bottom: 5px;
+    margin-bottom: 6px;
 }
 
 aside .side-menu .description {
     margin-bottom: 22px;
-    font-size: 17px;
+    font-size: 18px;
 }
 
 aside .side-menu .btn {
     margin-bottom: 40px;
+    font-size: 18px;
 }
 
 aside .side-menu .bottom-privat {
     border-top: 1px solid var(--gray-400);
+}
+
+aside .side-menu  .bottom-privat .bottom-link {
+    font-size: 18px;
 }
 
 /*Modal window*/
@@ -87,7 +92,7 @@ main .reset-password-modal {
     margin: 0;
 }
 
-@media screen and (min-width: 375px) and (max-width: 1079px) {
+@media screen and (max-width: 1079px) {
 
     /*Private event */
 
@@ -98,19 +103,27 @@ main .reset-password-modal {
     aside .side-menu .title {
         margin-bottom: 8px;
         font-weight: 600;
-        font-size: 22px;
+        font-size: 24px;
         line-height: 28px;
     }
 
     aside .side-menu .description {
-        max-width: 266px;
-        font-size: 15px;
+        max-width: 290px;
+        font-size: 16px;
         line-height: 20px;
     }
 
-    aside .side-menu .bottom-title {
-        font-size: 19px;
-        line-height: 24px;
-        font-weight: 600;
+    aside .side-menu .bottom-privat .bottom-link {
+        font-size: 16px;
+    }
+
+    aside .side-menu .btn {
+        font-size: 16px;
+    }
+
+    /*Modal*/
+
+    .modal-wrapper .reset-password-modal .modal-content-wrap .invite-card {
+        grid-template-columns: 1fr;
     }
 }
