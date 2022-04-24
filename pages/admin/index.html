@@ -151,150 +151,80 @@
                     </svg>
                     <span>Book a demo</span>
                 </a>
-                <div class="user active">
+                <div class="user">
                     <div class="avatar john mini"></div>
                     <span class="regular-text">Constantine</span>
                 </div>
             </div>
         </div>
-        <div class="settings">
-            <div class="settings-header"><h2>Settings</h2></div>
-            <div class="settings-list">
-                <a class="settings-item link active"><h4>Profile information</h4></a>
-                <a class="settings-item link"><h4>Balance</h4></a>
+        <div class="background-container">
+            <div class="container-content">
+                <div class="information">
+                    <div class="time">11:33 am</div>
+                    <div class="date">28 December, Wednesday</div>
+                    <a href="#" class="link-purple">All events</a>
+                </div>
+                <div class="events-wrapper">
+                    <div class="snippet">
+                        <div class="snippet-time">11 AM</div>
+                        <div class="snippet-event-container">
+                            <div class="event-card active">
+                                <div class="card-top">
+                                    <div class="event-name">Global Town Hall</div>
+                                    <div class="time-counter">
+                                        <div class="live">LIVE</div>
+                                        <span>33'</span>
+                                    </div>
+                                    <a class="join-link btn-link-text">Join</a>
+                                </div>
+                                <div class="card-bottom">
+                                    <div class="duration">
+                                        <span class="from">11:00 am</span>
+                                        <span class="arrow">-></span>
+                                        <span class="to">12:00 pm</span>
+                                    </div>
+                                    <div class="participants">
+                                        <div class="participant-avatar user-john"></div>
+                                        <div class="participant-avatar user-john"></div>
+                                        <div class="participant-avatar user-john"></div>
+                                        <div class="participant-avatar user-john"></div>
+                                        <div class="more-participants"><span>+390</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="snippet">
+                        <div class="snippet-time">12 PM</div>
+                        <div class="snippet-event-container">
+                            <div class="event-card not-started">
+                                <div class="card-top">
+                                    <div class="event-name">One-on-one w/ CEO</div>
+                                    <div class="time-counter">
+                                        <div class="live">LIVE</div>
+                                        <span>33'</span>
+                                    </div>
+                                    <a class="join-link btn-link-text">Join</a>
+                                </div>
+                                <div class="card-bottom">
+                                    <div class="duration">
+                                        <span class="from">12:00 am</span>
+                                        <span class="arrow">-></span>
+                                        <span class="to">12:30 pm</span>
+                                    </div>
+                                    <div class="participants">
+                                        <div class="participant-avatar user-john"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="snippet"></div>
+                    <div class="snippet"></div>
+                </div>
             </div>
-        </div>
-        <div class="container">
-            <h1>Profile information</h1>
-            <div class="content">
-                <div class="left-side">
-                    <div class="top">
-                        <h3>Personal info</h3>
-                        <div class="loaded-photo minimobile">
-                            <div class="photo"></div>
-                            <div class="instruments">
-                                <a class="left btn-link-text">Change photo</a>
-                                <a class="right btn-link-text">Remove</a>
-                            </div>
-                        </div>
-                        <form action="get" class="input-form">
-                            <div>
-                                <input class="input first-name" type="text" placeholder="" name="Title" required>
-                                <label for="first-name">First name</label>
-                            </div>
-    
-                            <div>
-                                <input class="input second-name" type="text" placeholder="" name="Title" required>
-                                <label for="second-name">Second name</label>
-                            </div>
-    
-                            <div>
-                                <input class="input email" type="text" placeholder="" name="Title" required>
-                                <label for="email">E-mail</label>
-                                <a href="#email-popup" class="popup-link">popup link</a>
-                                <div class="alert informational no-link">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <mask id="mask0_354_2779" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2ZM0 12C0 5.37258 5.37258 0 12 0C18.6274 0 24 5.37258 24 12C24 18.6274 18.6274 24 12 24C5.37258 24 0 18.6274 0 12ZM13.5 17.5C13.5 18.3284 12.8284 19 12 19C11.1716 19 10.5 18.3284 10.5 17.5C10.5 16.6716 11.1716 16 12 16C12.8284 16 13.5 16.6716 13.5 17.5ZM13 5C13 4.44772 12.5523 4 12 4C11.4477 4 11 4.44772 11 5V13C11 13.5523 11.4477 14 12 14C12.5523 14 13 13.5523 13 13V5Z" fill="#140E17"/>
-                                        </mask>
-                                        <g mask="url(#mask0_354_2779)">
-                                            <path d="M0 0H24V24H0V0Z" fill="#140E17"/>
-                                        </g>
-                                    </svg>
-                                    <span class="regular-text">Your email isn't confirmed</span>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="bottom">
-                        <h3>Password</h3>
-                        <form action="get" class="input-form">
-                            <div>
-                                <input class="input current password" id="current-password-input" type="password" placeholder="" name="Сurrent password" required>
-                                <label for="current">Сurrent password</label>
-                                <a href="#" class="password-control" onclick="show_hide_current_password(this);"></a>
-                                <div class="reset-info">
-                                    <span class="semibold-text">Can’t remember current password?</span>
-                                    <a href="#" class="semibold-text link-purple">Reset your password via email</a>
-                                </div>
-                            </div>
-    
-                            <div>
-                                <input class="input new-password password error" id="new-password-input" type="password" placeholder="" name="New password" required>
-                                <label for="new-password">New password</label>
-                                <a href="#" class="password-control" onclick="show_hide_new_password(this);"></a>
-                                <div class="reset-info">
-                                    <span class="semibold-text password-error">
-                                        Use 8 or more characters with a mix of letters, numbers & symbols. 
-                                        Don’t use the previous account password.
-                                    </span>
-                                </div>
-                            </div>
-    
-                            <div>
-                                <input class="input confirm password" id="confirm-password-input" type="password" placeholder="" name="New password" required>
-                                <label for="confirm">Confirm new password</label>
-                                <a href="#" class="password-control" onclick="show_hide_confirm_password(this);"></a>
-                            </div>
-                        </form>
-                        <div class="alert success no-link">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <mask id="mask0_354_2779" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2ZM0 12C0 5.37258 5.37258 0 12 0C18.6274 0 24 5.37258 24 12C24 18.6274 18.6274 24 12 24C5.37258 24 0 18.6274 0 12ZM13.5 17.5C13.5 18.3284 12.8284 19 12 19C11.1716 19 10.5 18.3284 10.5 17.5C10.5 16.6716 11.1716 16 12 16C12.8284 16 13.5 16.6716 13.5 17.5ZM13 5C13 4.44772 12.5523 4 12 4C11.4477 4 11 4.44772 11 5V13C11 13.5523 11.4477 14 12 14C12.5523 14 13 13.5523 13 13V5Z" fill="#140E17"/>
-                                </mask>
-                                <g mask="url(#mask0_354_2779)">
-                                    <path d="M0 0H24V24H0V0Z" fill="#140E17"/>
-                                </g>
-                            </svg>
-                            <span class="regular-text">Your password saved successfully</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="right-side">
-                    <div class="loaded-photo">
-                        <div class="photo"></div>
-                        <div class="instruments">
-                            <a class="left btn-link-text">Change photo</a>
-                            <a class="right btn-link-text">Remove</a>
-                        </div>
-                    </div>
-                </div>
-                <div></div>
-            </div>
-            <button class="btn primary-btn" disabled>Save changes</button>
-        </div>
-        <!--            Modal window                 -->
-        <div id="email-popup" class="popup">
-            <div class="popup__body">
-                <div class="popup__content">
-                    <div class="popup__container">
-                        <div class="popup__top">
-                            <a href="#" class="popup__link">View in the browser</a>
-                            <div class="logo-full"></div>
-                            <div class="text">
-                                <p>
-                                    Hi, you requested a change to the email 
-                                    address that you use to sign in to Collective web.
-                                </p>
-                                <p>
-                                    Click the link below to confirm that this is the right address.
-                                </p>
-                            </div>
-                            <a href="#" class="btn-link btn-link-text">Confirm your email address</a>
-                        </div>
-                        <div class="popup__bottom">
-                            <span>Link not working? Try this:</span>
-                            <a href="https://collectiveweb.com/confirm-email/GevUyWnwVgtMWQpkq1AiVCYFJ" class="bottom-primary-link">
-                                https://collectiveweb.com/confirm-email/GevUyWnwVgtMWQpkq1AiVCYFJ
-                            </a>
-                            <p>Collective web is a online meta universe to bring teams together, anytime and anywhere.</p>
-                            <div class="links-container">
-                                <a href="#">Unsub</a>
-                                <a href="#"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="sidebar">
+                
             </div>
         </div>
     </div>
