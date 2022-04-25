@@ -102,6 +102,13 @@
     font-size: 14px;
     line-height: 20px;
     color: #140E17;
+    transition: all 0.3s ease;
+}
+
+.text-field__input:hover,
+.text-field__input:active,
+.text-field__input:focus {
+    border-color: #A2A2A2;
 }
 
 .text-field_floating.field-error .text-field__input {
