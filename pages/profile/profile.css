@@ -8,7 +8,7 @@
 }
 
 .wrapper .settings {
-    width: 25%;
+    width: 23%;
     height: 100%;
     background-color: #F3F3F3;
 }
@@ -49,12 +49,12 @@
     display: flex;
     justify-content: space-between;
     border: 1px solid #DDDDDD;
-    padding: 40px;
+    padding: 40px 40px 40px 48px;
     border-radius: 8px;
 }
 
 .wrapper .container .content .left-side {
-    width: 70%;
+    width: 60%;
 }
 
 .wrapper .container .content .left-side .top {
@@ -64,85 +64,176 @@
     border-bottom: 1px solid #DDDDDD;
 }
 
-.wrapper .container .content .left-side .top .loaded-photo.minimobile {
-    display: none;
-}
-
-.wrapper .container .content .left-side .top .input-form,
-.wrapper .container .content .left-side .bottom .input-form {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-}
-
-.wrapper .container .content .left-side .top .input-form,
-.wrapper .container .content .left-side .bottom .input-form {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-}
-
-.wrapper .container .content .left-side .top .input-form div,
-.wrapper .container .content .left-side .bottom .input-form div {
-    position: relative;
-}
-
-.wrapper .container .content .left-side .top .input-form div:not(:last-child),
-.wrapper .container .content .left-side .bottom .input-form div:not(:last-child) {
-    margin-bottom: 12px;
-}
-
-.wrapper .container .content .left-side .top .input-form div .alert {
-    width: 100%;
-    margin-top: 12px;
-    margin-right: 0;
-}
-
-.wrapper .container .content .left-side .top .input-form .label {
-    width: 100%;
-}
-
 .wrapper .container .content .left-side .bottom {
     display: flex;
     justify-content: space-between;
     padding-top: 48px;
 }
 
-.password-control {
-	position: absolute;
-    top: 25px;
-    right: 19px;
-	display: inline-block;
-	width: 24px;
-	height: 24px;
-	background: url("../../images/eye-closed.svg") 0 0 no-repeat;
-}
-.password-control.view {
-	background: url("../../images/eye-opened.svg") 0 0 no-repeat;
-}
-
-.wrapper .container .content .left-side .bottom .input-form div .reset-info {
-    width: 400px;
-    margin-top: 4px;
-    padding-left: 16px;
-    font-size: 14px;
+.wrapper .container .content .left-side .bottom .link-purple {
     font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    margin: 2px 0 0 12px;
 }
 
-.wrapper .container .content .left-side .bottom .input-form div .reset-info .semibold-text {
-    color: #A2A2A2;
+.wrapper .container .content .left-side .top .loaded-photo.minimobile {
+    display: none;
 }
 
-.input.password.error {
+.wrapper .container .content .left-side .top .form-sign-up,
+.wrapper .container .content .left-side .bottom .form-sign-up {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.text-field__input {
+    display: block;
+    width: 400px;
+    height: 56px;
+    padding: 29px 12px 8px 12px;
+    border: 1px solid #DDDDDD;
+    border-radius: 8px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: #140E17;
+}
+
+.text-field_floating.field-error .text-field__input {
     border-color: #E22929;
 }
 
-.wrapper .container .content .left-side .bottom .input-form div .reset-info span.password-error {
+.text-field__input[type="search"]::-webkit-search-decoration,
+.text-field__input[type="search"]::-webkit-search-cancel-button,
+.text-field__input[type="search"]::-webkit-search-results-button,
+.text-field__input[type="search"]::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+}
+
+.text-field__input::placeholder {
+    color: #212529;
+}
+
+.text-field__input:focus {
+    color: #212529;
+    background-color: #fff;
+    outline: 0;
+}
+
+.text-field_floating {
+    position: relative;
+}
+
+
+.text-field_floating .text-field__label,
+.text-field_floating .text-field__label-error {
+    position: absolute;
+    top: 20px;
+    left: 14px;
+    height: 100%;
+    pointer-events: none;
+    transform-origin: 0 0;
+    transition: opacity .15s ease-in-out, transform .15s ease-in-out;
+    color: #A2A2A2;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.03em;
+}
+
+.icon-password {
+    display: none;
+    position: absolute;
+    top: 36px;
+    right: 16px;
+    width: 24px;
+    height: 24px;
+    align-items: center;
+}
+
+.icon-password.eye-open .icon-eye-close {
+    display: none;
+}
+
+.icon-password .icon-eye-open {
+    display: none;
+}
+
+.icon-password.eye-open .icon-eye-open {
+    display: block;
+}
+
+.text-field_floating.field-error .text-field__label {
+    display: none;
+}
+
+.text-field_floating .text-field__label-error {
+    display: none;
+}
+
+.text-field_floating.field-error .text-field__label-error {
+    display: block;
     color: #E22929;
 }
 
-.input.password.error + label {
+.text-field_floating.field-error .password-description {
     color: #E22929;
+}
+
+.text-field_floating .text-field__input::-moz-placeholder {
+    color: transparent;
+}
+
+.text-field_floating .text-field__input::placeholder {
+    color: transparent;
+}
+
+.text-field_floating .text-field__input:focus,
+.text-field_floating .text-field__input:not(:placeholder-shown) {
+
+}
+
+.text-field_floating .text-field__input:focus~.text-field__label,
+.text-field_floating .text-field__input:not(:placeholder-shown)~.text-field__label,
+.text-field_floating .text-field__input:focus~.text-field__label-error,
+.text-field_floating .text-field__input:not(:placeholder-shown)~.text-field__label-error {
+    transform: translateY(-11px);
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.text-field_floating .text-field__input:focus~.text-field__label + .icon-password,
+.text-field_floating .text-field__input:not(:placeholder-shown)~.text-field__label + .icon-password,
+.text-field_floating .text-field__input:focus~.text-field__label-error + .icon-password,
+.text-field_floating .text-field__input:not(:placeholder-shown)~.text-field__label-error + .icon-password {
+    display: flex;
+}
+
+form .text-field {
+    margin-bottom: 12px;
+}
+
+form .text-field .password-description {
+    display: block;
+    width: 400px;
+    margin: 2px 0 0 12px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: #A2A2A2;
+}
+
+form .form-bottom {
+    display: flex;
+    flex-direction: column;
+    margin-top: 32px;
 }
 
 .wrapper .container .content .left-side .bottom .alert {
@@ -161,110 +252,15 @@
 }
 
 .wrapper .container .btn {
-    padding: 16px 0;
+    padding: 18px 0;
     margin-top: 40px;
     width: 100%;
 }
 
-/* Modal Window */
-
-.popup__container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.popup__body {
-    min-height: 100%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.popup__content {
-    width: 40%;
-    min-height: fit-content;
-}
-
-.popup__container {
-    display: flex;
-    justify-content: center;
-    padding: 40px 32px;
-}
-
-.popup__top {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 16px;
-    margin-bottom: 72px;
-}
-
-.popup__top .popup__link {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 14px;
-    text-align: center;
-    text-decoration-line: underline;
-    color: #777777;
-    margin-bottom: 16px;
-}
-
-.popup__top .logo-full {
-    margin-bottom: 56px;
-}
-
-.popup__top .text {
-    margin-bottom: 24px;
-}
-
-.popup__top .text p:nth-child(1) {
-    margin-bottom: 16px;
-}
-
-.popup__top .text p {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 114%;
-    color: #101010;
-    text-align: left;
-}
-
-.popup__top .btn-link{
-    display: block;
-    text-align: center;
-    color: #FFFFFF;
-    background: #A24DE8;
-    border-radius: 8px;
-    padding: 24px 0;
-    width: 100%;
-}
-
-.popup__bottom {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.popup__bottom span {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 150%;
-    text-align: center;
-    color: #6A6A69;
-}
-
-.popup__bottom .bottom-primary-link {
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 150%;
-    color: #A24DE8;
-
-    margin-bottom: 48px;
+@media (max-width: 1600px) {
+    .wrapper .container .content .left-side {
+        width: 68%;
+    }
 }
 
 @media (max-width: 1285px) {

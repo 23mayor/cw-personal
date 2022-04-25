@@ -24,7 +24,7 @@
 .logo-full {
     width: 319px;
     height: 48px;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 }
 
 .hide .logo-full {
@@ -154,7 +154,7 @@
     border: 1px solid #DDDDDD;
     padding: 16px;
     border-radius: 8px;
-    margin-bottom: 35px;
+    margin-bottom: 20px;
 
     margin-left: auto;
     margin-right: auto;
