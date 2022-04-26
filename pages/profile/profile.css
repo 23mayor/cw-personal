@@ -1,6 +1,7 @@
 .wrapper {
     height: 100vh;
     display: flex;
+    padding-left: 80px;
 }
 
 .wrapper .navigation-mobile {
@@ -36,7 +37,7 @@
 }
 
 .wrapper .container {
-    width: 70%;
+    width: 87%;
     padding: 40px;
     overflow-y: scroll;
 }
@@ -92,7 +93,7 @@
     display: block;
     width: 400px;
     height: 56px;
-    padding: 29px 12px 8px 12px;
+    padding: 25px 12px 8px 12px;
     border: 1px solid #DDDDDD;
     border-radius: 8px;
     -webkit-appearance: none;
@@ -154,12 +155,12 @@
 }
 
 .icon-password {
-    display: none;
+    /* display: none; */
     position: absolute;
-    top: 36px;
-    right: 16px;
-    width: 24px;
-    height: 24px;
+    top: 20px;
+    right: 22px;
+    width: 20px;
+    height: 20px;
     align-items: center;
 }
 
@@ -223,6 +224,12 @@
     display: flex;
 }
 
+.icon-password.eye-open .icon-eye-open svg {
+    display: block;
+    width: 20px;
+    height: 16px;
+}
+
 form .text-field {
     margin-bottom: 12px;
 }
@@ -235,12 +242,6 @@ form .text-field .password-description {
     font-size: 12px;
     line-height: 16px;
     color: #A2A2A2;
-}
-
-form .form-bottom {
-    display: flex;
-    flex-direction: column;
-    margin-top: 32px;
 }
 
 .wrapper .container .content .left-side .bottom .alert {

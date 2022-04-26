@@ -1,14 +1,18 @@
 .navigation {
     display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
     flex-direction: column;
     justify-content: space-between;
-    max-width: 400px;
+    width: 390px;
     height: 100%;
-    border-right: 1px solid #DDDDDD;
+    background-color: #FFFFFF;
 }
 
 .navigation.hide {
-    max-width: 108px;
+    width: 80px;
 }
 
 .navigation .top {
@@ -19,6 +23,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 25px 0 0 0;
 }
 
 .logo-full {
@@ -47,6 +52,11 @@
     transition: all 0.2s ease;
     cursor: pointer;
     transition: all 0.3s ease;
+}
+
+.show-btn svg {
+    width: 20px;
+    height: 20px;
 }
 
 .show-btn.hide {
@@ -85,7 +95,7 @@
 }
 
 .navigation__list {
-    margin-top: 80px;
+    margin-top: 40px;
     margin-bottom: auto;
 }
 
@@ -94,7 +104,7 @@
 }
 
 .hide .navigation__list-item {
-    padding: 32px 42px;
+    padding: 28px 30px;
 }
 
 .navigation__list-item {
@@ -107,6 +117,11 @@
 
 .navigation__list-item h4 {
     margin-left: 29px;
+}
+
+.navigation__list-item svg {
+    width: 20px;
+    height: 20px;
 }
 
 .navigation__list-item:hover {
@@ -147,12 +162,17 @@
     display: none;
 }
 
+.book-a-demo svg {
+    width: 20px;
+    height: 20px;
+}
+
 .book-a-demo {
     display: flex;
     justify-content: center;
     width: 75%;
     border: 1px solid #DDDDDD;
-    padding: 16px;
+    padding: 13px;
     border-radius: 8px;
     margin-bottom: 20px;
 
@@ -177,7 +197,7 @@
     align-items: center;
 
     width: 100%;
-    padding: 16px 30px;
+    padding: 16px 0px;
 
     cursor: pointer;
     transition: all 0.3s ease;
