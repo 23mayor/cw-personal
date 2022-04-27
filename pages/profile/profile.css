@@ -329,6 +329,7 @@ form .text-field .password-description {
 
     .wrapper {
         flex-direction: column;
+        padding-left: 0;
     }
 
     .wrapper .navigation {
@@ -423,10 +424,18 @@ form .text-field .password-description {
         margin-bottom: 28px;
     }
 
-    .input {
+    form .text-field {
+        width: 100%;
+    }
+
+    .text-field__input {
         width: 100%;
         font-size: 14px;
         line-height: 20px;
+    }
+
+    form .text-field .password-description {
+        width: 95%;
     }
 
     label {

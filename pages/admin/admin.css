@@ -274,6 +274,7 @@
     background-image: url("../../images/company-icon.svg");
     background-position: center;
     background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .sidebar .invitation .sent,
@@ -313,6 +314,7 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    width: 70%;
 }
 
 .sidebar .invitation .accepted-avatars .participant-avatar:not(:last-child) {
@@ -326,4 +328,52 @@
 
 .sidebar .invitation .accepted-avatars .participant-avatar.user-john {
     background-image: url("../../images/john.png");
+}
+
+@media (max-width: 1300px) {
+    .container-content {
+        width: 67%;
+    }
+
+    .background-container .sidebar {
+        width: 33%;
+    }
+}
+
+@media (max-width: 1100px) {
+    .container-content {
+        width: 58%;
+    }
+
+    .snippet-event-container {
+        width: 92%;
+    }
+
+    .event-card.two-hour {
+        width: 45.0%;
+    }
+
+    .background-container .sidebar {
+        width: 42%;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .wrapper {
+        flex-direction: column;
+        padding-left: 0;
+    }
+
+    .wrapper .navigation {
+        display: none;
+    }
+
+    .wrapper .navigation-mobile {
+        display: block;
+    }
+
+    .background-container {
+        flex-direction: column;
+    }
 }
