@@ -1,6 +1,11 @@
+.navigation {
+    border-right: 1px solid #DDDDDD;
+}
+
 .wrapper {
     height: 100vh;
     display: flex;
+    padding-left: 80px;
 }
 
 .wrapper .navigation-mobile {
@@ -11,16 +16,26 @@
 
 .background-container {
     width: 100%;
-    padding: 20px 20px 0 20px;
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .container-content {
-    width: 65%;
-    height: 100vh;
+    width: 78%;
+    height: 100%;
     background: #E6E6E6;
     border-radius: 8px 8px 0px 0px;
     padding: 40px 40px 0 40px;
+    overflow-y: scroll;
 }
+
+/* хром, сафари */
+.container-content::-webkit-scrollbar { width: 0; }
+
+/* ie 10+ */
+.container-content { -ms-overflow-style: none; }
 
 .container-content .information {
     display: flex;
@@ -37,12 +52,14 @@
 }
 
 .container-content .information .date {
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 24px;
     color: #9E9E9E;
+    line-height: 33px;
     margin-right: auto;
     margin-left: 24px;
+}
+
+.container-content .information a {
+    line-height: 33px;
 }
 
 .events-wrapper {
@@ -63,9 +80,9 @@
     top: -9px;
     left: 0;
     width: fit-content;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 20px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
     text-align: right;
     letter-spacing: 0.03em;
     text-transform: uppercase;
@@ -78,6 +95,8 @@
     width: 95%;
     border-top: 1px solid #CECECE;
     padding-top: 8px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .snippet .event-card {
@@ -103,8 +122,8 @@
 
 .snippet .event-card .card-top .event-name {
     font-weight: 600;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 14px;
+    line-height: 20px;
     color: #140E17;
 }
 
@@ -114,8 +133,8 @@
     margin-left: 20px;
     margin-right: auto;
     font-weight: 700;
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 12px;
+    line-height: 16px;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #E22929;
@@ -144,9 +163,9 @@
 }
 
 .snippet .event-card .card-bottom .duration {
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 24px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
     color: #A2A2A2;
 }
 
@@ -158,7 +177,7 @@
     display: flex;
 }
 
-.snippet .event-card .card-bottom .participant-avatar {
+.participant-avatar {
     width: 40px;
     height: 40px;
     border-radius: 1000px;
@@ -175,13 +194,13 @@
     margin-right: 4px;
 }
 
-.snippet .event-card .card-bottom .more-participants {
+.background-container .more-participants {
     width: 40px;
     height: 40px;
     border-radius: 1000px;
     background-color: #EEEEEE;
     color: #A2A2A2;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 12px;
     line-height: 16px;
     text-align: center;
@@ -200,4 +219,111 @@
 
 .snippet .event-card.not-started .join-link{
     display: none;
+}
+
+.event-card.half-snippet {
+    width: 49%;
+}
+
+.event-card.half-hour {
+    height: 50%;
+}
+
+.event-card.two-hour {
+    position: absolute;
+    z-index: 8888;
+    top: 8px;
+    right: 0;
+    width: 46.5%;
+    height: 452px;
+}
+
+/*             Sidebar               */
+
+.background-container .sidebar {
+    border: 1px solid #DDDDDD;
+    border-radius: 8px;
+    width: 22%;
+    height: 100%;
+    margin-left: 20px;
+    padding: 20px;
+}
+
+.sidebar-header {
+    margin-bottom: 4px;
+}
+
+.sidebar-header span {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #9E9E9E;
+}
+
+.sidebar .company {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.sidebar .company .company-toggle {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-image: url("../../images/company-icon.svg");
+    background-position: center;
+    background-size: contain;
+}
+
+.sidebar .invitation .sent,
+.sidebar .invitation .accepted {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sidebar .invitation .sent {
+    margin-bottom: 8px;
+}
+
+.sidebar .invitation .accepted {
+    margin-top: 40px;
+    margin-bottom: 16px;
+}
+
+.sidebar .invitation .sent span,
+.sidebar .invitation .accepted span {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.sidebar .invitation .sent .counter,
+.sidebar .invitation .accepted .counter {
+    color: #9E9E9E;
+}
+
+.sidebar .invitation .link-purple {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.sidebar .invitation .accepted-avatars {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.sidebar .invitation .accepted-avatars .participant-avatar:not(:last-child) {
+    margin-right: 4px;
+}
+
+.sidebar .invitation .accepted-avatars .participant-avatar,
+.sidebar .invitation .accepted-avatars .more-participants {
+    margin-bottom: 8px;
+}
+
+.sidebar .invitation .accepted-avatars .participant-avatar.user-john {
+    background-image: url("../../images/john.png");
 }

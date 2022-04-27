@@ -103,6 +103,7 @@
     font-size: 14px;
     line-height: 20px;
     color: #140E17;
+    margin-right: 0;
     transition: all 0.3s ease;
 }
 
@@ -231,6 +232,7 @@
 }
 
 form .text-field {
+    width: 400px;
     margin-bottom: 12px;
 }
 

@@ -197,7 +197,7 @@
     align-items: center;
 
     width: 100%;
-    padding: 16px 0px;
+    padding: 16px 0 16px 48px;
 
     cursor: pointer;
     transition: all 0.3s ease;
@@ -205,6 +205,7 @@
 
 .hide .user {
     justify-content: center;
+    padding: 16px 0 16px 0;
 }
 
 .user:hover {

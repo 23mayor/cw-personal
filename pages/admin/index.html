@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
+    <title>Admin</title>
 
-    <link rel="stylesheet" href="../../css/globalStyles.css">
     <link rel="stylesheet" href="../../components/avatar/avatar.css">
     <link rel="stylesheet" href="../../components/alerts/alerts.css">
     <link rel="stylesheet" href="../../components/upload-photo/upload.css">
@@ -17,6 +16,7 @@
     <link rel="stylesheet" href="../../components/buttons/buttons.css">
     <link rel="stylesheet" href="../../components/navigation bar/navi mobile/index.css">
     <link rel="stylesheet" href="../../components/navigation bar/menuLinks.css">
+    <link rel="stylesheet" href="../../css/globalStyles.css">
     <link rel="stylesheet" href="admin.css">
 </head>
 <body>
@@ -160,8 +160,8 @@
         <div class="background-container">
             <div class="container-content">
                 <div class="information">
-                    <div class="time">11:33 am</div>
-                    <div class="date">28 December, Wednesday</div>
+                    <h1>11:33 am</h1>
+                    <div class="date semibold-text">December 28, Wednesday</div>
                     <a href="#" class="link-purple">All events</a>
                 </div>
                 <div class="events-wrapper">
@@ -197,7 +197,27 @@
                     <div class="snippet">
                         <div class="snippet-time">12 PM</div>
                         <div class="snippet-event-container">
-                            <div class="event-card not-started">
+                            <div class="event-card not-started half-snippet half-hour">
+                                <div class="card-top">
+                                    <div class="event-name">One-on-one w/ CEO</div>
+                                    <div class="time-counter">
+                                        <div class="live">LIVE</div>
+                                        <span>33'</span>
+                                    </div>
+                                    <a class="join-link btn-link-text">Join</a>
+                                </div>
+                                <div class="card-bottom">
+                                    <div class="duration">
+                                        <span class="from">12:00 am</span>
+                                        <span class="arrow">-></span>
+                                        <span class="to">12:30 pm</span>
+                                    </div>
+                                    <div class="participants">
+                                        <div class="participant-avatar user-john"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="event-card not-started half-snippet two-hour">
                                 <div class="card-top">
                                     <div class="event-name">One-on-one w/ CEO</div>
                                     <div class="time-counter">
@@ -219,12 +239,89 @@
                             </div>
                         </div>
                     </div>
-                    <div class="snippet"></div>
-                    <div class="snippet"></div>
+                    <div class="snippet">
+                        <div class="snippet-time">1 PM</div>
+                        <div class="snippet-event-container">
+                        </div>
+                    </div>
+                    <div class="snippet">
+                        <div class="snippet-time">2 PM</div>
+                        <div class="snippet-event-container">
+                            <div class="event-card not-started half-snippet half-hour">
+                                <div class="card-top">
+                                    <div class="event-name">One-on-one w/ CEO</div>
+                                    <div class="time-counter">
+                                        <div class="live">LIVE</div>
+                                        <span>33'</span>
+                                    </div>
+                                    <a class="join-link btn-link-text">Join</a>
+                                </div>
+                                <div class="card-bottom">
+                                    <div class="duration">
+                                        <span class="from">12:00 am</span>
+                                        <span class="arrow">-></span>
+                                        <span class="to">12:30 pm</span>
+                                    </div>
+                                    <div class="participants">
+                                        <div class="participant-avatar user-john"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="event-card not-started half-snippet">
+                                <div class="card-top">
+                                    <div class="event-name">One-on-one w/ CEO</div>
+                                    <div class="time-counter">
+                                        <div class="live">LIVE</div>
+                                        <span>33'</span>
+                                    </div>
+                                    <a class="join-link btn-link-text">Join</a>
+                                </div>
+                                <div class="card-bottom">
+                                    <div class="duration">
+                                        <span class="from">12:00 am</span>
+                                        <span class="arrow">-></span>
+                                        <span class="to">12:30 pm</span>
+                                    </div>
+                                    <div class="participants">
+                                        <div class="participant-avatar user-john"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="sidebar">
-                
+                <div class="sidebar-header">
+                    <span class="semibold-text">Your company</span>
+                </div>
+                <div class="company">
+                    <h2>Marriott International</h2>
+                    <a href="#" class="company-toggle"></a>
+                </div>
+                <div class="invitation">
+                    <div class="sent">
+                        <span class="semibold-text">Invitation sent</span>
+                        <span class="counter">1337</span>
+                    </div>
+                    <a href="#" class="link-purple">Invite more</a>
+                    <div class="accepted">
+                        <span class="semibold-text">Invitation accepted</span>
+                        <span class="counter">399</span>
+                    </div>
+                    <div class="accepted-avatars">
+                        <div class="participant-avatar user-john"></div>
+                        <div class="participant-avatar user-john"></div>
+                        <div class="participant-avatar user-john"></div>
+                        <div class="participant-avatar user-john"></div>
+                        <div class="participant-avatar user-john"></div>
+                        <div class="participant-avatar user-john"></div>
+                        <div class="participant-avatar user-john"></div>
+                        <div class="participant-avatar user-john"></div>
+                        <div class="participant-avatar user-john"></div>
+                        <div class="more-participants"><span>+390</span></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
