@@ -44,6 +44,11 @@
     margin-bottom: 30px;
 }
 
+.container-content .information .data-time {
+    display: flex;
+    align-items: flex-end;
+}
+
 .container-content .information .time {
     font-weight: 500;
     font-size: 64px;
@@ -369,11 +374,30 @@
         display: none;
     }
 
+    .header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 15px;
+    }
+
     .wrapper .navigation-mobile {
         display: block;
     }
 
     .background-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .container-content {
+        padding: 16px;
+    }
+
+    .container-content .information .data-time {
         flex-direction: column;
     }
 }
