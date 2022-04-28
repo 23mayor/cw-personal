@@ -170,6 +170,10 @@
     text-align: center;
 }
 
+.snippet .event-card .join-link.join-link-mobile {
+    display: none;
+}
+
 .snippet .event-card .card-bottom {
     display: flex;
     align-items: center;
@@ -364,8 +368,38 @@
         width: 58%;
     }
 
+    .container-content .information .data-time {
+        flex-direction: column;
+    }
+
+    .container-content .information .date {
+        margin-left: 0;
+    }
+
     .snippet-event-container {
         width: 92%;
+    }
+
+    .snippet {
+        height: 431px;
+    }
+
+    .event-card.half-hour .card-top {
+        margin-bottom: 16px;
+    }
+
+    .event-card.half-hour .duration {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .event-card.half-hour .duration .from,
+    .event-card.half-hour .duration .to {
+        display: block;
+    }
+
+    .event-card.half-hour .duration .arrow {
+        display: none;
     }
 
     .event-card.two-hour {
