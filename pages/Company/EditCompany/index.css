@@ -1,0 +1,427 @@
+h1 {
+    font-size: 52px;
+    line-height: 60px;
+}
+
+.navigation {
+    position: fixed;
+    z-index: 1;
+}
+
+/*Submenu*/
+
+.container-companies {
+    margin-top: 91px;
+}
+
+.company-item {
+    position: relative;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.container-companies {
+    padding-left: 40px;
+}
+
+.company-item:after {
+    content: '';
+    position: absolute;
+    right: -1px;
+    top: -6px;
+    width: 1px;
+    height: 34px;
+    background-color: var(--purple-400);
+}
+
+/*Alert*/
+
+.alert {
+    position: absolute;
+    right: 40px;
+    align-items: end;
+    width: auto;
+    margin: 0;
+    padding: 24px;
+    border: 1px solid var(--green-300);
+}
+
+.alert .regular-text {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+/*Content*/
+
+.content {
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    min-width: 100%;
+    padding: 40px;
+}
+
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.content-header .header-title {
+    margin: 0;
+}
+
+.content-header .button-wrap {
+    display: flex;
+}
+
+.content-header .button-wrap .header-btn {
+    min-width: 182px;
+    height: 72px;
+    margin-left: 16px;
+    color: var(--gray-700);
+    border-radius: 8px;
+    border: none;
+    background-color: transparent;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+    cursor: pointer;
+}
+
+.content-body {
+    display: grid;
+    grid-template-columns: auto 426px 1fr 240px;
+    grid-template-areas: "info-title info-inputs . avatar-inputs"
+                    "admin-title admin-inputs . avatar-inputs";
+    padding: 40px;
+    margin-bottom: 40px;
+    gap: 46px 89px;
+    border: 1px solid var(--gray-500);
+    border-radius: 8px;
+}
+
+.content-body .text-field_floating {
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.content-body .text-field_floating .input-description {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4px;
+    margin-left: 12px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--gray-600);
+}
+
+.info-company-title {
+    grid-area: info-title;
+    margin: 0;
+}
+
+.info-inputs-wrap {
+    grid-area: info-inputs;
+}
+
+.info-inputs-wrap textarea {
+    height: 110px;
+}
+
+.admin-title {
+    grid-area: admin-title;
+    margin: 0;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.admin-inputs-wrap {
+    grid-area: admin-inputs;
+    padding-left: 26px;
+}
+
+.modal-create-avatar {
+    grid-area: avatar-inputs;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.content-header .button-wrap .header-btn.isActive {
+    color: var(--dark);
+    background-color: var(--gray-100);
+}
+
+.content-body .div {
+    margin: 0;
+}
+
+.select-input {
+    display: block;
+    margin-bottom: 0;
+}
+
+.loaded-photo .instruments {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.loaded-photo {
+    margin-bottom: 40px;
+}
+
+.content-body .text-field_floating .input-description .link {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.content .btn {
+    padding: 18px;
+}
+
+@media screen and (max-width: 1919px ) {
+    /*Content*/
+
+    .content-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .content-header .header-title {
+        margin-bottom: 16px;
+    }
+
+    .content-header .button-wrap .header-btn {
+        margin-left: 0;
+        margin-right: 16px;
+    }
+
+    .content-body {
+        grid-template-columns: 400px 1fr 240px;
+        grid-template-rows: 32px auto 32px auto;
+        grid-template-areas:
+                "info-title . avatar-inputs"
+                "info-inputs . avatar-inputs"
+                "admin-title  . ."
+                "admin-inputs . .";
+        gap: 40px 50px;
+        padding: 40px 30px 48px 30px;
+    }
+
+    .content-body .text-field_floating {
+        margin-bottom: 12px;
+    }
+
+    .admin-inputs-wrap {
+        padding-left: 0;
+    }
+
+    .modal-create-avatar {
+        margin-bottom: 8px;
+    }
+
+    .admin-inputs-wrap .text-field_floating {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 1279px) {
+
+    .content {
+        padding: 40px;
+    }
+
+    /*.content-header {*/
+    /*    flex-direction: column-reverse;*/
+    /*}*/
+
+    .content-header .header-title {
+        /*margin-bottom: 0;*/
+        margin-bottom: 24px;
+        font-size: 32px;
+        line-height: 36px;
+    }
+
+    /*.content-header .button-wrap {*/
+    /*    margin-bottom: 24px;*/
+    /*}*/
+
+    .content-header .button-wrap .header-btn {
+        min-width: 164px;
+        height: 52px;
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .content-body {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "info-title"
+        "avatar-inputs"
+        "info-inputs"
+        "admin-title"
+        "admin-inputs";
+        gap: 12px;
+        padding: 40px 40px 48px 40px;
+    }
+
+    .modal-create-avatar {
+        align-items: flex-start;
+        padding: 12px;
+        margin-top: 12px;
+        margin-bottom: 0;
+        background-color: var(--gray-200);
+        border-radius: 8px;
+    }
+
+    .modal-create-avatar .mini {
+        width: auto;
+        height: auto;
+        font-size: 12px;
+    }
+
+    .modal-create-avatar .loaded-photo {
+        margin-bottom: 12px;
+    }
+
+    .modal-create-avatar .text-field_floating {
+        margin-bottom: 0;
+    }
+
+    .content-body .text-field_floating .input-description {
+        flex-direction: row;
+    }
+
+    .content-body .text-field_floating .input-description a {
+        margin-left: 4px;
+    }
+
+    .btn-link-text {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 20px
+    }
+
+    .info-company-title,
+    .admin-title {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .info-inputs-wrap textarea {
+        height: 92px;
+    }
+
+    .content-body .div {
+        margin-bottom: 35px;
+    }
+
+    .content-body .div label::before {
+        width: 18px;
+        height: 18px;
+    }
+
+    .admin-inputs-wrap {
+        margin-top: 10px;
+    }
+
+    .select__header {
+        height: 52px;
+    }
+
+}
+
+@media screen and (max-width: 1079px) {
+
+    /*Submenu*/
+
+    main .submenu .submenu-top {
+        padding: 24px 15px 0 15px;
+    }
+
+    .container-companies {
+        display: flex;
+        margin-top: 22px;
+        padding: 0 15px;
+    }
+
+    .company-item {
+        padding: 0 6px 8px 6px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .company-item:after {
+        right: auto;
+        top: auto;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: var(--purple-400);
+    }
+
+    /*Content*/
+
+    .content {
+        padding: 24px 15px;
+    }
+
+    .content-header {
+        display: none;
+    }
+
+    .content-body {
+        padding: 16px;
+    }
+
+    .info-company-title {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .modal-create-avatar {
+        margin-top: 28px;
+    }
+
+    .text-field_floating .text-field__label,
+    .text-field_floating .text-field__label-error,
+    .create-form .select__header .select-label {
+        top: 22px;
+    }
+
+    .content-body .text-field_floating .input-description {
+        flex-direction: column;
+    }
+
+    .content-body .text-field__input {
+        padding-top: 26px;
+        padding-left: 12px;
+    }
+
+    .info-inputs-wrap textarea {
+        height: 132px;
+    }
+
+    .content-body .div label::before {
+        width: 14px;
+        height: 14px;
+    }
+
+    .admin-title {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .admin-inputs-wrap {
+        margin-top: 0;
+    }
+
+}

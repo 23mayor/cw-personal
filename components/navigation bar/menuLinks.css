@@ -17,7 +17,7 @@
 
 .navigation .line {
     position: absolute;
-    right: -1px;
+    right: 0;
     top: 0;
     height: 100%;
     width: 1px;
@@ -136,6 +136,8 @@
 .active {
     background-color: #F0E2FB;
     border-right: 1px solid #A24DE8;
+    position: relative;
+    z-index: 1;
 }
 
 .active svg path,
