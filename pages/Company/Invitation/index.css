@@ -59,7 +59,8 @@
     line-height: 20px;
 }
 
-.invitation-alert.shown {
+.invitation-alert.shown,
+.removed-alert.shown {
     display: flex;
 }
 
@@ -68,7 +69,12 @@
     width: fit-content;
 }
 
-/*Filter*/
+.removed-alert {
+    display: none;
+    padding: 26px 24px;
+}
+
+    /*Filter*/
 
 .members-filter {
     display: flex;
@@ -115,15 +121,28 @@
 
 /*Table*/
 
+.sented-invitation,
+.accept-invitation {
+    display: none;
+}
+
+.table-custom.isActive {
+    display: block;
+}
+
 .table-custom .table-head {
     display: grid;
-    grid-template-columns: 1fr 170px 206px;
     padding: 10px 27px;
-    color: var(--gray-600);
     text-align: left;
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 16px;
+}
+
+.sented-invitation .table-head {
+    grid-template-columns: 1fr 170px 206px;
+}
+
+.accept-invitation .table-head,
+.accept-invitation .table-body .table-row {
+    grid-template-columns: 1fr 1fr 145px 70px;
 }
 
 .table-custom .table-head .table-cell {
@@ -143,12 +162,22 @@
 .table-custom .table-body .table-row {
     display: grid;
     align-items: center;
-    grid-template-columns: 1fr 170px 160px auto;
-    padding: 24px 8px;
     border-radius: 8px;
     font-weight: 600;
     font-size: 14px;
     line-height: 20px
+}
+
+.sented-invitation .table-body .table-row {
+    padding: 24px 8px;
+}
+
+.accept-invitation .table-body .table-row {
+    padding: 15px 11px;
+}
+
+.sented-invitation .table-body .table-row {
+    grid-template-columns: 1fr 170px 160px auto;
 }
 
 .table-custom .table-body .table-row:hover {
@@ -158,6 +187,26 @@
 .table-custom .table-body .table-row .date {
     font-size: 12px;
     line-height: 16px;
+}
+
+.table-custom .table-body .table-row .cell-for-name {
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.table-custom .table-body .table-row .wrap-name {
+    display: flex;
+    align-items: center;
+}
+
+.table-custom .table-body .table-row .cell-delete-btn {
+    justify-self: center;
+}
+
+.table-custom .table-body .table-row .cell-for-name .avatar {
+    width: 48px;
+    height: 48px;
+    margin-right: 10px ;
 }
 
 .btn-revoke-email {
@@ -177,7 +226,7 @@
     line-height: 16px;
 }
 
-/*Select*/
+/*Select badge*/
 
 .select {
     width: fit-content;
@@ -187,7 +236,7 @@
     white-space: nowrap;
 }
 
-.select__header {
+.select.badge .select__header {
     align-items: center;
     height: auto;
     padding: 6px 12px;
@@ -229,6 +278,28 @@
     overflow: hidden;
     text-align: center;
     padding: 8px 0;
+}
+
+/*Select-filter*/
+
+.select.filter .select__header {
+    height: auto;
+    padding: 0;
+    border: none;
+}
+
+.select.filter .select__current {
+    color: var(--gray-600);
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    text-transform: uppercase;
+}
+
+.select.filter .select__body {
+    min-width: 100px;
+    max-width: 240px;
+    right: auto;
 }
 
 /*Burger-menu*/
@@ -337,12 +408,67 @@
 }
 
 @media screen and (max-width: 1919px ) {
-
+    .accept-invitation .table-body .table-cell:nth-child(2) {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding-right: 65px;
+    }
 }
 
 @media screen and (max-width: 1279px) {
     .members-navigation {
         margin-bottom: 20px;
+    }
+
+    /*Table*/
+
+    .accept-invitation .table-row {
+        grid-template-columns: 1fr auto;
+        grid-template-areas: "name btn"
+                            "rights ."
+                            "email email";
+        gap: 16px;
+    }
+
+    .table-custom .table-body .table-row .select__header .arrow-icon {
+        display: block;
+    }
+
+    .accept-invitation .table-body .table-row .cell-for-name .avatar {
+        width: 80px;
+        height: 80px;
+    }
+
+    .accept-invitation .table-body .table-row .cell-for-name {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .cell-for-name {
+        grid-area: name;
+    }
+
+    .cell-for-email {
+        grid-area: email;
+    }
+
+    .cell-for-rights {
+        grid-area: rights;
+    }
+
+    .cell-delete-btn {
+        grid-area: btn;
+    }
+
+    .cell-delete-btn .btn-delete {
+        width: auto;
+        height: auto;
+    }
+
+    .cell-delete-btn .btn-delete svg {
+        width: 40px;
+        height: 40px;
     }
 
     /*Filter*/
@@ -369,6 +495,11 @@
 
     .cell-header {
         display: block;
+    }
+
+    .table-custom .table-body .table-row .cell-for-name {
+        align-items: flex-start;
+        flex-direction: column;
     }
 
     .table-custom .table-body .table-row {
@@ -434,5 +565,27 @@
 
     .btn-revoke-email {
         margin-top: 10px;
+    }
+
+    .accept-invitation .table-body .table-cell:nth-child(2) {
+        white-space: normal;
+        padding-right: 0;
+        word-wrap: break-word;
+    }
+
+    .table-custom .table-body .table-row .wrap-name {
+        align-items: flex-start;
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .accept-invitation .table-body .table-row .cell-for-name .avatar {
+        width: 56px;
+        height: 56px;
+    }
+
+    .cell-for-email {
+        font-size: 16px;
+        line-height: 20px;
     }
 }

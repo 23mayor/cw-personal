@@ -1,7 +1,31 @@
+
+h2 {
+    font-size: 36px;
+    line-height: 44px;
+}
+
+h3 {
+    font-size: 24px;
+    line-height: 32px;
+}
+
+h4 {
+    font-size: 20px;
+    line-height: 28px;
+}
+
 main {
     position: relative;
     display: flex;
+    min-height: 100vh;
     padding-left: 108px;
+}
+
+.btn {
+    padding: 24px;
+    font-size: 14px;
+    line-height: 20px;
+    white-space: nowrap;
 }
 
 main .navigation {
@@ -11,6 +35,23 @@ main .navigation {
     background-color: var(--white);
 }
 
+main .navigation .mobile-burger {
+    display: none;
+}
+
+main .navigation .bottom {
+    display: flex;
+    flex-direction: column;
+}
+
+main .navigation .bottom .book-a-demo {
+    width: auto;
+}
+
+main .navigation .bottom .user .avatar {
+    margin: 0;
+}
+
 /*Content*/
 
 main .container-content {
@@ -18,73 +59,113 @@ main .container-content {
     padding: 20px;
 }
 
+main .container-content .home-page-content {
+    position: relative;
+    height: 100%;
+    border-radius: 8px;
+    background-color: var(--gray-200);
+}
+
 main .container-content .welcome-wrapper {
-    padding: 40px;
-    margin-bottom: -213px;
-    background-color: var(--gray-100);
+    position: absolute;
+    width: 100% ;
+    background-color: var(--dark);
     border-radius: 8px;
     color: var(--gray-600);
     font-weight: 600;
-    font-size: 28px;
+    font-size: 24px;
     line-height: 32px;
 }
 
+main .container-content .welcome-wrapper .welcome-container {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 24px;
+    border-radius: inherit;
+    background: linear-gradient(338.48deg, rgba(82, 27, 128, 0.7) 38.76%, rgba(162, 77, 232, 0) 79.77%);
+}
+
+main .container-content .welcome-wrapper.isActive .welcome-container {
+    flex-direction: column;
+}
+
 main .container-content .welcome-wrapper .avatar {
-    width: 48px;
-    height: 48px;
+    width: 40px;
+    height: 40px;
     margin: 0 8px 0 6px;
 }
 
 main .container-content .welcome-wrapper .user-name {
-    color: var(--dark);
+    margin: 0;
+    color: var(--white);
 }
 
 main .container-content .welcome-wrapper .header {
     display: flex;
     align-items: center;
-    margin-bottom: 8px;
+    padding: 25px 40px 0 40px;
+}
+
+main .container-content .welcome-wrapper.isActive .header {
+    padding-top: 40px;
 }
 
 main .container-content .welcome-wrapper .body {
-    display: flex;
+    display: none;
     flex-direction: column;
-    margin-bottom: 270px;
+    margin-bottom: 366px;
+    padding: 0 40px;
 }
 
-/*main .container-content .welcome-wrapper .body {*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    margin-bottom: 329px;*/
-/*}*/
+main .container-content .welcome-wrapper.isActive .body {
+    display: flex;
+}
 
 main .container-content .welcome-wrapper .body span {
     display: flex;
-    margin-bottom: 14px;
+    align-items: baseline;
+}
+
+main .container-content .welcome-wrapper .body span:nth-child(2) {
+    margin-bottom: 2px;
+}
+
+main .container-content .welcome-wrapper .body span:first-child {
+    margin-bottom: 4px;
 }
 
 main .container-content .welcome-wrapper .body span .link {
     margin: 0 4px;
     font-weight: 600;
-    font-size: 28px;
+    font-size: 24px;
     line-height: 32px;
 }
 
 main .container-content .welcome-wrapper .body span .link-create-events {
-    color: var(--dark);
-    border-bottom: 2px dashed #140E17;;
+    color: var(--white);
+    border-bottom: 2px dashed var(--white);;
 }
 
 main .container-content .welcome-wrapper .welcome-btn {
     display: flex;
+    align-self: self-end;
     align-items: center;
     padding: 0;
-    margin-left: auto;
+    margin: 0 38px 8px auto;
     background-color: transparent;
     border: none;
     color: var(--gray-600);
     font-weight: 700;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+main .container-content .welcome-wrapper.isActive .welcome-btn {
+    margin-bottom: 2px;
+}
+
+main .container-content .welcome-wrapper.isActive .welcome-btn svg {
+    transform: rotate(180deg);
 }
 
 main .container-content .welcome-wrapper .welcome-btn svg {
@@ -92,20 +173,28 @@ main .container-content .welcome-wrapper .welcome-btn svg {
 }
 
 main .container-content .events-wrap {
-    padding: 0 40px;
+    padding: 128px 40px 0 40px;
+}
+
+main .container-content .welcome-wrapper.isActive~.events-wrap {
+    padding-top: 265px;
 }
 
 main .container-content .events-wrap h4 {
+    position: relative;
+    color: var(--dark);
     margin: 0 0 20px 0;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 20px;
+    font-weight: 600;
+}
+
+main .container-content .welcome-wrapper.isActive~.events-wrap h4 {
+    color: var(--white);
 }
 
 main .container-content .events-wrap .event-container {
     position: relative;
-    width: 780px;
-    height: 460px;
+    width: 612px;
+    height: 400px;
     padding: 20px;
 }
 
@@ -115,6 +204,7 @@ main .container-content .events-wrap .event-container .image-container {
     left: 0;
     height: 100%;
     width: 100%;
+    border-radius: 8px;
     background: url("../../images/loaded-pic.png") no-repeat;
     background-size: cover;
     z-index: 0;
@@ -136,8 +226,10 @@ main .container-content .events-wrap .event-container .length-time {
     z-index: 1;
 }
 
-main .container-content .events-wrap .event-container .length-time h4 {
+main .container-content .events-wrap .event-container .length-time h5 {
     margin: 15px 0 0 0;
+    font-size: 14px;
+    line-height: 16px;
 }
 
 main .container-content .events-wrap .event-container .length-time span {
@@ -147,17 +239,70 @@ main .container-content .events-wrap .event-container .length-time span {
 
 main .container-content .events-wrap .event-container .event-card {
     position: relative;
-}
-
-main .container-content .events-wrap .event-container .event-card {
-    width: 440px;
+    display: flex;
+    flex-direction: column;
+    width: 340px;
     height: 100%;
+    padding: 20px;
+    border-radius: 8px;
     background-color: var(--white);
 }
 
-/*Aside   */
+main .container-content .events-wrap .event-container .event-card .time {
+    margin-bottom: 16px;
+}
+
+main .container-content .events-wrap .event-container .event-card .time .container {
+    margin: 0;
+}
+
+main .container-content .events-wrap .event-container .event-card .time .container:nth-child(1) {
+    color: var(--red-300);
+}
+
+main .container-content .events-wrap .event-container .event-card .time svg {
+    margin: 0 8px;
+}
+
+main .container-content .events-wrap .event-container .event-card h4 {
+    margin-bottom: 8px;
+    color: var(--dark);
+}
+
+main .container-content .events-wrap .event-container .event-card .description {
+    margin: 0 0 36px 0;
+    color: var(--gray-600);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+/*Badge*/
+
+.event-card .badge {
+    width: auto;
+    justify-content: flex-start;
+    margin-bottom: 16px;
+    background: transparent;
+    color: var(--gray-600);
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    text-transform: uppercase;
+}
+
+.event-card .badge .indicator {
+    width: 18px;
+    height: 18px;
+}
+
+.event-card .btn {
+    padding: 18px;
+}
+
+    /*Aside   */
 
 aside {
-    min-width: 428px;
+    min-width: 448px;
     padding: 20px 20px 20px 0;
 }

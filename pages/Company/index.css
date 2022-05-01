@@ -673,7 +673,7 @@ main .submenu .btn svg {
     max-width: 364px;
 }
 
-.email-item button {
+.btn-delete {
     height: 20px;
     width: 20px;
     padding: 0;
