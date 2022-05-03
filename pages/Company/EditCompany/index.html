@@ -276,7 +276,7 @@
             alert.classList.toggle('shown')
         }
 
-        function textAreaAdjust(element) {
+        function textAreaAdjust(element) { // Если textarea уже с текстом, то вызвать эту функцию при первом рендере
             element.style.height = "1px";
             element.style.height = (element.scrollHeight)+"px";
         }

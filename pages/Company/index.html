@@ -171,61 +171,62 @@
 
 	<div class="modal-wrapper isOpen">
 		<div class="modal-company">
-			<div class="modal-nav">
-				<div class="step-list">
-					<div class="step-item active" onclick="switchSteps()">
-						<div class="line"></div>
-						<span class="small-semibold-text">Company info</span>
+			<div>
+				<div class="modal-nav">
+					<div class="step-list">
+						<div class="step-item active" onclick="switchSteps()">
+							<div class="line"></div>
+							<span class="small-semibold-text">Company info</span>
+						</div>
+						<div class="step-item" onclick="switchSteps()">
+							<div class="line"></div>
+							<span class="small-semibold-text">Invite members</span>
+						</div>
 					</div>
-					<div class="step-item" onclick="switchSteps()">
-						<div class="line"></div>
-						<span class="small-semibold-text">Invite members</span>
-					</div>
+					<button class="modal-close" onclick="closeModal()">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="#A24DE8" xmlns="http://www.w3.org/2000/svg">
+							<g mask="url(#mask0_3806_9856)">
+								<rect width="24" height="24"/>
+							</g>
+						</svg>
+					</button>
 				</div>
-				<button class="modal-close" onclick="closeModal()">
-					<svg width="24" height="24" viewBox="0 0 24 24" fill="#A24DE8" xmlns="http://www.w3.org/2000/svg">
-						<g mask="url(#mask0_3806_9856)">
-							<rect width="24" height="24"/>
-						</g>
-					</svg>
-				</button>
-			</div>
 
-<!--			Form-->
+				<!--			Form-->
 
-			<form method="get" class="create-form isActive">
-				<h3 class="form-title">
-					Create company
-				</h3>
-				<div class="modal-create-avatar">
-					<div class="upload-photo mini activePhoto" onclick="changePhoto()">
-						<div class="photo">
-							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<mask id="mask0_560_4800" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="1" y="3" width="22" height="18">
-									<path fill-rule="evenodd" clip-rule="evenodd" d="M21 5H3L3 16.289L10.3861 12.1287C10.7519 11.9227 11.2073 11.967 11.5264 12.2397L14.2893 14.5998L16.7151 13.0347C17.0453 12.8217 17.4697 12.8218 17.7997 13.0349L21 15.1014V5ZM3 19V18.5845L10.7587 14.2143L13.5563 16.6041C13.8922 16.8911 14.3767 16.9236 14.7479 16.684L17.2571 15.0652L21 17.4821V19H3ZM3 3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3H3ZM15.2394 9.54139L15.2394 9.54118L15.2394 9.54098C15.2398 9.53931 15.2403 9.53741 15.2411 9.53557C15.2425 9.53217 15.2441 9.53024 15.2453 9.52901C15.2465 9.52777 15.2498 9.52491 15.2564 9.52209C15.2598 9.52064 15.2637 9.51941 15.2676 9.5186C15.2717 9.51776 15.2745 9.51765 15.2752 9.51765C15.2759 9.51765 15.2787 9.51776 15.2827 9.5186C15.2867 9.51941 15.2905 9.52064 15.294 9.52209C15.3006 9.52491 15.3038 9.52777 15.305 9.52901C15.3063 9.53024 15.3078 9.53217 15.3092 9.53557C15.31 9.53741 15.3106 9.53931 15.3109 9.54098L15.311 9.54118L15.3109 9.54139C15.3106 9.54306 15.31 9.54496 15.3092 9.5468C15.3086 9.54839 15.3079 9.54966 15.3072 9.55068C15.3064 9.55185 15.3057 9.5527 15.305 9.55336C15.3038 9.55459 15.3006 9.55746 15.294 9.56027C15.2905 9.56173 15.2867 9.56295 15.2827 9.56377C15.2787 9.5646 15.2759 9.56471 15.2752 9.56471C15.2745 9.56471 15.2717 9.5646 15.2676 9.56377C15.2637 9.56295 15.2598 9.56173 15.2564 9.56027C15.2498 9.55746 15.2465 9.55459 15.2453 9.55336C15.2441 9.55212 15.2425 9.55019 15.2411 9.5468C15.2403 9.54496 15.2398 9.54306 15.2394 9.54139ZM17.2392 9.54118C17.2392 10.6328 16.3599 11.5177 15.2752 11.5177C14.1905 11.5177 13.3111 10.6328 13.3111 9.54118C13.3111 8.44961 14.1905 7.56471 15.2752 7.56471C16.3599 7.56471 17.2392 8.44961 17.2392 9.54118Z" fill="#A24DE8"/>
-								</mask>
-								<g mask="url(#mask0_560_4800)">
-									<rect width="24" height="24" fill="#A24DE8"/>
-								</g>
-							</svg>
+				<form method="get" class="create-form isActive">
+					<h3 class="form-title">
+						Create company
+					</h3>
+					<div class="modal-create-avatar">
+						<div class="upload-photo mini activePhoto" onclick="changePhoto()">
+							<div class="photo">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<mask id="mask0_560_4800" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="1" y="3" width="22" height="18">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M21 5H3L3 16.289L10.3861 12.1287C10.7519 11.9227 11.2073 11.967 11.5264 12.2397L14.2893 14.5998L16.7151 13.0347C17.0453 12.8217 17.4697 12.8218 17.7997 13.0349L21 15.1014V5ZM3 19V18.5845L10.7587 14.2143L13.5563 16.6041C13.8922 16.8911 14.3767 16.9236 14.7479 16.684L17.2571 15.0652L21 17.4821V19H3ZM3 3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3H3ZM15.2394 9.54139L15.2394 9.54118L15.2394 9.54098C15.2398 9.53931 15.2403 9.53741 15.2411 9.53557C15.2425 9.53217 15.2441 9.53024 15.2453 9.52901C15.2465 9.52777 15.2498 9.52491 15.2564 9.52209C15.2598 9.52064 15.2637 9.51941 15.2676 9.5186C15.2717 9.51776 15.2745 9.51765 15.2752 9.51765C15.2759 9.51765 15.2787 9.51776 15.2827 9.5186C15.2867 9.51941 15.2905 9.52064 15.294 9.52209C15.3006 9.52491 15.3038 9.52777 15.305 9.52901C15.3063 9.53024 15.3078 9.53217 15.3092 9.53557C15.31 9.53741 15.3106 9.53931 15.3109 9.54098L15.311 9.54118L15.3109 9.54139C15.3106 9.54306 15.31 9.54496 15.3092 9.5468C15.3086 9.54839 15.3079 9.54966 15.3072 9.55068C15.3064 9.55185 15.3057 9.5527 15.305 9.55336C15.3038 9.55459 15.3006 9.55746 15.294 9.56027C15.2905 9.56173 15.2867 9.56295 15.2827 9.56377C15.2787 9.5646 15.2759 9.56471 15.2752 9.56471C15.2745 9.56471 15.2717 9.5646 15.2676 9.56377C15.2637 9.56295 15.2598 9.56173 15.2564 9.56027C15.2498 9.55746 15.2465 9.55459 15.2453 9.55336C15.2441 9.55212 15.2425 9.55019 15.2411 9.5468C15.2403 9.54496 15.2398 9.54306 15.2394 9.54139ZM17.2392 9.54118C17.2392 10.6328 16.3599 11.5177 15.2752 11.5177C14.1905 11.5177 13.3111 10.6328 13.3111 9.54118C13.3111 8.44961 14.1905 7.56471 15.2752 7.56471C16.3599 7.56471 17.2392 8.44961 17.2392 9.54118Z" fill="#A24DE8"/>
+									</mask>
+									<g mask="url(#mask0_560_4800)">
+										<rect width="24" height="24" fill="#A24DE8"/>
+									</g>
+								</svg>
+							</div>
+							<div class="requirements">
+								<div class="left">jpeg, png</div>
+								<div class="right">min size 500x500</div>
+							</div>
 						</div>
-						<div class="requirements">
-							<div class="left">jpeg, png</div>
-							<div class="right">min size 500x500</div>
+						<div class="loaded-photo mini" onclick="changePhoto()">
+							<div class="photo"></div>
+							<div class="instruments">
+								<div class="left btn-link-text">Change photo</div>
+								<div class="right btn-link-text">Remove</div>
+							</div>
 						</div>
-					</div>
-					<div class="loaded-photo mini" onclick="changePhoto()">
-						<div class="photo"></div>
-						<div class="instruments">
-							<div class="left btn-link-text">Change photo</div>
-							<div class="right btn-link-text">Remove</div>
-						</div>
-					</div>
-					<div class="text-field text-field_floating">
-						<input class="text-field__input" type="text" id="HexCompany" placeholder="Company hex color" required>
-						<label class="text-field__label" for="HexCompany">Company hex color*</label>
-						<div class="icon-color"></div>
-						<span class="input-description">
+						<div class="text-field text-field_floating">
+							<input class="text-field__input" type="text" id="HexCompany" placeholder="Company hex color" required>
+							<label class="text-field__label" for="HexCompany">Company hex color*</label>
+							<div class="icon-color"></div>
+							<span class="input-description">
 							<span class="description-link">
 								Check your company hex color on <a href="#" class="link">imagecolorpicker</a>
 							</span>
@@ -233,39 +234,75 @@
 								Example: FF1024
 							</span>
 						</span>
+						</div>
 					</div>
-				</div>
-				<div class="text-field text-field_floating">
-					<input class="text-field__input" type="text" id="companyName" placeholder="Company Name" required>
-					<label class="text-field__label" for="companyName">Company Name*</label>
-				</div>
-				<div class="text-field text-field_floating">
-					<textarea class="text-field__input" onkeyup="textAreaAdjust(this)" name="companyName" id="aboutCompany" placeholder="About Company"></textarea>
-					<label class="text-field__label" for="aboutCompany">About company</label>
-					<span class="input-description">
+					<div class="text-field text-field_floating">
+						<input class="text-field__input" type="text" id="companyName" placeholder="Company Name" required>
+						<label class="text-field__label" for="companyName">Company Name*</label>
+					</div>
+					<div class="text-field text-field_floating">
+						<textarea class="text-field__input" onkeyup="textAreaAdjust(this)" name="companyName" id="aboutCompany" placeholder="About Company"></textarea>
+						<label class="text-field__label" for="aboutCompany">About company</label>
+						<span class="input-description">
 					This information will be visible to other users at each company event.
 				</span>
-				</div>
-				<div class="text-field text-field_floating">
-					<input class="text-field__input" type="email" id="email" placeholder=" " required>
-					<label class="text-field__label" for="email">Email*</label>
-					<label class="text-field__label-error" for="email">Email ISn’t Correct*</label>
-				</div>
-				<div class="div">
-					<input type="checkbox" class="custom-checkbox" id="checkbox" name="checkbox" value="yes">
-					<label for="checkbox">Matches with user email</label>
-				</div>
-				<div class="wrap-select">
-					<h4 class="select-title">
-						Admin info
-					</h4>
-					<!--				add class='selected'-->
-					<div class="select">
-						<div class="select__header">
-						<span class="select-label">
-							Position in the company
-						</span>
-							<span class="select__current"></span>
+					</div>
+					<div class="text-field text-field_floating">
+						<input class="text-field__input" type="email" id="email" placeholder=" " required>
+						<label class="text-field__label" for="email">Email*</label>
+						<label class="text-field__label-error" for="email">Email ISn’t Correct*</label>
+					</div>
+					<div class="div">
+						<input type="checkbox" class="custom-checkbox" id="checkbox" name="checkbox" value="yes">
+						<label for="checkbox">Matches with user email</label>
+					</div>
+					<div class="wrap-select">
+						<h4 class="select-title">
+							Admin info
+						</h4>
+						<!--				add class='selected'-->
+						<div class="select">
+							<div class="select__header">
+							<span class="select-label">
+								Position in the company
+							</span>
+								<span class="select__current"></span>
+								<span class="arrow-icon">
+								<svg width="20" height="20" viewBox="0 0 20 20" fill="#140E17" xmlns="http://www.w3.org/2000/svg">
+								<g mask="url(#mask0_553_20590)">
+								<rect width="20" height="20"/>
+								</g>
+								</svg>
+							</span>
+							</div>
+							<div class="select__body">
+								<div class="select__item">Event manager</div>
+								<div class="select__item">Innovation Manager</div>
+								<div class="select__item">Marketer</div>
+								<div class="select__item">Other</div>
+							</div>
+						</div>
+						<div class="text-field text-field_floating select-input">
+							<input class="text-field__input" type="text" id="other" placeholder=" " required>
+							<label class="text-field__label" for="other">E-mail*</label>
+						</div>
+					</div>
+					<button class="btn primary-btn" type="submit">Create company</button>
+				</form>
+
+				<!--			Invite members-->
+
+				<div class="container-invite-members">
+					<h2 class="form-title">
+						Invite members
+					</h2>
+					<div class="counter-wrap">
+						Marriott International
+						<div class="counter gray">20</div>
+					</div>
+					<div class="rights-company-dropdown isOpen" onclick="openDropdown()">
+						<div class="dropdown-header">
+							Rights in company
 							<span class="arrow-icon">
 							<svg width="20" height="20" viewBox="0 0 20 20" fill="#140E17" xmlns="http://www.w3.org/2000/svg">
 							<g mask="url(#mask0_553_20590)">
@@ -273,43 +310,7 @@
 							</g>
 							</svg>
 						</span>
-						</div>
-						<div class="select__body">
-							<div class="select__item">Event manager</div>
-							<div class="select__item">Innovation Manager</div>
-							<div class="select__item">Marketer</div>
-							<div class="select__item">Other</div>
-						</div>
-					</div>
-					<div class="text-field text-field_floating select-input">
-						<input class="text-field__input" type="text" id="other" placeholder=" " required>
-						<label class="text-field__label" for="other">E-mail*</label>
-					</div>
-				</div>
-				<button class="btn primary-btn" type="submit">Create company</button>
-			</form>
-
-<!--			Invite members-->
-
-			<div class="container-invite-members">
-				<h2 class="form-title">
-					Invite members
-				</h2>
-				<div class="counter-wrap">
-					Marriott International
-					<div class="counter gray">20</div>
-				</div>
-				<div class="rights-company-dropdown isOpen" onclick="openDropdown()">
-					<div class="dropdown-header">
-						Rights in company
-						<span class="arrow-icon">
-							<svg width="20" height="20" viewBox="0 0 20 20" fill="#140E17" xmlns="http://www.w3.org/2000/svg">
-							<g mask="url(#mask0_553_20590)">
-							<rect width="20" height="20"/>
-							</g>
-							</svg>
-						</span>
-						<span class="mobile-icon">
+							<span class="mobile-icon">
 							<svg class="mobile-icon-close" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<g mask="url(#mask0_601_9392)">
 							<rect width="20" height="20" fill="#140E17"/>
@@ -321,102 +322,104 @@
 							</g>
 							</svg>
 						</span>
-					</div>
-					<div class="dropdown-body">
+						</div>
+						<div class="dropdown-body">
 						<span class="dropdown-admin">
 							Admin
 						</span>
-						<ul class="admin-list">
-							<li>
-								Create events
-							</li>
-							<li>
-								Has access to information about event participants
-							</li>
-							<li>
-								Invite and delete members
-							</li>
-						</ul>
-						<span class="dropdown-user">
+							<ul class="admin-list">
+								<li>
+									Create events
+								</li>
+								<li>
+									Has access to information about event participants
+								</li>
+								<li>
+									Invite and delete members
+								</li>
+							</ul>
+							<span class="dropdown-user">
 							User
 						</span>
-						<ul class="user-list">
-							<li>
-								Join to public events and company events
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="invite-members-bottom">
-					<div class="email-item">
-						<div class="text-field text-field_floating">
-							<input class="text-field__input" type="email" id="item1" placeholder=" " required>
-							<label class="text-field__label" for="item1">User email</label>
+							<ul class="user-list">
+								<li>
+									Join to public events and company events
+								</li>
+							</ul>
 						</div>
-						<div class="select">
-							<div class="select__header">
-								<span class="select__current"> Admin</span>
-								<span class="arrow-icon">
+					</div>
+					<div class="invite-members-bottom">
+						<div class="email-item">
+							<div class="text-field text-field_floating">
+								<input class="text-field__input" type="email" id="item1" placeholder=" " required>
+								<label class="text-field__label" for="item1">User email</label>
+							</div>
+							<div class="select">
+								<div class="select__header">
+									<span class="select__current"> Admin</span>
+									<span class="arrow-icon">
 							<svg width="20" height="20" viewBox="0 0 20 20" fill="#A24DE8" xmlns="http://www.w3.org/2000/svg">
 							<g mask="url(#mask0_553_20590)">
 							<rect width="20" height="20"/>
 							</g>
 							</svg>
 						</span>
+								</div>
+								<div class="select__body">
+									<div class="select__item">User</div>
+									<div class="select__item">Admin</div>
+								</div>
 							</div>
-							<div class="select__body">
-								<div class="select__item">User</div>
-								<div class="select__item">Admin</div>
+							<button class="btn-delete">
+								<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<g mask="url(#mask0_553_12885)">
+										<rect width="20" height="20" fill="#E22929"/>
+									</g>
+								</svg>
+							</button>
+						</div>
+						<div class="email-item">
+							<div class="text-field text-field_floating">
+								<input class="text-field__input" type="email" id="item2" placeholder=" " required>
+								<label class="text-field__label" for="item2">User email</label>
 							</div>
-						</div>
-						<button class="btn-delete">
-							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<g mask="url(#mask0_553_12885)">
-									<rect width="20" height="20" fill="#E22929"/>
-								</g>
-							</svg>
-						</button>
-					</div>
-					<div class="email-item">
-						<div class="text-field text-field_floating">
-							<input class="text-field__input" type="email" id="item2" placeholder=" " required>
-							<label class="text-field__label" for="item2">User email</label>
-						</div>
-						<div class="select">
-							<div class="select__header">
-								<span class="select__current"> Admin</span>
-								<span class="arrow-icon">
+							<div class="select">
+								<div class="select__header">
+									<span class="select__current"> Admin</span>
+									<span class="arrow-icon">
 							<svg width="20" height="20" viewBox="0 0 20 20" fill="#A24DE8" xmlns="http://www.w3.org/2000/svg">
 							<g mask="url(#mask0_553_20590)">
 							<rect width="20" height="20"/>
 							</g>
 							</svg>
 						</span>
+								</div>
+								<div class="select__body">
+									<div class="select__item">User</div>
+									<div class="select__item">Admin</div>
+								</div>
 							</div>
-							<div class="select__body">
-								<div class="select__item">User</div>
-								<div class="select__item">Admin</div>
-							</div>
+							<button class="btn-delete">
+								<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<g mask="url(#mask0_553_12885)">
+										<rect width="20" height="20" fill="#E22929"/>
+									</g>
+								</svg>
+							</button>
 						</div>
-						<button>
-							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<g mask="url(#mask0_553_12885)">
-									<rect width="20" height="20" fill="#E22929"/>
+						<button class="btn tetriary-btn add-email">
+							<svg width="41" height="40" viewBox="0 0 41 40" fill="#A24DE8" xmlns="http://www.w3.org/2000/svg">
+								<g mask="url(#mask0_373_6552)">
+									<rect x="0.5" width="40" height="40"/>
 								</g>
 							</svg>
+							Add more
 						</button>
 					</div>
-					<button class="btn tetriary-btn add-email">
-						<svg width="41" height="40" viewBox="0 0 41 40" fill="#A24DE8" xmlns="http://www.w3.org/2000/svg">
-							<g mask="url(#mask0_373_6552)">
-								<rect x="0.5" width="40" height="40"/>
-							</g>
-						</svg>
-						Add more
-					</button>
+					<button class="btn primary-btn" type="submit">Send invintations</button>
 				</div>
-				<button class="btn primary-btn" type="submit">Send invintations</button>
 			</div>
+
 		</div>
 	</div>
 <script src="../../js/show-menu.js"></script>
@@ -453,6 +456,7 @@
             element.style.height = "1px";
             element.style.height = (element.scrollHeight)+"px";
         }
+
 	</script>
 </body>
 </html>

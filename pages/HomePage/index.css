@@ -29,9 +29,11 @@ main {
 }
 
 main .navigation {
+    position: fixed;
     top: 0;
     left: 0;
     height: 100vh;
+    z-index: 2;
     background-color: var(--white);
 }
 
@@ -52,7 +54,87 @@ main .navigation .bottom .user .avatar {
     margin: 0;
 }
 
-/*Content*/
+/*Empty-container*/
+
+.empty-title {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--gray-600);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px
+}
+
+/*Side-menu*/
+
+aside .side-menu {
+    display: block;
+    height: 100%;
+    padding: 0;
+    border: 1px solid var(--gray-400);
+    border-radius: 8px;
+}
+
+aside .side-menu .card {
+    display: grid;
+    grid-template-columns: 1fr 120px;
+    gap: 12px 16px;
+    margin-bottom: 40px;
+}
+
+aside .side-menu .card div {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: var(--gray-100);
+    border-radius: 8px;
+}
+
+aside .side-menu .card:not(:first-child) div {
+    grid-column: 2 span;
+}
+
+aside .side-menu .card .count {
+    margin-bottom: 4px;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 44px;
+}
+
+aside .side-menu .card .description {
+    color: var(--gray-700);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+aside .side-menu .card .done-counter,
+aside .side-menu .card .description {
+    color: var(--gray-600);
+}
+
+aside .side-menu {
+    padding: 20px 20px 0 20px;
+}
+
+.counter-wrap h5 {
+    margin: 0;
+    grid-column: 2 span;
+    white-space: nowrap;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    text-transform: uppercase;
+}
+
+.counter-wrap h5 .date {
+    margin-left: 12px;
+    color: var(--gray-600);
+}
+
+    /*Content*/
 
 main .container-content {
     width: 100%;
@@ -80,9 +162,9 @@ main .container-content .welcome-wrapper {
 main .container-content .welcome-wrapper .welcome-container {
     display: flex;
     flex-direction: row;
-    padding-bottom: 24px;
+    padding-bottom: 22px;
     border-radius: inherit;
-    background: linear-gradient(338.48deg, rgba(82, 27, 128, 0.7) 38.76%, rgba(162, 77, 232, 0) 79.77%);
+    background-image: url("./images/bg.jpg");
 }
 
 main .container-content .welcome-wrapper.isActive .welcome-container {
@@ -103,10 +185,21 @@ main .container-content .welcome-wrapper .user-name {
 main .container-content .welcome-wrapper .header {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     padding: 25px 40px 0 40px;
 }
 
+main .container-content .welcome-wrapper .header .user-info {
+    display: flex;
+    align-items: center;
+}
+
+main .container-content .welcome-wrapper.isActive  .header .user-info {
+    align-items: flex-end;
+}
+
 main .container-content .welcome-wrapper.isActive .header {
+    align-items: flex-end;
     padding-top: 40px;
 }
 
@@ -121,17 +214,27 @@ main .container-content .welcome-wrapper.isActive .body {
     display: flex;
 }
 
+main .container-content .home-page-content.empty .welcome-wrapper.isActive .body {
+    margin-bottom: 0;
+}
+
 main .container-content .welcome-wrapper .body span {
     display: flex;
     align-items: baseline;
+    flex-wrap: wrap;
 }
 
-main .container-content .welcome-wrapper .body span:nth-child(2) {
-    margin-bottom: 2px;
+main .container-content .welcome-wrapper .body span > span {
+    margin: 0 4px;
 }
 
-main .container-content .welcome-wrapper .body span:first-child {
+.container-content .welcome-wrapper .body span:first-child,
+.container-content .welcome-wrapper .body span:nth-child(2) {
     margin-bottom: 4px;
+}
+
+.container-content .welcome-wrapper .body span .span-with-link {
+    margin-bottom: 0;
 }
 
 main .container-content .welcome-wrapper .body span .link {
@@ -154,6 +257,7 @@ main .container-content .welcome-wrapper .welcome-btn {
     margin: 0 38px 8px auto;
     background-color: transparent;
     border: none;
+    white-space: nowrap;
     color: var(--gray-600);
     font-weight: 700;
     font-size: 14px;
@@ -172,11 +276,16 @@ main .container-content .welcome-wrapper .welcome-btn svg {
     margin-left: 8px;
 }
 
-main .container-content .events-wrap {
-    padding: 128px 40px 0 40px;
+main .container-content .home-page-content.empty .welcome-wrapper.isActive .welcome-btn {
+    margin-top: -13px;
+    margin-bottom: 5px;
 }
 
-main .container-content .welcome-wrapper.isActive~.events-wrap {
+main .container-content .live-events {
+    padding: 128px 40px 40px 40px;
+}
+
+main .container-content .welcome-wrapper.isActive~.live-events {
     padding-top: 265px;
 }
 
@@ -205,15 +314,15 @@ main .container-content .events-wrap .event-container .image-container {
     height: 100%;
     width: 100%;
     border-radius: 8px;
-    background: url("../../images/loaded-pic.png") no-repeat;
+    background: url("./images/bg-image.jpg") no-repeat;
     background-size: cover;
     z-index: 0;
 }
 
 main .container-content .events-wrap .event-container .length-time {
     position: absolute;
-    top: -12px;
-    left: -12px;
+    top: -13px;
+    left: -13px;
     height: 64px;
     width: 64px;
     color: var(--white);
@@ -250,6 +359,9 @@ main .container-content .events-wrap .event-container .event-card {
 
 main .container-content .events-wrap .event-container .event-card .time {
     margin-bottom: 16px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
 }
 
 main .container-content .events-wrap .event-container .event-card .time .container {
@@ -277,7 +389,69 @@ main .container-content .events-wrap .event-container .event-card .description {
     line-height: 20px;
 }
 
-/*Badge*/
+/*Mobile side-menu*/
+
+.side-menu-mobile {
+    position: absolute;
+    bottom: -124px;
+    display: none;
+    left: 0;
+    right: 0;
+    margin: 0 15px;
+    overflow-x: auto;
+    background-color: var(--white);
+    border-radius: 8px;
+}
+
+.side-menu-mobile .counter-wrap {
+    display: flex;
+    gap: 20px;
+    padding: 20px 15px;
+}
+
+.side-menu-mobile .counter-wrap .card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    color: var(--dark);
+}
+
+.side-menu-mobile .counter-wrap h5 .date {
+    margin-left: 8px;
+}
+
+.side-menu-mobile .counter-wrap .count {
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.side-menu-mobile .counter-wrap .card div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 120px;
+    padding: 8px;
+    background-color: var(--gray-100);
+    border-radius: 8px;
+}
+
+.side-menu-mobile .counter-wrap .card .description,
+.side-menu-mobile .counter-wrap .card .done-counter .count {
+    color: var(--gray-600);
+}
+
+.side-menu-mobile .counter-wrap .card .description {
+    width: min-content;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+
+.side-menu-mobile .counter-wrap .card:not(:first-child) div {
+    grid-column: 2 span;
+}
+
+    /*Badge*/
 
 .event-card .badge {
     width: auto;
@@ -305,4 +479,352 @@ main .container-content .events-wrap .event-container .event-card .description {
 aside {
     min-width: 448px;
     padding: 20px 20px 20px 0;
+}
+
+@media screen and (max-width: 1919px) {
+
+    main {
+        padding-left: 76px;
+    }
+
+    .navigation.hide {
+        max-width: 76px;
+    }
+
+    .hide .navigation__list-item {
+        padding: 35px 26px;
+    }
+
+    .user {
+        padding: 16px 18px;
+    }
+
+    aside {
+        min-width: 370px;
+    }
+
+    main .container-content .events-wrap .event-container {
+        width: 578px;
+    }
+
+    main .container-content .welcome-wrapper .header {
+        padding-top: 20px;
+    }
+
+    main .container-content .home-page-content.empty .welcome-wrapper.isActive .welcome-btn {
+        margin-top: -16px;
+        margin-bottom: 10px;
+    }
+
+    main .container-content .welcome-wrapper .welcome-container {
+        padding-bottom: 20px;
+    }
+
+    main .container-content .live-events {
+        padding-top: 122px;
+    }
+}
+
+@media screen and (max-width: 1279px) {
+
+    h3 {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    main .container-content .welcome-wrapper.isActive~.events-wrap .event-container {
+        width: 420px;
+    }
+
+    aside {
+        min-width: 326px;
+    }
+
+    aside .side-menu .card .count {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    main .container-content .events-wrap .event-container {
+        width: 100%;
+    }
+
+    main .container-content .welcome-wrapper.isActive~.live-events {
+        padding-top: 250px;
+    }
+
+    main .container-content .welcome-wrapper .body {
+        margin-bottom: 372px;
+    }
+
+    main .container-content .welcome-wrapper.isActive .header .user-info {
+        align-items: center;
+    }
+
+    main .container-content .welcome-wrapper .welcome-container {
+        padding-bottom: 20px;
+    }
+
+    main .container-content .welcome-wrapper .header {
+        padding-right: 0;
+    }
+
+    main .container-content .welcome-wrapper.isActive .welcome-btn {
+        margin-bottom: 6px;
+    }
+
+    main .container-content .home-page-content.empty .welcome-wrapper.isActive .welcome-btn {
+        margin-top: 19px;
+        margin-bottom: 7px;
+    }
+
+    main .container-content .welcome-wrapper,
+    main .container-content .welcome-wrapper .body span .link,
+    main .container-content .welcome-wrapper .events-wrap h4 {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    main .container-content .welcome-wrapper.isActive .header {
+        align-items: center;
+    }
+
+    .container-content .welcome-wrapper .body span:first-child,
+    .container-content .welcome-wrapper .body span:nth-child(2) {
+        margin-bottom: 8px;
+    }
+
+}
+
+@media screen and (max-width: 1079px) {
+
+    h4 {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .user-name {
+        white-space: nowrap;
+    }
+
+    main {
+        padding-left: 0;
+        padding-top: 64px;
+    }
+
+    /*Navigation*/
+
+    main .navigation.hide {
+        flex-direction: row;
+        align-items: center;
+        top: 0;
+        left: 0;
+        height: 64px;
+        max-width: 100%;
+        width: 100%;
+        background-color: var(--white);
+    }
+
+    .navigation .top {
+        padding: 12px 15px;
+    }
+
+    main .navigation.hide .top .logo-full {
+        margin: 0;
+        width: 40px;
+    }
+
+    main .navigation.hide .top .show-btn {
+        display: none;
+    }
+
+    main .navigation.hide .navigation__list {
+        display: none;
+    }
+
+    main .navigation.hide .bottom {
+        display: none;
+    }
+
+    main .navigation.hide .mobile-burger {
+        display: block;
+        padding: 15px;
+        border: none;
+        background-color: transparent;
+    }
+
+    main .navigation .line {
+        display: none;
+    }
+
+    /*Content*/
+
+    main .container-content {
+        padding: 0;
+    }
+
+    main .container-content .welcome-wrapper {
+        position: relative;
+        border-radius: 0;
+
+    }
+
+    main .container-content .welcome-wrapper .welcome-container {
+        display: block;
+        padding: 20px 15px 38px 15px;
+    }
+
+    main .container-content .welcome-wrapper.isActive .header,
+    main .container-content .welcome-wrapper .header {
+        padding: 0;
+    }
+
+    main .container-content .welcome-wrapper .avatar {
+        width: 28px;
+        height: 28px;
+        margin-left: 0;
+    }
+
+    main .container-content .welcome-wrapper .header .user-info,
+    main .container-content .welcome-wrapper.isActive .header .user-info {
+        align-items: flex-end;
+    }
+
+    main .container-content .welcome-wrapper .body {
+        padding: 12px 0 14px 0;
+    }
+
+    .container-content .welcome-wrapper .body span:first-child,
+    .container-content .welcome-wrapper .body span:nth-child(2) {
+        margin-bottom: 12px;
+        gap: 2px;
+    }
+
+    main .container-content .welcome-wrapper .body {
+        margin: 0;
+    }
+
+    main .container-content .welcome-wrapper .body span .link {
+        margin: 0 2px;
+    }
+
+    .span-with-link {
+        margin-left: 0;
+    }
+
+    main .container-content .welcome-wrapper .body span .span-with-link {
+        margin-bottom: 0;
+    }
+
+    main .container-content .welcome-wrapper .welcome-btn {
+        align-self: flex-start;
+        margin: 16px 0 8px 0;
+    }
+
+
+    main .container-content .home-page-content.empty .welcome-wrapper.isActive .welcome-btn {
+        margin-top: 2px;
+        margin-bottom: 6px;
+    }
+
+    main .container-content .welcome-wrapper.isActive~.live-events,
+    main .container-content .live-events {
+        padding: 144px 15px 0 15px;
+    }
+
+    main .container-content .welcome-wrapper.isActive~.events-wrap h4 {
+        color: var(--dark);
+    }
+
+    main .container-content .events-wrap h4 {
+        margin-bottom: 8px;
+    }
+
+    main .container-content .events-wrap .event-container {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    main .container-content .events-wrap .event-container .image-container {
+        position: initial;
+        height: 180px;
+    }
+
+
+    main .container-content .events-wrap .event-container {
+        width: auto;
+        height: auto;
+        padding: 16px;
+        background-color: var(--white);
+        border-radius: 8px;
+    }
+
+    main .container-content .welcome-wrapper.isActive~.events-wrap .event-container {
+        width: auto;
+    }
+
+    main .container-content .events-wrap .event-container .event-card {
+        padding: 0;
+        width: 100%;
+    }
+
+    main .container-content .events-wrap .event-container .length-time {
+        width: 52px;
+        height: 52px;
+        right: -8px;
+        top: -8px;
+        left: auto;
+    }
+
+    main .container-content .events-wrap .event-container .length-time h5,
+    main .container-content .events-wrap .event-container .length-time span {
+        font-size: 12px;
+        line-height: 14px;
+    }
+
+    main .container-content .events-wrap .event-container .length-time h5 {
+        margin-top: 11px;
+    }
+
+    main .container-content .events-wrap .event-container .event-card .time svg {
+        margin: 0 4px;
+    }
+
+    main .container-content .events-wrap .event-container .event-card .description {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-bottom: 16px;
+    }
+
+    .event-card .btn {
+        padding: 16px;
+        margin-bottom: 8px;
+    }
+
+    .event-card .badge .indicator {
+        width: 16px;
+        height: 16px;
+    }
+
+    .event-card .badge {
+        order: 1;
+        margin-bottom: 8px;
+    }
+
+
+    /*Mobile side-menu*/
+
+    .side-menu-mobile {
+        display: block;
+    }
+
+    /*Side-menu*/
+
+    aside {
+        display: none;
+    }
+
 }

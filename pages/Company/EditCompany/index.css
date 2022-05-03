@@ -65,7 +65,7 @@ h1 {
 .content {
     display: flex;
     flex-direction: column;
-    overflow: scroll;
+    overflow: auto;
     min-width: 100%;
     padding: 40px;
 }

@@ -1,0 +1,547 @@
+
+.btn {
+    padding: 8px;
+}
+
+.admin-dropdown.isActive .btn {
+    padding: 18px 14px;
+}
+
+
+main .admin-content .admin-dropdown {
+    position: fixed;
+    left: 128px;
+    right: 468px;
+    width: auto;
+    z-index: 2;
+}
+
+main .admin-content .admin-dropdown.isActive {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 0;
+}
+
+main .admin-content .admin-dropdown.isActive .welcome-container {
+    padding: 0;
+}
+
+main .admin-content .admin-dropdown .header,
+main .admin-content .admin-dropdown.isActive .header {
+    width: 100%;
+    justify-content: space-between;
+}
+
+main .admin-content .admin-dropdown .header {
+    padding-top: 20px;
+}
+
+main .admin-content .admin-dropdown.isActive .header {
+    align-items: flex-start;
+}
+
+main .admin-content .admin-dropdown .date-container {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 16px;
+}
+
+main .admin-content .admin-dropdown.isActive .date-container {
+    flex-direction: column;
+    gap: 0;
+}
+
+main .admin-content .admin-dropdown .date-container .date-time {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 44px;
+    color: var(--white);
+}
+
+main .admin-content .admin-dropdown.isActive .date-container .date-time {
+    font-size: 52px;
+    line-height: 60px;
+}
+
+.date-container .date-bottom {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(255, 255, 255, 0.48);
+}
+
+.header .dropdown-btn-wrap {
+    display: flex;
+    gap: 16px;
+}
+
+.header .secondary-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.header .secondary-btn svg {
+    height: 20px;
+    width: 20px;
+}
+
+main .admin-content .admin-dropdown .body {
+    margin-bottom: 300px;
+}
+
+main .admin-content .admin-dropdown.isActive.noLiveEvent .body {
+    margin-bottom: 40px;
+}
+
+main .admin-content .admin-dropdown.isActive~.live-events {
+    padding-top: 160px;
+}
+
+aside .invitation-wrap {
+    position: relative;
+    padding-top: 40px;
+}
+
+aside .invitation-wrap:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -20px;
+    right: -20px;
+    height: 1px;
+    background-color: var(--gray-400);
+}
+
+/*Select*/
+
+.select.disabled .select__header {
+    background-color: var(--gray-200);
+}
+
+.select.disabled .select__header .select__current {
+    color: var(--gray-700);
+}
+
+.select.disabled .select__header svg {
+    fill: var(--gray-700);
+}
+
+.invitation-wrap .select {
+    margin-top: 0;
+    margin-bottom: 22px;
+}
+
+.select-input {
+    display: none;
+    margin-top: 12px;
+    margin-bottom: 0;
+}
+
+.select__current {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.select-input.active {
+    display: block;
+}
+
+.select__header {
+    height: 56px;
+    padding: 28px 32px 8px 12px;
+    border: 1px solid var(--gray-400);
+    border-radius: 8px;
+}
+
+.select__header .select-label {
+    position: absolute;
+    top: 20px;
+    color: var(--gray-600);
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    text-transform: uppercase;
+    transition: all .15s ease-in-out;
+}
+
+.select__header .arrow-icon {
+    position: absolute;
+    top: 18px;
+    right: 12px;
+    height: 20px;
+    transition: all .15s ease-in-out;
+}
+
+.select .select__header .arrow-icon svg {
+    transition: all .15s ease-in-out;
+}
+
+.select.is-active .select__header .arrow-icon svg {
+    transform-origin: center;
+    transform: rotate(180deg);
+}
+
+.select.is-active .select__header .arrow-icon svg {
+    fill: var(--purple-400);
+}
+
+.select.selected .select__header .arrow-icon,
+.select.is-active .select__header .arrow-icon {
+    transform: translateY(9px);
+}
+
+.select.is-active .select__header .select-label,
+.select.selected .select__header .select-label {
+    text-transform: uppercase;
+    transform: translateY(-12px);
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.select__body {
+    top: calc(100% + 12px);
+    padding: 20px;
+}
+
+.select__body .select__item {
+    border-radius: 6px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.invitation-counter {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 8px 0;
+    margin-bottom: 30px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.invitation-counter h5 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.invitation-counter .count {
+    padding: 2px 9px;
+    background-color: var(--gray-300);
+    border-radius: 100px;
+}
+
+.invitation-counter a {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.invitation-counter > div {
+    grid-column: 2 span;
+}
+
+.invitation-counter .members {
+    display: flex;
+}
+
+.invitation-counter .members .avatar {
+    margin-right: 4px;
+}
+
+/*Upcoming-events*/
+
+.upcoming-event-wrap {
+    padding: 0 40px 40px 40px;
+}
+
+.upcoming-event-wrap h4 {
+    margin: 0 0 20px 0;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.upcoming-event-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.upcoming-event-container .event-card {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas: "time image"
+                        "title image"
+                        ". image"
+                        "badge image"
+                        "counter image";
+    padding: 20px;
+    gap: 12px 20px;
+    background-color: var(--white);
+    border-radius: 8px;
+}
+
+.event-card .time {
+    grid-area: time;
+    color: var(--gray-600);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.event-card .time .container:first-child {
+    color: var(--dark);
+}
+
+.event-card .time div {
+    margin: 0;
+}
+
+.event-card .time svg {
+    fill: var(--gray-600);
+    margin: 0 8px;
+}
+
+.event-card .card-title {
+    grid-area: title;
+    margin: 0;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.event-card .badge {
+    grid-area: badge;
+    margin: 0;
+}
+
+.event-card .card-counter {
+    grid-area: counter;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    padding: 4px 6px;
+    border-radius: 8px;
+    background-color: var(--gray-200);
+}
+
+.event-card .card-counter .count {
+    padding: 2px 9px;
+    border-radius: 100px;
+    background-color: var(--white);
+
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.event-card .card-image {
+    grid-area: image;
+}
+
+@media screen and (max-width: 1919px) {
+
+    main .admin-content .admin-dropdown.isActive~.events-wrap .event-container {
+        width: 100%;
+    }
+
+    main .admin-content .admin-dropdown {
+        left: 96px;
+        right: 391px;
+    }
+
+    main .admin-content .admin-dropdown.isActive~.live-events {
+        padding-top: 136px;
+    }
+
+    main .admin-content .admin-dropdown .body {
+        margin-bottom: 324px;
+    }
+
+    .select__header {
+        height: 52px;
+    }
+
+    .invitation-counter {
+        margin-bottom: 28px;
+    }
+
+    .upcoming-event-container {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media screen and (max-width: 1279px) {
+
+    main .admin-content .admin-dropdown {
+        left: 96px;
+        right: 347px;
+    }
+
+    main .admin-content .admin-dropdown .header {
+        padding-right: 40px;
+    }
+
+    .date-container .date-time {
+        font-size: 32px;
+        line-height: 36px;
+    }
+
+    main .admin-content .admin-dropdown .date-container .date-time {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .header .secondary-btn {
+        gap: 8px;
+    }
+}
+
+@media screen and (max-width: 1079px) {
+
+    .admin-dropdown.isActive .btn,
+    .btn {
+        padding: 10px;
+    }
+
+    main .admin-content .admin-dropdown .date-container {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    main .admin-content .admin-dropdown .welcome-container {
+        padding: 0;
+    }
+
+    main .admin-content .admin-dropdown.isActive {
+        position: relative;
+    }
+
+    main .admin-content .admin-dropdown {
+        left: 0;
+        right: 0;
+    }
+
+    main .admin-content .admin-dropdown .header {
+        flex-direction: row;
+        padding: 12px 15px;
+    }
+
+    main .admin-content .admin-dropdown.isActive.noLiveEvent .body {
+        margin-bottom: 0;
+    }
+
+    .header .dropdown-btn-wrap {
+        gap: 8px;
+    }
+
+    main .admin-content .admin-dropdown.isActive .header {
+        flex-direction: column;
+        gap: 16px;
+        padding: 20px 15px 34px 15px;
+    }
+
+    main .admin-content .admin-dropdown.isActive .btn-title {
+        display: block;
+    }
+
+    main .admin-content .admin-dropdown.isActive .dropdown-btn-wrap {
+        width: 100%;
+    }
+
+    main .admin-content .admin-dropdown.isActive .secondary-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .dropdown-btn-wrap .btn-title {
+        display: none;
+    }
+
+    .date-container .date-time {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    main .admin-dropdown~.side-menu-mobile {
+        top: 84px;
+        bottom: auto;
+        margin-bottom: 84px;
+    }
+
+    main .admin-dropdown.isActive~.side-menu-mobile {
+        top: -40px;
+        margin-bottom: -40px;
+    }
+
+    main .admin-content .admin-dropdown .body {
+        margin-bottom: 0px;
+    }
+
+    main .container-content .home-page-content {
+
+    }
+
+    /*Side-menu-mobile*/
+
+    .side-menu-mobile {
+        position: relative;
+    }
+
+    .side-menu-mobile .counter-wrap {
+        padding-bottom: 0;
+    }
+
+    /*Mobile-dropdown*/
+
+    .side-menu-mobile .dropdown-header {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 18px 20px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--gray-600);
+    }
+
+    .side-menu-mobile .dropdown-header svg {
+        height: 20px;
+        width: 20px;
+        transition: all .15s ease-in-out;
+    }
+
+    .mobile-sideMenu-dropdown.isOpen .dropdown-header svg {
+        transform: rotate(180deg);
+        transform-origin: 50%;
+    }
+
+    .side-menu-mobile .dropdown-body {
+        display: none;
+        margin-top: 20px;
+        border-top: 1px solid var(--gray-400);
+        padding: 20px 20px 8px 20px;
+    }
+
+    .mobile-sideMenu-dropdown.isOpen .dropdown-body {
+        display: block;
+    }
+
+    .side-menu-mobile .invitation-counter:last-child {
+        margin: 0;
+    }
+
+    main .container-content .live-events,
+    main .container-content .welcome-wrapper.isActive~.live-events {
+        padding: 20px 15px 24px 15px;
+    }
+
+}
