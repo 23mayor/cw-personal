@@ -16,8 +16,10 @@
     <link rel="stylesheet" href="../../components/buttons/buttons.css">
     <link rel="stylesheet" href="../../components/navigation bar/navi mobile/index.css">
     <link rel="stylesheet" href="../../components/navigation bar/menuLinks.css">
+    <link rel="stylesheet" href="../../components/select/select.css">
     <link rel="stylesheet" href="../../css/globalStyles.css">
     <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="all-events.css">
 </head>
 <body>
     <div class="wrapper">
@@ -172,208 +174,131 @@
         <div class="background-container">
             <div class="container-content">
                 <div class="information">
-                    <div class="data-time">
-                        <h1>11:33 am</h1>
-                        <div class="date semibold-text">December 28, Wednesday</div>
+                    <h1>All events</h1>
+                    <div class="switchers">
+                        <div class="slider-switch">
+                            <span class="regular-text">Week</span>
+                        </div>
+                        <div class="select">
+                            <div class="select__header">
+                                <span class="select__current">Type</span>
+                            </div>
+                            <div class="select__body">
+                                <div class="select__item">Item</div>
+                                <div class="select__item">Item</div>
+                                <div class="select__item">Item</div>
+                                <div class="select__item">Item</div>
+                            </div>
+                        </div>
                     </div>
-                    <a href="#" class="link-purple">All events</a>
+                    <a href="#" class="btn-link">Book a demo</a>
                 </div>
-                <div class="events-wrapper">
-                    <div class="snippet">
-                        <div class="snippet-time">11 AM</div>
-                        <div class="snippet-event-container">
-                            <div class="event-card active">
-                                <div class="card-top">
-                                    <div class="name-time">
-                                        <div class="event-name">Global Town Hall</div>
-                                        <div class="time-counter">
-                                            <div class="live">LIVE</div>
-                                            <span>33'</span>
-                                        </div>
-                                    </div>
-                                    <div class="duration mobile-duration">
-                                        <span class="from">11:00 am</span>
-                                        <span class="to">12:00 pm</span>
-                                    </div>
-                                    <a class="join-link btn-link-text">Join</a>
+                <div class="events-week-wrapper">
+                    <div class="column">
+                        <div class="date">
+                            <span class="semibold-text">1 Mon</span>
+                        </div>
+                        <div class="column-content">
+                            <div class="event">
+                                <span class="semibold-text event-name">Event name</span>
+                                <div class="event-time"><span class="semibold-text">12:00 am</span></div>
+                                <div class="company-info">
+                                    <div class="info-icon"></div>
+                                    <span class="semibold-text">Samsung</span>
                                 </div>
-                                <div class="card-bottom">
-                                    <div class="duration">
-                                        <span class="from">11:00 am</span>
-                                        <span class="arrow">-></span>
-                                        <span class="to">12:00 pm</span>
-                                    </div>
-                                    <div class="participants">
-                                        <div class="participant-avatar user-john"></div>
-                                        <div class="participant-avatar user-john"></div>
-                                        <div class="participant-avatar user-john"></div>
-                                        <div class="participant-avatar user-john"></div>
-                                        <div class="more-participants"><span>+390</span></div>
-                                    </div>
-                                </div>
-                                <a class="join-link btn-link-text join-link-mobile">Join</a>
                             </div>
                         </div>
                     </div>
-                    <div class="snippet">
-                        <div class="snippet-time">12 PM</div>
-                        <div class="snippet-event-container">
-                            <div class="event-card not-started half-snippet half-hour">
-                                <div class="card-top">
-                                    <div class="name-time">
-                                        <div class="event-name">Design thinking w/ Design department</div>
-                                        <div class="time-counter">
-                                            <div class="live">LIVE</div>
-                                            <span>33'</span>
-                                        </div>
-                                    </div>
-                                    <div class="duration mobile-duration">
-                                        <span class="from">11:00 am</span>
-                                        <span class="to">12:00 pm</span>
-                                    </div>
-                                    <a class="join-link btn-link-text">Join</a>
+                    <div class="column">
+                        <div class="date">
+                            <span class="semibold-text">2 Tue</span>
+                        </div>
+                        <div class="column-content">
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="date">
+                            <span class="semibold-text">3 Thu</span>
+                        </div>
+                        <div class="column-content active">
+                            <div class="event">
+                                <span class="semibold-text event-name">Event name</span>
+                                <div class="event-time">
+                                    <span class="semibold-text">00:00 am</span>
+                                    <span class="semibold-text">00:00 pm</span>
                                 </div>
-                                <div class="card-bottom">
-                                    <div class="duration">
-                                        <span class="from">12:00 am</span>
-                                        <span class="arrow">-></span>
-                                        <span class="to">12:30 pm</span>
-                                    </div>
-                                    <div class="participants">
-                                        <div class="participant-avatar user-john"></div>
-                                    </div>
+                                <div class="company-info">
+                                    <div class="info-icon"></div>
+                                    <span class="semibold-text">Samsung</span>
                                 </div>
-                                <a class="join-link btn-link-text join-link-mobile">Join</a>
-                            </div>
-                            <div class="event-card not-started half-snippet two-hour">
-                                <div class="card-top">
-                                    <div class="name-time">
-                                        <div class="event-name">Design thinking w/ Design department</div>
-                                        <div class="time-counter">
-                                            <div class="live">LIVE</div>
-                                            <span>33'</span>
-                                        </div>
-                                    </div>
-                                    <div class="duration mobile-duration">
-                                        <span class="from">11:00 am</span>
-                                        <span class="to">12:00 pm</span>
-                                    </div>
-                                    <a class="join-link btn-link-text">Join</a>
-                                </div>
-                                <div class="card-bottom">
-                                    <div class="duration">
-                                        <span class="from">12:00 am</span>
-                                        <span class="arrow">-></span>
-                                        <span class="to">12:30 pm</span>
-                                    </div>
-                                    <div class="participants">
-                                        <div class="participant-avatar user-john"></div>
-                                    </div>
-                                </div>
-                                <a class="join-link btn-link-text join-link-mobile">Join</a>
                             </div>
                         </div>
                     </div>
-                    <div class="snippet empty">
-                        <div class="snippet-time">1 PM</div>
-                        <div class="snippet-event-container">
+                    <div class="column">
+                        <div class="date">
+                            <span class="semibold-text">4 Dec</span>
+                        </div>
+                        <div class="column-content">
                         </div>
                     </div>
-                    <div class="snippet">
-                        <div class="snippet-time">2 PM</div>
-                        <div class="snippet-event-container">
-                            <div class="event-card not-started half-snippet half-hour">
-                                <div class="card-top">
-                                    <div class="name-time">
-                                        <div class="event-name">Design thinking w/ Design department</div>
-                                        <div class="time-counter">
-                                            <div class="live">LIVE</div>
-                                            <span>33'</span>
-                                        </div>
-                                    </div>
-                                    <div class="duration mobile-duration">
-                                        <span class="from">11:00 am</span>
-                                        <span class="to">12:00 pm</span>
-                                    </div>
-                                    <a class="join-link btn-link-text">Join</a>
-                                </div>
-                                <div class="card-bottom">
-                                    <div class="duration">
-                                        <span class="from">12:00 am</span>
-                                        <span class="arrow">-></span>
-                                        <span class="to">12:30 pm</span>
-                                    </div>
-                                    <div class="participants">
-                                        <div class="participant-avatar user-john"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="event-card not-started half-snippet">
-                                <div class="card-top">
-                                    <div class="name-time">
-                                        <div class="event-name">Design thinking w/ Design department</div>
-                                        <div class="time-counter">
-                                            <div class="live">LIVE</div>
-                                            <span>33'</span>
-                                        </div>
-                                    </div>
-                                    <div class="duration mobile-duration">
-                                        <span class="from">11:00 am</span>
-                                        <span class="to">12:00 pm</span>
-                                    </div>
-                                    <a class="join-link btn-link-text">Join</a>
-                                </div>
-                                <div class="card-bottom">
-                                    <div class="duration">
-                                        <span class="from">12:00 am</span>
-                                        <span class="arrow">-></span>
-                                        <span class="to">12:30 pm</span>
-                                    </div>
-                                    <div class="participants">
-                                        <div class="participant-avatar user-john"></div>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="column">
+                        <div class="date">
+                            <span class="semibold-text">5 Fri</span>
+                        </div>
+                        <div class="column-content">
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="date">
+                            <span class="semibold-text">6 Sat</span>
+                        </div>
+                        <div class="column-content">
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="date">
+                            <span class="semibold-text">7 Sun</span>
+                        </div>
+                        <div class="column-content">
                         </div>
                     </div>
                 </div>
             </div>
             <div class="sidebar">
                 <div class="sidebar-header">
-                    <span class="semibold-text">Your company</span>
+                    <span class="semibold-text">Upcoming event</span>
                 </div>
-                <div class="company">
-                    <h2>Marriott International</h2>
-                    <a href="#" class="company-toggle"></a>
+                <div class="sidebar-event-name">
+                    <h2>Galaxy Unpacked</h2>
                 </div>
-                <div class="invitation">
-                    <div class="sent">
-                        <span class="semibold-text">Invitation sent</span>
-                        <span class="counter">1337</span>
+                <div class="sidebar-event-pic"></div>
+                <div class="sidebar-event-info">
+                    <div class="info-name">
+                        <span class="semibold-text gray-600">Company</span>
+                        <div class="company-info">
+                            <div class="info-icon"></div>
+                            <span class="semibold-text gray-700">Samsung</span>
+                        </div>
                     </div>
-                    <a href="#" class="link-purple">Invite more</a>
-                    <div class="accepted">
-                        <span class="semibold-text">Invitation accepted</span>
-                        <span class="counter">399</span>
-                    </div>
-                    <div class="accepted-avatars">
-                        <div class="participant-avatar user-john"></div>
-                        <div class="participant-avatar user-john"></div>
-                        <div class="participant-avatar user-john"></div>
-                        <div class="participant-avatar user-john"></div>
-                        <div class="participant-avatar user-john"></div>
-                        <div class="participant-avatar user-john"></div>
-                        <div class="participant-avatar user-john"></div>
-                        <div class="participant-avatar user-john"></div>
-                        <div class="participant-avatar user-john"></div>
-                        <div class="more-participants"><span>+390</span></div>
+                    <div class="info-date-time">
+                        <span class="semibold-text info-date">3 December, 2021</span>
+                        <span class="semibold-text info-time">12:00 am</span>
                     </div>
                 </div>
+                <div class="event-description">
+                    <p class="semibold-text">
+                        At Unpacked in February 2022, we'll be unveiling the most note-worthy Galaxy devices yet. 
+                        It's the next generation of Galaxy S, bringing the best features of the Samsung Galaxy 
+                        experience together into one incredible, epic device.
+                    </p>
+                </div>
+                <a class="join-link btn-link-text join-link-mobile">Join</a>
             </div>
         </div>
     </div>
     <script src="../../js/show-menu.js"></script>
     <script src="../../js/popup.js"></script>
     <script src="../../js/burger.js"></script>
+    <script src="../../js/select.js"></script>
 </body>
 </html>
