@@ -20,6 +20,8 @@
 
 .members-tab {
     position: relative;
+    display: flex;
+    gap: 8px;
     padding: 6px 8px 12px 8px;
     border: none;
     background-color: transparent;
@@ -44,7 +46,17 @@
 }
 
 .members-tab .tab-counter {
-    margin-left: 4px;
+    display: none;
+    padding: 2px 9px;
+    background-color: var(--gray-300);
+    border-radius: 100px;
+    color: var(--dark);
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.members-tab.active .tab-counter {
+    display: block;
 }
 
 /*Alert*/
@@ -74,7 +86,7 @@
     padding: 26px 24px;
 }
 
-    /*Filter*/
+/*Filter*/
 
 .members-filter {
     display: flex;
@@ -114,7 +126,7 @@
 }
 
 .members-filter .btn {
-    margin-left: 30px;
+    margin-left: 12px;
     padding: 13px;
     font-weight: 600;
 }
@@ -137,7 +149,7 @@
 }
 
 .sented-invitation .table-head {
-    grid-template-columns: 1fr 170px 206px;
+    grid-template-columns: 1fr 174px 174px;
 }
 
 .accept-invitation .table-head,
@@ -177,11 +189,15 @@
 }
 
 .sented-invitation .table-body .table-row {
-    grid-template-columns: 1fr 170px 160px auto;
+    grid-template-columns: 1fr 170px 120px auto;
 }
 
 .table-custom .table-body .table-row:hover {
     background-color: var(--gray-100);
+}
+
+.table-custom .table-body .table-row:hover .select__header{
+    background-color: var(--white);
 }
 
 .table-custom .table-body .table-row .date {
@@ -201,6 +217,14 @@
 
 .table-custom .table-body .table-row .cell-delete-btn {
     justify-self: center;
+}
+
+.btn-delete {
+    visibility: hidden;
+}
+
+.table-custom .table-body .table-row:hover .btn-delete {
+    visibility: visible;
 }
 
 .table-custom .table-body .table-row .cell-for-name .avatar {
@@ -418,7 +442,23 @@
 
 @media screen and (max-width: 1279px) {
     .members-navigation {
-        margin-bottom: 20px;
+        margin-bottom: 16px;
+    }
+
+    .content-header {
+        margin-bottom: 40px;
+    }
+
+    .members-filter {
+        margin-bottom: 16px;
+    }
+
+    .members-tab {
+        padding-bottom: 8px;
+    }
+
+    .members-filter .btn {
+        padding: 10px 12px;
     }
 
     /*Table*/
@@ -436,13 +476,13 @@
     }
 
     .accept-invitation .table-body .table-row .cell-for-name .avatar {
-        width: 80px;
-        height: 80px;
+        width: 56px;
+        height: 56px;
     }
 
     .accept-invitation .table-body .table-row .cell-for-name {
-        font-size: 20px;
-        line-height: 28px;
+        font-size: 18px;
+        line-height: 24px;
     }
 
     .cell-for-name {
@@ -464,11 +504,34 @@
     .cell-delete-btn .btn-delete {
         width: auto;
         height: auto;
+        visibility: visible;
     }
 
     .cell-delete-btn .btn-delete svg {
-        width: 40px;
-        height: 40px;
+        width: 20px;
+        height: 20px;
+    }
+
+    .table-custom .table-body .table-row:hover .select__header {
+        background-color: transparent;
+    }
+
+    .badge {
+        height: auto;
+    }
+
+    .select.badge .select__header {
+        padding: 4px 8px;
+    }
+
+    .table-custom .table-body .table-row .date {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .btn-revoke-email {
+        width: 100%;
+        padding: 6px;
     }
 
     /*Filter*/
@@ -484,7 +547,11 @@
         grid-template-columns: auto auto auto 1fr;
         gap: 24px;
         padding: 0;
-        margin-bottom: 24px;
+        margin-bottom: 12px;
+    }
+
+    .accept-invitation .table-head {
+        gap: 82px;
     }
 
     .table-custom .table-body {
@@ -504,11 +571,19 @@
 
     .table-custom .table-body .table-row {
         grid-template-columns: 1fr;
-        gap: 12px;
+        gap: 16px;
         padding: 16px;
-        margin-bottom: 12px;
+        margin-bottom: 8px;
         border: 1px solid var(--gray-400);
         border-radius: 8px;
+    }
+
+    /*.accept-invitation .table-body .table-row {*/
+    /*    padding: 16px;*/
+    /*}*/
+
+    .table-custom .table-body .table-row:last-child {
+        margin-bottom: 0;
     }
 
     .table-custom .table-body .table-row:hover {
@@ -516,7 +591,7 @@
     }
 
     .table-custom .table-body .table-row .table-cell:last-child {
-        justify-self: center;
+        width: 100%;
     }
 }
 
@@ -548,11 +623,15 @@
     }
 
     .members-filter .btn {
-        padding: 16px 14px;
+        padding: 10px;
     }
 
     .table-custom .table-head {
-        margin-bottom: 18px;
+        margin-bottom: 12px;
+    }
+
+    .accept-invitation .table-head {
+        gap: 24px;
     }
 
     .content-header .header-title {
@@ -563,25 +642,10 @@
         display: block;
     }
 
-    .btn-revoke-email {
-        margin-top: 10px;
-    }
-
     .accept-invitation .table-body .table-cell:nth-child(2) {
         white-space: normal;
         padding-right: 0;
         word-wrap: break-word;
-    }
-
-    .table-custom .table-body .table-row .wrap-name {
-        align-items: flex-start;
-        font-size: 18px;
-        line-height: 24px;
-    }
-
-    .accept-invitation .table-body .table-row .cell-for-name .avatar {
-        width: 56px;
-        height: 56px;
     }
 
     .cell-for-email {

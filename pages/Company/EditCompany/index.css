@@ -83,12 +83,12 @@ h1 {
 
 .content-header .button-wrap {
     display: flex;
+    gap: 16px;
 }
 
 .content-header .button-wrap .header-btn {
     min-width: 182px;
     height: 72px;
-    margin-left: 16px;
     color: var(--gray-700);
     border-radius: 8px;
     border: none;
@@ -207,7 +207,10 @@ h1 {
 
     .content-header .button-wrap .header-btn {
         margin-left: 0;
-        margin-right: 16px;
+    }
+
+    .content-header .button-wrap {
+        gap: 16px;
     }
 
     .content-body {
@@ -231,7 +234,7 @@ h1 {
     }
 
     .modal-create-avatar {
-        margin-bottom: 8px;
+        margin-bottom: 2px;
     }
 
     .admin-inputs-wrap .text-field_floating {
@@ -249,17 +252,37 @@ h1 {
         padding: 40px;
     }
 
+    .content-header {
+        gap: 24px;
+    }
+
     .content-header .header-title {
-        margin-bottom: 24px;
+        margin-bottom: 0;
         font-size: 32px;
         line-height: 36px;
     }
 
+    .content-header .button-wrap {
+        width: 100%;
+    }
+
+    .content-header .button-wrap {
+        gap: 12px;
+    }
+
     .content-header .button-wrap .header-btn {
-        min-width: 164px;
+        flex: 1;
         height: 52px;
         font-size: 20px;
         line-height: 24px;
+    }
+
+    .container-companies {
+        margin-top: 138px;
+    }
+
+    .company-item {
+
     }
 
     .content-body {
@@ -278,7 +301,6 @@ h1 {
     .modal-create-avatar {
         align-items: flex-start;
         padding: 12px;
-        margin-top: 12px;
         margin-bottom: 0;
         background-color: var(--gray-200);
         border-radius: 8px;
@@ -312,10 +334,13 @@ h1 {
         line-height: 20px
     }
 
-    .info-company-title,
     .admin-title {
         font-size: 20px;
         line-height: 24px;
+    }
+
+    .info-company-title {
+        margin-bottom: 28px;
     }
 
     .info-inputs-wrap textarea {
@@ -324,15 +349,6 @@ h1 {
 
     .content-body .div {
         margin-bottom: 35px;
-    }
-
-    .content-body .div label::before {
-        width: 18px;
-        height: 18px;
-    }
-
-    .admin-inputs-wrap {
-        margin-top: 10px;
     }
 
     .select__header {
@@ -395,11 +411,16 @@ h1 {
         display: none;
     }
 
+    .content-header .button-wrap .header-btn {
+        min-width: auto;
+    }
+
     .content-body {
         padding: 16px;
     }
 
     .info-company-title {
+        margin: 0;
         font-size: 24px;
         line-height: 28px;
     }

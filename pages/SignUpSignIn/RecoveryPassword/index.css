@@ -11,28 +11,23 @@ aside .side-menu .recover-wrap.visible {
 }
 
 aside .side-menu .title {
-    margin: 0 0 14px 0;
-    font-weight: 500;
-    font-size: 40px;
-    line-height: 48px;
+    margin: 0 0 8px 0;
 }
 
 aside .side-menu .description {
-    max-width: 380px;
-    margin: 0 0 14px 0;
+    margin: 0 0 24px 0;
     font-weight: 600;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 14px;
+    line-height: 20px;
     color: var(--gray-600);
 }
 
 aside .side-menu .container-recovery .text-field {
-    margin-bottom: 16px;
+    margin-bottom: 24px;
 }
 
 aside .side-menu .btn {
     margin-bottom: 40px;
-    font-size: 16px;
 }
 
 aside .side-menu .container-recovery .bottom-recovery {
@@ -40,30 +35,30 @@ aside .side-menu .container-recovery .bottom-recovery {
 }
 
 aside .side-menu .bottom-title {
-    margin: 0 0 16px 0;
-    padding-top: 17px;
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 28px;
+    margin: 0 0 12px 0;
+    padding-top: 16px;
 }
 
 /*Reset password*/
 
 aside .side-menu .reset-password-btn {
-    margin-bottom: 16px;
-    font-size: 16px;
+    margin-bottom: 40px;
 }
 
 aside .side-menu .container-reset .container-resend-folder {
     border-top: 1px solid var(--gray-400);
 }
 
-aside .side-menu .text-field_floating .text-field__label,
-aside .side-menu .text-field_floating .text-field__label-error {
-    font-size: 16px;
+aside .side-menu .reset-title {
+    margin-bottom: 16px;
+}
+
+aside .side-menu .reset-description {
+    margin-bottom: 16px;
 }
 
 /*Modal reset password*/
+
 
 .modal-wrapper {
     position: fixed;
@@ -165,23 +160,25 @@ aside .side-menu .text-field_floating .text-field__label-error {
 .container-reset-form .email-wrap {
     display: flex;
     align-items: center;
-    margin-bottom: 15px;
+    margin-bottom: 24px;
     font-weight: 600;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 14px;
+    line-height: 20px;
     color: var(--gray-600);
 }
 
 .container-reset-form .email-wrap a {
     margin-left: 6px;
-}
-
-.container-reset-form .password-description {
-    max-width: 360px;
-    margin: 4px 0 0 15px;
     font-weight: 600;
     font-size: 14px;
     line-height: 20px;
+}
+
+.container-reset-form .password-description {
+    margin: 4px 0 0 12px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
     color: var(--gray-600);
 }
 
@@ -189,7 +186,11 @@ aside .side-menu .text-field_floating .text-field__label-error {
     margin-bottom: 16px;
 }
 
-/*Change-password-screen*/
+.side-menu .container-reset-form .text-field:last-of-type {
+    margin-bottom: 40px;
+}
+
+    /*Change-password-screen*/
 
 .side-menu .container-change-pass .change-password-title {
     margin-bottom: 8px;
@@ -214,47 +215,47 @@ aside .side-menu .text-field_floating .text-field__label-error {
     /*Recovery screen*/
 
     aside .side-menu .description {
-        max-width: 260px;
+        margin-bottom: 12px;
+    }
+
+    aside .side-menu .bottom-title {
+        margin-bottom: 10px;
+    }
+
+    /*Reset password*/
+
+    aside .side-menu .reset-title {
+        margin-bottom: 8px;
+    }
+
+    aside .side-menu .reset-description {
+        margin-bottom: 16px;
     }
 }
 
 @media screen and (max-width: 1079px) {
 
     aside .logo-full {
-        margin-bottom: 37px;
+        margin-bottom: 34px;
     }
 
-    aside .side-menu .title {
-        margin-bottom: 6px;
-        font-weight: 600;
-        font-size: 24px;
-        line-height: 28px;
-    }
 
     aside .side-menu .description {
-        max-width: none;
-        margin-bottom: 16px;
         font-size: 14px;
         line-height: 20px;
     }
 
     aside .side-menu .bottom-title {
-        padding-top: 20px;
-        margin-bottom: 14px;
-        font-weight: 600;
-        font-size: 20px;
-        line-height: 24px;
+        padding-top: 16px;
+        margin-bottom: 10px;
     }
 
-    aside .side-menu .bottom-link {
-        font-size: 16px;
+
+    aside .side-menu .container-recovery .text-field {
+        margin-bottom: 16px;
     }
 
     /*Reset password*/
-
-    aside .side-menu .reset-password-btn {
-        margin-bottom: 41px;
-    }
 
     .container-reset-form .email-wrap {
         font-size: 14px;
@@ -265,16 +266,12 @@ aside .side-menu .text-field_floating .text-field__label-error {
         margin-left: 4px;
     }
 
-
-    .container-reset-form .password-description {
-        margin: 4px 20px 0 9px;
-        font-size: 12px;
-        line-height: 16px;
+    aside .side-menu .container-reset-form .btn {
+        margin: 0;
     }
 
-    aside .side-menu .container-recovery .btn {
-        margin-top: 8px;
-        font-size: 14px;
+    .side-menu .container-reset-form .text-field {
+        margin-bottom: 12px;
     }
 
     .side-menu .container-change-pass .change-password-description {

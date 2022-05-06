@@ -74,8 +74,8 @@ main .submenu .submenu-title {
 }
 
 main .submenu .btn svg {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
     margin-right: 8px;
 }
 
@@ -132,6 +132,7 @@ main .submenu .btn svg {
     left: 0;
     width: 100%;
     height: 100%;
+    padding: 20px;
     z-index: 2;
     background: rgba(20, 14, 23, 0.5);
 }
@@ -149,6 +150,8 @@ main .submenu .btn svg {
 }
 
 .modal-wrapper .modal-company > div {
+    display: flex;
+    flex-direction: column;
     min-height: 100%;
     padding: 24px;
 }
@@ -186,7 +189,7 @@ main .submenu .btn svg {
 .create-form {
     display: none;
     flex-direction: column;
-    height: 100%;
+    flex: 1;
 }
 
 .create-form.isActive {
@@ -320,7 +323,7 @@ main .submenu .btn svg {
 .text-field_floating .text-field__label,
 .text-field_floating .text-field__label-error {
     position: absolute;
-    top: 22px;
+    top: 20px;
     left: 12px;
     height: 100%;
     pointer-events: none;
@@ -505,6 +508,8 @@ main .submenu .btn svg {
 }
 
 .select__body .select__item {
+    margin: 0;
+    padding: 10px;
     border-radius: 6px;
     font-size: 14px;
     line-height: 20px;
@@ -514,6 +519,7 @@ main .submenu .btn svg {
 
 .modal-company .btn {
     margin-top: auto;
+    padding: 18px;
     font-size: 14px;
     line-height: 20px;
 }
@@ -527,7 +533,7 @@ main .submenu .btn svg {
 .container-invite-members {
     display: none;
     flex-direction: column;
-    height: 100%;
+    flex: 1;
 }
 
 .container-invite-members.isActive {
@@ -550,6 +556,10 @@ main .submenu .btn svg {
     height: 20px;
     font-size: 12px;
     line-height: 16px;
+}
+
+.invite-members-bottom .add-email {
+    margin-top: 8px;
 }
 
 /*Dropdown*/
@@ -751,7 +761,14 @@ main .submenu .btn svg {
     }
 
     .submenu .btn {
-        padding: 24px;
+        padding: 10px 12px;
+    }
+
+    main .submenu .submenu-title {
+        margin-bottom: 24px;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 28px;
     }
 
     /*Modal window*/
@@ -815,6 +832,7 @@ main .submenu .btn svg {
     /*Button*/
 
     .btn {
+        width: fit-content;
         padding: 16px ;
     }
 
@@ -898,20 +916,25 @@ main .submenu .btn svg {
         /*padding: 24px 15px;*/
     }
 
+    main .submenu .submenu-top {
+        padding: 24px 16px 0 16px;
+    }
+
     main .submenu .submenu-title {
         margin-bottom: 12px;
     }
 
     main .submenu .btn {
+        width: 100%;
         padding: 9px 24px;
         font-size: 14px;
         line-height: 20px;
     }
 
-    main .submenu .btn svg {
-        width: 20px;
-        height: 20px;
-    }
+    /*main .submenu .btn svg {*/
+    /*    width: 20px;*/
+    /*    height: 20px;*/
+    /*}*/
 
     /*Content*/
     .container-content .content-empty .content-description {
@@ -932,7 +955,11 @@ main .submenu .btn svg {
         margin-bottom: 18px;
     }
 
-    .modal-wrapper .modal-company {
+    /*.modal-wrapper .modal-company {*/
+    /*    padding: 16px;*/
+    /*}*/
+
+    .modal-wrapper .modal-company > div {
         padding: 16px;
     }
 
@@ -940,8 +967,21 @@ main .submenu .btn svg {
         margin-top: 0;
     }
 
+    .modal-wrapper .step-item {
+        width: 120px;
+    }
+
     .modal-wrapper .line {
         height: 4px;
+    }
+
+    .modal-wrapper .modal-create-avatar .upload-photo.mini,
+    .modal-wrapper .modal-create-avatar .loaded-photo.mini {
+        justify-content: center;
+    }
+
+    .modal-company .btn {
+        padding: 16px;
     }
 
     .modal-wrapper .modal-close {
@@ -1008,6 +1048,11 @@ main .submenu .btn svg {
         position: absolute;
         display: block;
         left: 16px;
+    }
+
+    .invite-members-bottom .add-email {
+        margin-top: 6px;
+        padding: 0;
     }
 
     .email-item .select__header .arrow-icon {
