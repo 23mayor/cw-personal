@@ -13,14 +13,17 @@ main .admin-content .admin-dropdown {
     left: 128px;
     right: 468px;
     width: auto;
+    padding-top: 20px;
     z-index: 2;
 }
 
 main .admin-content .admin-dropdown.isActive {
     position: absolute;
+    padding: 0;
     left: 0;
     right: 0;
     z-index: 0;
+    padding-top: 0;
 }
 
 main .admin-content .admin-dropdown.isActive .welcome-container {
@@ -34,7 +37,11 @@ main .admin-content .admin-dropdown.isActive .header {
 }
 
 main .admin-content .admin-dropdown .header {
-    padding-top: 20px;
+    padding-top: 12px;
+}
+
+main .container-content .welcome-wrapper .welcome-container {
+    padding-bottom: 12px;
 }
 
 main .admin-content .admin-dropdown.isActive .header {
@@ -45,12 +52,12 @@ main .admin-content .admin-dropdown .date-container {
     display: flex;
     flex-direction: row;
     align-items: baseline;
-    gap: 16px;
+    gap: 8px;
 }
 
 main .admin-content .admin-dropdown.isActive .date-container {
     flex-direction: column;
-    gap: 0;
+    gap: 16px;
 }
 
 main .admin-content .admin-dropdown .date-container .date-time {
@@ -74,7 +81,7 @@ main .admin-content .admin-dropdown.isActive .date-container .date-time {
 
 .header .dropdown-btn-wrap {
     display: flex;
-    gap: 16px;
+    gap: 12px;
 }
 
 .header .secondary-btn {
@@ -91,7 +98,7 @@ main .admin-content .admin-dropdown.isActive .date-container .date-time {
 }
 
 main .admin-content .admin-dropdown .body {
-    margin-bottom: 300px;
+    height: 272px;
 }
 
 main .admin-content .admin-dropdown.isActive.noLiveEvent .body {
@@ -99,7 +106,7 @@ main .admin-content .admin-dropdown.isActive.noLiveEvent .body {
 }
 
 main .admin-content .admin-dropdown.isActive~.live-events {
-    padding-top: 160px;
+    padding-top: 168px;
 }
 
 aside .invitation-wrap {
@@ -252,6 +259,8 @@ aside .invitation-wrap:before {
 }
 
 .invitation-counter .members .avatar {
+    width: 40px;
+    height: 40px;
     margin-right: 4px;
 }
 
@@ -275,6 +284,7 @@ aside .invitation-wrap:before {
 }
 
 .upcoming-event-container .event-card {
+    position: relative;
     display: grid;
     grid-template-columns: 1fr auto;
     grid-template-areas: "time image"
@@ -348,21 +358,25 @@ aside .invitation-wrap:before {
 
 @media screen and (max-width: 1919px) {
 
-    main .admin-content .admin-dropdown.isActive~.events-wrap .event-container {
+    main .admin-content .admin-dropdown~.events-wrap .event-container {
         width: 100%;
     }
 
     main .admin-content .admin-dropdown {
         left: 96px;
-        right: 391px;
+        right: 390px;
     }
 
-    main .admin-content .admin-dropdown.isActive~.live-events {
-        padding-top: 136px;
+    main .admin-content .admin-dropdown .body {      
+        height: 292px;
     }
 
-    main .admin-content .admin-dropdown .body {
-        margin-bottom: 324px;
+    .item {
+        width: 100%;
+    }
+
+    .slider {
+        margin-bottom: 0;
     }
 
     .select__header {
@@ -381,9 +395,14 @@ aside .invitation-wrap:before {
 
 @media screen and (max-width: 1279px) {
 
+    main .admin-content .admin-dropdown~.events-wrap .event-container,
+    main .admin-content .admin-dropdown.isActive~.events-wrap .event-container {
+        width: 100%;
+    }
+
     main .admin-content .admin-dropdown {
         left: 96px;
-        right: 347px;
+        right: 346px;
     }
 
     main .admin-content .admin-dropdown .header {
@@ -403,6 +422,10 @@ aside .invitation-wrap:before {
     .header .secondary-btn {
         gap: 8px;
     }
+
+    main .admin-content .admin-dropdown.isActive~.live-events {
+        padding-top: 144px;
+    }
 }
 
 @media screen and (max-width: 1079px) {
@@ -417,22 +440,25 @@ aside .invitation-wrap:before {
         gap: 0;
     }
 
-    main .admin-content .admin-dropdown .welcome-container {
-        padding: 0;
-    }
-
     main .admin-content .admin-dropdown.isActive {
         position: relative;
+        top: 0;
     }
 
     main .admin-content .admin-dropdown {
+        top: 64px;
         left: 0;
         right: 0;
+        padding: 0;
     }
 
     main .admin-content .admin-dropdown .header {
         flex-direction: row;
-        padding: 12px 15px;
+        padding: 0;
+    }
+
+    main .container-content .admin-dropdown .welcome-container {
+        padding: 8px 15px;
     }
 
     main .admin-content .admin-dropdown.isActive.noLiveEvent .body {
@@ -486,9 +512,6 @@ aside .invitation-wrap:before {
         margin-bottom: 0px;
     }
 
-    main .container-content .home-page-content {
-
-    }
 
     /*Side-menu-mobile*/
 
@@ -542,6 +565,23 @@ aside .invitation-wrap:before {
     main .container-content .live-events,
     main .container-content .welcome-wrapper.isActive~.live-events {
         padding: 20px 15px 24px 15px;
+    }
+
+    main .admin-content .admin-dropdown.isActive .date-container {
+        gap: 0;
+    }
+
+    main .admin-content .admin-dropdown .body {
+        height: 0;
+    }
+
+    main .admin-content .admin-dropdown.isActive .date-container .date-time {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .upcoming-event-wrap {
+        padding: 0 16px 20px 16px;
     }
 
 }

@@ -1,25 +1,15 @@
 /*Prevent event*/
 
 aside .side-menu .title {
-    margin-bottom: 6px;
+    margin-bottom: 8px;
 }
 
 aside .side-menu .description {
-    margin-bottom: 22px;
-    font-size: 18px;
-}
-
-aside .side-menu .btn {
-    margin-bottom: 40px;
-    font-size: 18px;
+    margin-bottom: 24px;
 }
 
 aside .side-menu .bottom-privat {
     border-top: 1px solid var(--gray-400);
-}
-
-aside .side-menu  .bottom-privat .bottom-link {
-    font-size: 18px;
 }
 
 /*Modal window*/
@@ -92,12 +82,18 @@ main .reset-password-modal {
     margin: 0;
 }
 
+@media screen and (max-width: 1279px) {
+    aside .side-menu .bottom-title {
+        line-height: 24px;
+    }
+}
+
 @media screen and (max-width: 1079px) {
 
     /*Private event */
 
     aside .side-menu .logo-full {
-        margin-bottom: 36px;
+        margin-bottom: 34px;
     }
 
     aside .side-menu .title {
@@ -105,20 +101,6 @@ main .reset-password-modal {
         font-weight: 600;
         font-size: 24px;
         line-height: 28px;
-    }
-
-    aside .side-menu .description {
-        max-width: 290px;
-        font-size: 16px;
-        line-height: 20px;
-    }
-
-    aside .side-menu .bottom-privat .bottom-link {
-        font-size: 16px;
-    }
-
-    aside .side-menu .btn {
-        font-size: 16px;
     }
 
     /*Modal*/

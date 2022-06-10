@@ -11,27 +11,36 @@ h1 {
 /*Submenu*/
 
 .container-companies {
-    margin-top: 91px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 88px;
+    padding-left: 40px;
 }
 
 .company-item {
     position: relative;
+    padding: 3px 0;
+    border: none;
+    background-color: transparent;
+    text-align: start;
+    font-family: "Manrope", sans-serif;
     font-weight: 600;
-    font-size: 20px;
-    line-height: 28px;
+    font-size: 18px;
+    line-height: 24px;
+    cursor: pointer;
 }
 
-.container-companies {
-    padding-left: 40px;
+.company-item.isActive {
+    color: var(--purple-400);
 }
 
-.company-item:after {
+.company-item.isActive:after {
     content: '';
     position: absolute;
     right: -1px;
-    top: -6px;
     width: 1px;
-    height: 34px;
+    height: 100%;
     background-color: var(--purple-400);
 }
 
@@ -58,6 +67,48 @@ h1 {
 .alert .regular-text {
     font-size: 14px;
     line-height: 20px;
+}
+
+/* Content-header-mobile */
+
+.header-mobile-wrapper {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.header-mobile-wrapper .select {
+    width: fit-content;
+}
+
+.header-mobile-wrapper .select__header .arrow-icon {
+    position: initial;
+    margin-left: 8px
+}
+
+.header-mobile-wrapper .select__header .arrow-icon svg,
+.header-mobile-wrapper .select.is-active .arrow-icon svg  {
+    fill: var(--dark);
+}
+
+.header-mobile-wrapper .select__header {
+    height: auto;
+    padding: 0;
+    border: none;
+}
+
+.header-mobile-wrapper .select__header .select__current {
+    white-space: nowrap;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.header-mobile-wrapper .add-company-mobile-btn {
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
 }
 
 /*Content*/
@@ -105,7 +156,7 @@ h1 {
     grid-template-areas: "info-title info-inputs . avatar-inputs"
                     "admin-title admin-inputs . avatar-inputs";
     padding: 40px;
-    margin-bottom: 40px;
+    margin-bottom: auto;
     gap: 46px 89px;
     border: 1px solid var(--gray-500);
     border-radius: 8px;
@@ -152,6 +203,11 @@ h1 {
     padding-left: 26px;
 }
 
+.admin-inputs-wrap .text-field {
+    display: block;
+    margin-bottom: 0;
+}
+
 .modal-create-avatar {
     grid-area: avatar-inputs;
     display: flex;
@@ -164,13 +220,12 @@ h1 {
     background-color: var(--gray-100);
 }
 
-.content-body .div {
-    margin: 0;
+.content-header .select.selected .select__header .arrow-icon {
+    transform: none;
 }
 
-.select-input {
-    display: block;
-    margin-bottom: 0;
+.content-body .div {
+    margin: 0;
 }
 
 .loaded-photo .instruments {
@@ -183,6 +238,10 @@ h1 {
     margin-bottom: 40px;
 }
 
+.upload-photo-input {
+    margin-bottom: 0;
+}
+
 .content-body .text-field_floating .input-description .link {
     font-weight: 600;
     font-size: 12px;
@@ -190,6 +249,7 @@ h1 {
 }
 
 .content .btn {
+    margin-top: 40px;
     padding: 18px;
 }
 
@@ -222,7 +282,7 @@ h1 {
                 "admin-title  . ."
                 "admin-inputs . .";
         gap: 40px 50px;
-        padding: 40px 30px 48px 30px;
+        padding: 40px 30px 40px 30px;
     }
 
     .content-body .text-field_floating {
@@ -248,8 +308,9 @@ h1 {
         padding: 12px;
     }
 
-    .content {
-        padding: 40px;
+    .company-item {
+        font-size: 18px;
+        line-height: 24px;
     }
 
     .content-header {
@@ -278,11 +339,7 @@ h1 {
     }
 
     .container-companies {
-        margin-top: 138px;
-    }
-
-    .company-item {
-
+        margin-top: 140px;
     }
 
     .content-body {
@@ -295,7 +352,7 @@ h1 {
         "admin-title"
         "admin-inputs";
         gap: 12px;
-        padding: 40px 40px 48px 40px;
+        padding: 40px;
     }
 
     .modal-create-avatar {
@@ -360,7 +417,7 @@ h1 {
 @media screen and (max-width: 1079px) {
 
     .alert {
-        display: flex;
+        display: none;
         align-items: flex-start;
         top: 20px;
         right: 15px;
@@ -401,13 +458,25 @@ h1 {
         background-color: var(--purple-400);
     }
 
+    /* Content-header-mobile */
+
+    .header-mobile-wrapper {
+        display: flex;
+    }
+
     /*Content*/
 
     .content {
-        padding: 24px 15px;
+        padding: 16px;
     }
 
     .content-header {
+        display: block;
+        margin-bottom: 28px;
+        gap: 0;
+    }
+
+    .content-header .header-title {
         display: none;
     }
 
@@ -415,18 +484,33 @@ h1 {
         min-width: auto;
     }
 
+    .content-header .select__body {
+        padding: 8px;
+        width: max-content;
+        left: 50%;
+        right: auto;
+    }
+
     .content-body {
+        grid-template-areas:
+        "avatar-inputs"
+        "info-inputs"
+        "admin-title"
+        "admin-inputs";
         padding: 16px;
     }
 
-    .info-company-title {
-        margin: 0;
-        font-size: 24px;
-        line-height: 28px;
+    .loaded-photo .btn-link-text {
+        padding: 8px 0;
+        cursor: pointer;
     }
 
-    .modal-create-avatar {
-        margin-top: 28px;
+    .loaded-photo.mini .instruments {
+        align-items: baseline;
+    }
+
+    .info-company-title {
+        display: none;
     }
 
     .text-field_floating .text-field__label,

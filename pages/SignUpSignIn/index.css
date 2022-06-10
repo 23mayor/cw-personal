@@ -15,10 +15,14 @@ h4 {
 main {
     position: relative;
     display: flex;
-    padding-left: 108px;
+    padding-left: 100px;
 }
 
 /*Navigation*/
+
+.navigation.hide {
+    max-width: 100px;
+}
 
 main .navigation {
     position: fixed;
@@ -26,6 +30,48 @@ main .navigation {
     left: 0;
     height: 100vh;
     background-color: var(--white);
+}
+
+/* Navigation-btn-chat */
+
+.hide .chat span {
+    display: none;
+}
+
+.chat {
+    display: flex;
+    justify-content: center;
+    width: auto;
+    border: 1px solid #DDDDDD;
+    padding: 18px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hide .chat {
+    width: auto;
+}
+
+.chat span {
+    margin-left: 12px;
+}
+
+/* Navigation-btn-chat-mobile */
+
+.btn-chat-mobile {
+    position: fixed;
+    right: 8px;
+    bottom: 8px;
+    display: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--purple-400);
+    cursor: pointer;
 }
 
 /*Content*/
@@ -156,7 +202,7 @@ aside .side-menu .btn-wrap .button-active {
     display: flex;
     position: absolute;
     top: 18px;
-    right: 11px;
+    right: 12px;
     width: 20px;
     height: 20px;
     align-items: center;
@@ -228,7 +274,7 @@ form .text-field {
 
 form .text-field .password-description {
     display: block;
-    margin: 4px 0 0 16px;
+    margin: 4px 0 0 12px;
     color: var(--gray-600);
     font-weight: 600;
     font-size: 12px;
@@ -238,35 +284,6 @@ form .text-field .password-description {
 form .form-bottom {
     display: flex;
     flex-direction: column;
-    margin-top: 22px;
-}
-
-/*Checkbox */
-
-.div {
-    justify-content: flex-start;
-    padding: 0;
-    margin-bottom: 22px;
-}
-
-.form-bottom .div {
-    padding-left: 4px;
-}
-
-.div .custom-checkbox + label:before {
-    width: 16px;
-    height: 16px;
-    border-color: var(--dark);
-}
-
-.div .custom-checkbox + label {
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 20px;
-}
-
-.div label:before {
-    margin-right: 14px;
 }
 
 /*Button*/
@@ -280,7 +297,7 @@ form .form-bottom {
 
 /*Google auth*/
 
-.google-title {
+.auth-title {
     margin-bottom: 16px;
     font-weight: 600;
     font-size: 14px;
@@ -288,29 +305,28 @@ form .form-bottom {
     color: #9E9E9E;
 }
 
-.google-link-wrap {
+.auth-link-wrap {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 12px;
 }
 
-.google-link-wrap .google-link {
-    padding: 16px 14px;
+.auth-link-wrap .links {
+    justify-content: center;
+    padding: 18px 14px;
     font-size: 14px;
     line-height: 20px;
     border: 1px solid var(--gray-400);
     border-radius: 8px;
 }
 
-.google-link-wrap .google-link svg {
+.auth-link-wrap .links svg {
     width: 20px;
     height: 20px;
-    margin-right: 6px;
+    margin-right: 8px;
 }
 
-/*.google-link-wrap .icon {*/
-/*    margin: 0 auto;*/
-/*}*/
+
 
 /*Form-sign-up*/
 
@@ -333,7 +349,7 @@ form .form-bottom {
 }
 
 .form-log-in .link-forgot-password {
-    margin-bottom: 28px;
+    margin-bottom: 16px;
     font-weight: 600;
 }
 
@@ -346,7 +362,6 @@ form .form-bottom {
     align-items: center;
     padding: 22px 16px;
     margin-bottom: 16px;
-    border: 1px solid var(--red-300);
     border-radius: 8px;
     background-color: var(--red-100);
 }
@@ -449,37 +464,24 @@ aside .side-menu .wrong-email .wrong-title {
 
 .container-modal .modal-window .modal-header {
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-}
-
-.container-modal .modal-window .modal-header {
-    margin-bottom: 18px;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 24px;
 }
 
 .container-modal .modal-window .modal-header .modal-title {
     margin: 0;
 }
 
-.container-modal .modal-window .modal-header .modal-close {
-    min-width: 40px;
-    height: 40px;
-    padding: 8px;
-    border: none;
-    background-color: var(--purple-100);
-    border-radius: 50%;
+.container-modal .modal-window .modal-header .modal-description {
+    color: var(--gray-600);
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
 }
 
-.container-modal .modal-window .modal-header .modal-close:hover {
-    background-color: var(--purple-200);
-}
-
-.container-modal .modal-window .modal-header .modal-close:active {
-    background-color: var(--purple-200);
-}
-
-.container-modal .modal-window .modal-header .modal-close svg {
-    display: block;
+.container-modal .modal-window .text-field {
+    margin-bottom: 40px;
 }
 
 .container-modal .modal-window .div label:before {
@@ -601,17 +603,8 @@ aside .side-menu .wrong-email .wrong-title {
 
     /*Google auth*/
 
-    .google-title {
-        margin-bottom: 12px;
-    }
-
-    .google-link-wrap .icon svg {
-        height: 22px;
-        width: 22px;
-    }
-
-    .google-link-wrap .icon {
-        margin-right: 0;
+    .auth-link-wrap .links {
+        padding: 10px;
     }
 
     /*Verify*/
@@ -633,15 +626,19 @@ aside .side-menu .wrong-email .wrong-title {
     /*Modal*/
 
     .container-modal .modal-window {
-        width: 440px;
+        width: 345px;
     }
 
     .container-modal .modal-window .modal-header {
-        margin-bottom: 6px;
+        margin-bottom: 16px;
     }
 
-    .container-modal .modal-window .div {
-        margin-bottom: 34px;
+    .container-modal .modal-window .modal-header .modal-description {
+        margin-right: 85px;
+    }
+
+    .container-modal .modal-window .text-field {
+        margin-bottom: 28px;
     }
 
     /*Log in*/
@@ -677,24 +674,11 @@ aside .side-menu .wrong-email .wrong-title {
         padding: 16px;
     }
 
-    aside .side-menu {
-        padding: 24px 14px;
-    }
-
     aside .logo-full {
         display: block;
         align-self: center;
-        height: 24px;
-        margin-bottom: 26px;
-    }
-
-    aside .side-menu .recover-wrap .btn {
         margin-top: 8px;
-        font-size: 14px;
-    }
-
-    aside .side-menu .btn-wrap {
-        margin-bottom: 28px;
+        margin-bottom: 26px;
     }
 
     aside .side-menu .btn-wrap .button {
@@ -705,16 +689,17 @@ aside .side-menu .wrong-email .wrong-title {
         line-height: 24px
     }
 
+    
+    /* Navigation-btn-chat-mobile */
+
+    .btn-chat-mobile {
+        display: block;
+    }
+
     /*Form*/
 
     form .text-field .password-description {
-        margin-left: 12px;
         font-size: 12px;
-        line-height: 14px;
-    }
-
-    form .form-bottom {
-        margin-top: 26px;
     }
 
     /*Checkbox*/
@@ -733,11 +718,7 @@ aside .side-menu .wrong-email .wrong-title {
 
     /*Google auth*/
 
-    .google-link-wrap .google-link svg {
-        height: 20px;
-        width: 20px;
-        margin-right: 11px;
-    }
+
 
     /*Form log in*/
 
@@ -775,20 +756,6 @@ aside .side-menu .wrong-email .wrong-title {
 
     .container-modal .modal-window .modal-header {
         margin-bottom: 18px;
-    }
-
-    .container-modal .modal-window .div .custom-checkbox + label {
-        font-size: 13px;
-    }
-
-    .container-modal .modal-window .div .custom-checkbox + label:before {
-        width: 14px;
-        height: 14px;
-        margin-right: 14px;
-    }
-
-    .container-modal .modal-window .div {
-        margin-bottom: 34px;
     }
 
 }

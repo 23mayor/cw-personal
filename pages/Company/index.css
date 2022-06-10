@@ -18,14 +18,29 @@ main {
     position: relative;
     display: flex;
     min-height: 100vh;
-    padding-left: 108px;
+    padding-left: 100px;
 }
 
 .btn {
-    padding: 24px;
+    padding: 26px;
     font-size: 14px;
     line-height: 20px;
     white-space: nowrap;
+}
+
+/* Navigation */
+
+.navigation__list {
+    margin-top: 15px;
+}
+
+.hide .navigation__list-item {
+    padding: 30px 40px;
+}
+
+.hide .navigation__list-item svg {
+    width: 20px;
+    height: 20px;
 }
 
 main .navigation {
@@ -35,6 +50,10 @@ main .navigation {
     background-color: var(--white);
 }
 
+.navigation.hide {
+    max-width: 100px;
+}
+
 main .navigation .mobile-burger {
     display: none;
 }
@@ -42,9 +61,10 @@ main .navigation .mobile-burger {
 main .navigation .bottom {
     display: flex;
     flex-direction: column;
+    padding: 0 12px;
 }
 
-main .navigation .bottom .book-a-demo {
+main .navigation.hide .bottom a {
     width: auto;
 }
 
@@ -52,12 +72,101 @@ main .navigation .bottom .user .avatar {
     margin: 0;
 }
 
+main .navigation .bottom a {
+    width: 100%;
+}
+
+.book-a-demo {
+    margin-bottom: 24px;
+}
+
+.user {
+    padding: 16px 14px;
+}
+
+.mini {
+    width: 48px;
+    height: 48px;
+}
+
+/* Navigation-btn-chat */
+
+.hide .chat span {
+    display: none;
+}
+
+.chat {
+    display: flex;
+    justify-content: center;
+    width: auto;
+    border: 1px solid #DDDDDD;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hide .chat {
+    width: auto;
+}
+
+.chat span {
+    margin-left: 12px;
+}
+
+/* Navigation-btn-chat-mobile */
+
+.btn-chat-mobile {
+    position: fixed;
+    right: 8px;
+    bottom: 8px;
+    display: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--purple-400);
+    cursor: pointer;
+}
+
+/* Upload-photo */
+
+.upload-photo-input {
+    max-width: 110px;
+    color: transparent;
+    margin-bottom: 16px;
+    font-family: "Manrope", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.upload-photo-input::-webkit-file-upload-button {
+    visibility: hidden;
+}
+
+.upload-photo-input::before {
+    content: 'Upload logo';
+    display: inline-block;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    color: var(--purple-400);
+    
+}
+.upload-photo-input:hover::before {
+    border-color: black;
+}
+
 /*Submenu*/
 
 main .submenu {
     display: flex;
     flex-direction: column;
-    min-width: 448px;
+    min-width: 456px;
     /*padding: 40px;*/
     background-color: var(--gray-100);
     border-right: 1px solid var(--gray-300);
@@ -79,22 +188,34 @@ main .submenu .btn svg {
     margin-right: 8px;
 }
 
+main .submenu .btn.disabled {
+    color: var(--gray-600);
+}
+
+main .submenu .btn.disabled svg {
+    fill: var(--gray-600);
+}
+
 
 /*Content*/
 
 .container-content {
     display: flex;
     width: 100%;
-    min-height: calc(100vh - 192px);
+    min-height: calc(100vh - 64px);
 }
 
 .container-content .content-empty {
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: auto;
+}
+
+.content-empty.isActive {
+    display: flex;
 }
 
 .container-content .content-empty .content-title {
@@ -104,9 +225,14 @@ main .submenu .btn svg {
 .container-content .content-empty .content-description {
     display: flex;
     align-items: center;
+    color: var(--gray-600);
     font-weight: 600;
     font-size: 14px;
     line-height: 20px;
+}
+
+.container-content .content-empty .btn.mobile-btn {
+    display: none;
 }
 
 .container-content .content-empty .content-description .link {
@@ -418,7 +544,7 @@ main .submenu .btn svg {
 .div label::before {
     width: 18px;
     height: 18px;
-    margin-right: 12px;
+    margin-right: 10px;
 }
 
 .modal-wrapper .wrap-select {
@@ -488,12 +614,10 @@ main .submenu .btn svg {
     fill: var(--purple-400);
 }
 
-.select.selected .select__header .arrow-icon,
-.select.is-active .select__header .arrow-icon {
+.select.selected .select__header .arrow-icon {
     transform: translateY(9px);
 }
 
-.select.is-active .select__header .select-label,
 .select.selected .select__header .select-label {
     text-transform: uppercase;
     transform: translateY(-12px);
@@ -501,7 +625,7 @@ main .submenu .btn svg {
     line-height: 16px;
 }
 
-.select__body {
+.wrap-select .select__body {
     bottom: calc(100% + 12px);
     top: auto;
     padding: 20px;
@@ -509,7 +633,7 @@ main .submenu .btn svg {
 
 .select__body .select__item {
     margin: 0;
-    padding: 10px;
+    padding: 8px;
     border-radius: 6px;
     font-size: 14px;
     line-height: 20px;
@@ -724,12 +848,11 @@ main .submenu .btn svg {
     }
 
     .hide .navigation__list-item {
-        padding: 35px 26px;
+        padding: 30px 28px;
     }
 
-
     .user {
-        padding: 16px 18px;
+        padding: 16px 2px;
     }
 
 
@@ -760,15 +883,15 @@ main .submenu .btn svg {
         min-width: 328px;
     }
 
-    .submenu .btn {
-        padding: 10px 12px;
-    }
-
     main .submenu .submenu-title {
         margin-bottom: 24px;
-        font-weight: 600;
         font-size: 24px;
         line-height: 28px;
+    }
+
+    main .submenu .btn {
+        width: fit-content;
+        padding: 10px 12px;
     }
 
     /*Modal window*/
@@ -787,6 +910,12 @@ main .submenu .btn svg {
     .container-content .content-empty .content-title {
         font-size: 20px;
         line-height: 24px;
+    }
+
+    .modal-wrapper .form-title {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 28px;
     }
 
     /*Input*/
@@ -831,10 +960,10 @@ main .submenu .btn svg {
 
     /*Button*/
 
-    .btn {
+    /* .btn {
         width: fit-content;
         padding: 16px ;
-    }
+    } */
 
     /*Invite members*/
 
@@ -858,6 +987,12 @@ main .submenu .btn svg {
     h4 {
         font-size: 18px;
         line-height: 24px;
+    }
+
+    /* Navigation-btn-chat-mobile */
+
+    .btn-chat-mobile {
+        display: block;
     }
 
     /*Navigation*/
@@ -911,39 +1046,27 @@ main .submenu .btn svg {
 
     /*Submenu*/
     main .submenu {
-        min-width: 100%;
-        min-height: 128px;
-        /*padding: 24px 15px;*/
+        /* min-width: 100%;
+        min-height: 128px; */
+        display: none;
     }
-
-    main .submenu .submenu-top {
-        padding: 24px 16px 0 16px;
-    }
-
-    main .submenu .submenu-title {
-        margin-bottom: 12px;
-    }
-
-    main .submenu .btn {
-        width: 100%;
-        padding: 9px 24px;
-        font-size: 14px;
-        line-height: 20px;
-    }
-
-    /*main .submenu .btn svg {*/
-    /*    width: 20px;*/
-    /*    height: 20px;*/
-    /*}*/
 
     /*Content*/
-    .container-content .content-empty .content-description {
-        font-size: 14px;
-        line-height: 20px;
-    }
 
     .container-content .content-empty .content-title {
         margin-bottom: 6px;
+    }
+
+    .container-content .content-empty .btn.mobile-btn {
+        display: flex;
+        margin-top: 18px;
+        padding: 10px 12px;
+    }
+
+    .container-content .content-empty .btn.mobile-btn svg {
+        height: 20px;
+        width: 20px;
+        margin-right: 8px;
     }
 
     /*Modal window*/
@@ -954,10 +1077,6 @@ main .submenu .btn svg {
     .modal-wrapper .modal-nav {
         margin-bottom: 18px;
     }
-
-    /*.modal-wrapper .modal-company {*/
-    /*    padding: 16px;*/
-    /*}*/
 
     .modal-wrapper .modal-company > div {
         padding: 16px;
@@ -973,11 +1092,6 @@ main .submenu .btn svg {
 
     .modal-wrapper .line {
         height: 4px;
-    }
-
-    .modal-wrapper .modal-create-avatar .upload-photo.mini,
-    .modal-wrapper .modal-create-avatar .loaded-photo.mini {
-        justify-content: center;
     }
 
     .modal-company .btn {
@@ -1007,9 +1121,18 @@ main .submenu .btn svg {
         margin-left: 0;
     }
 
+    .loaded-photo.mini .photo {
+        flex: none;
+    }
+
+    .modal-wrapper .text-field .input-description .description-hex{
+        display: none;
+    }
+
     /*Checkbox*/
     .div {
-        margin-top: -2px;
+        padding-left: 4px;
+        margin-top: -4px;
     }
 
     /*Invite members*/

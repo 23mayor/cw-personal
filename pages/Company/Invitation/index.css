@@ -4,7 +4,7 @@
 }
 
 .content-header {
-    margin-bottom: 44px;
+    margin-bottom: 48px;
 }
 
 .members-container {
@@ -22,12 +22,13 @@
     position: relative;
     display: flex;
     gap: 8px;
-    padding: 6px 8px 12px 8px;
+    padding: 0 8px 12px 8px;
     border: none;
     background-color: transparent;
     font-weight: 600;
     font-size: 14px;
     line-height: 20px;
+    z-index: 0;
     cursor: pointer;
 }
 
@@ -46,7 +47,6 @@
 }
 
 .members-tab .tab-counter {
-    display: none;
     padding: 2px 9px;
     background-color: var(--gray-300);
     border-radius: 100px;
@@ -56,7 +56,8 @@
 }
 
 .members-tab.active .tab-counter {
-    display: block;
+    color: var(--white);
+    background-color: var(--purple-400);
 }
 
 /*Alert*/
@@ -117,6 +118,9 @@
 
 .filter-search input::placeholder {
     color: var(--gray-600);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
 }
 
 .filter-search .icon-glass {
@@ -126,8 +130,9 @@
 }
 
 .members-filter .btn {
+    margin-top: 0;
     margin-left: 12px;
-    padding: 13px;
+    padding: 16px;
     font-weight: 600;
 }
 
@@ -185,7 +190,7 @@
 }
 
 .accept-invitation .table-body .table-row {
-    padding: 15px 11px;
+    padding: 16px 11px;
 }
 
 .sented-invitation .table-body .table-row {
@@ -333,6 +338,7 @@
     top: 0;
     left: 0;
     display: none;
+    flex-direction: column;
     width: 100%;
     height: 100%;
     background-color: var(--white);
@@ -340,7 +346,7 @@
 }
 
 .burger-menu.isActive {
-    display: block;
+    display: flex;
 }
 
 .menu-head {
@@ -356,11 +362,11 @@
 }
 
 .burger-menu .navigation__list {
-    margin-top: 62px;
+    margin-top: 22px;
 }
 
 .burger-menu .navigation__list-item {
-    padding: 26px 36px;
+    padding: 28px 36px;
 }
 
 .burger-menu .navigation__list-item svg {
@@ -371,12 +377,8 @@
 .navigation__list-item h4 {
     margin: 0;
     margin-left: 28px;
-    font-size: 24px;
-    line-height: 28px;
-}
-
-.navigation__list-item:last-child {
-    margin-bottom: 45px;
+    font-size: 18px;
+    line-height: 24px;
 }
 
 /*Dropdown*/
@@ -393,13 +395,14 @@
 }
 
 .mobile-menu-dropdown .dropdown-body {
-    padding: 12px 0 12px 48px;
+    padding: 8px 0 12px 48px;
 }
 
 .mobile-menu-dropdown.isOpen .dropdown-body {
     display: flex;
+    flex-direction: column;
     align-items: flex-start;
-    min-height: 64px;
+    gap: 4px;
 }
 
 .mobile-menu-dropdown .dropdown-header .arrow-icon {
@@ -409,7 +412,27 @@
 }
 
 .mobile-menu-dropdown .dropdown-body .company-item {
-    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 0;
+    border: none;
+    background-color: transparent;
+    color: var(--gray-700);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.mobile-menu-dropdown .dropdown-body .company-item:last-child {
+    color: var(--gray-600);
+}
+
+.mobile-menu-dropdown .dropdown-body .company-item.select {
+    color: var(--purple-400);
+}
+
+.mobile-menu-dropdown .dropdown-body .company-item.select svg {
+    fill: var(--purple-400);
 }
 
 .mobile-menu-dropdown .dropdown-body .company-item:after {
@@ -418,15 +441,24 @@
 
 .burger-menu .book-a-demo {
     width: auto;
-    margin: 0 24px 60px 24px;
+    margin-bottom: 40px;
     padding: 15px;
 }
 
 .burger-menu .user {
-    padding: 0 28px;
+    padding: 0 4px;
 }
 
-.burger-menu .book-a-demo svg {
+.burger-menu .menu-bottom {
+    padding: 20px 24px;
+}
+
+.burger-menu .user .avatar {
+    width: 40px;
+    height: 40px;
+}
+
+.book-a-demo svg {
     width: 20px;
     height: 20px;
 }
@@ -446,7 +478,7 @@
     }
 
     .content-header {
-        margin-bottom: 40px;
+        margin-bottom: 46px;
     }
 
     .members-filter {
@@ -483,6 +515,10 @@
     .accept-invitation .table-body .table-row .cell-for-name {
         font-size: 18px;
         line-height: 24px;
+    }
+
+    .table-custom.accept-invitation .table-body .table-row {
+        padding: 16px;
     }
 
     .cell-for-name {
@@ -531,6 +567,7 @@
 
     .btn-revoke-email {
         width: 100%;
+        margin-top: 4px;
         padding: 6px;
     }
 
@@ -572,7 +609,7 @@
     .table-custom .table-body .table-row {
         grid-template-columns: 1fr;
         gap: 16px;
-        padding: 16px;
+        padding: 20px;
         margin-bottom: 8px;
         border: 1px solid var(--gray-400);
         border-radius: 8px;
@@ -599,11 +636,6 @@
 
     main .submenu {
         display: none;
-    }
-
-    .content-header {
-        display: block;
-        margin-bottom: 28px;
     }
 
     .content {
@@ -634,6 +666,10 @@
         gap: 24px;
     }
 
+    .content-header {
+        margin-bottom: 26px;
+    }
+
     .content-header .header-title {
         display: none;
     }
@@ -646,6 +682,10 @@
         white-space: normal;
         padding-right: 0;
         word-wrap: break-word;
+    }
+
+    .table-custom .table-body .table-row {
+        padding: 16px;
     }
 
     .cell-for-email {

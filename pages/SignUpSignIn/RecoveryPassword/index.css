@@ -245,16 +245,6 @@ aside .side-menu .reset-description {
         line-height: 20px;
     }
 
-    aside .side-menu .bottom-title {
-        padding-top: 16px;
-        margin-bottom: 10px;
-    }
-
-
-    aside .side-menu .container-recovery .text-field {
-        margin-bottom: 16px;
-    }
-
     /*Reset password*/
 
     .container-reset-form .email-wrap {
